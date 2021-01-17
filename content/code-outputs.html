@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formatting code outputs &#8212; My Jupyter Book</title>
+    <title>Formatting code outputs &#8212; Data Science Study</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -78,7 +78,7 @@
 <a class="navbar-brand text-wrap" href="../index.html">
   
   
-  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+  <h1 class="site-logo" id="site-title">Data Science Study</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -364,6 +364,22 @@
 </div>
 
         <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy/issues/new?title=Issue%20on%20page%20%2Fcontent/code-outputs.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
@@ -882,13 +898,13 @@ to focus on the glueing part.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0023035385104575
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.000662481946937
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9900024958373006
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9881481690698024
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0147137098701684
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0132100570137976
 </pre></div>
 </div>
 </div>
@@ -967,33 +983,33 @@ use the <code class="docutils literal notranslate"><span class="pre">display=Fal
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.254233</td>
-      <td>3.098491</td>
-      <td>3.270044</td>
+      <td>2.906166</td>
+      <td>2.841093</td>
+      <td>3.091271</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.971051</td>
-      <td>3.112410</td>
-      <td>3.069389</td>
+      <td>3.235090</td>
+      <td>2.969250</td>
+      <td>2.876545</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.816367</td>
-      <td>3.444816</td>
-      <td>3.176406</td>
+      <td>3.091469</td>
+      <td>2.820253</td>
+      <td>2.912487</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.030915</td>
-      <td>2.856834</td>
-      <td>3.319746</td>
+      <td>3.460336</td>
+      <td>2.710395</td>
+      <td>2.946932</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.254592</td>
-      <td>3.227715</td>
-      <td>2.680512</td>
+      <td>2.790675</td>
+      <td>2.979517</td>
+      <td>2.893935</td>
     </tr>
   </tbody>
 </table>
@@ -1035,7 +1051,7 @@ Simply add this:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 </pre></div>
 </div>
-<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0023035385104575</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../_images/code-outputs_22_0.png" src="../_images/code-outputs_22_0.png" /></span>.</p>
+<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.000662481946937</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../_images/code-outputs_22_0.png" src="../_images/code-outputs_22_0.png" /></span>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>We recommend using wider, shorter figures when plotting in-line, with a ratio
@@ -1066,7 +1082,7 @@ For example, the following text:</p>
 </pre></div>
 </div>
 <p>Is rendered as:
-The mean of the bootstrapped distribution was <span class="pasted-text">3.0023035385104575</span> (95% confidence interval <span class="pasted-text">2.9900024958373006</span>/<span class="pasted-text">3.0147137098701684</span>)</p>
+The mean of the bootstrapped distribution was <span class="pasted-text">3.000662481946937</span> (95% confidence interval <span class="pasted-text">2.9881481690698024</span>/<span class="pasted-text">3.0132100570137976</span>)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> only works with glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> output.</p>
@@ -1142,33 +1158,33 @@ A caption for a pandas table.
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.254233</td>
-      <td>3.098491</td>
-      <td>3.270044</td>
+      <td>2.906166</td>
+      <td>2.841093</td>
+      <td>3.091271</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.971051</td>
-      <td>3.112410</td>
-      <td>3.069389</td>
+      <td>3.235090</td>
+      <td>2.969250</td>
+      <td>2.876545</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.816367</td>
-      <td>3.444816</td>
-      <td>3.176406</td>
+      <td>3.091469</td>
+      <td>2.820253</td>
+      <td>2.912487</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.030915</td>
-      <td>2.856834</td>
-      <td>3.319746</td>
+      <td>3.460336</td>
+      <td>2.710395</td>
+      <td>2.946932</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.254592</td>
-      <td>3.227715</td>
-      <td>2.680512</td>
+      <td>2.790675</td>
+      <td>2.979517</td>
+      <td>2.893935</td>
     </tr>
   </tbody>
 </table>
@@ -1239,13 +1255,13 @@ that were generated in other cells or other notebooks. For example, the followin
 <tbody>
 <tr class="row-even"><td class="text-align:center"><p>histogram and raw text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../_images/code-outputs_22_0.png" src="../_images/code-outputs_22_0.png" /></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0023035385104575</span></code></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9900024958373006</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0147137098701684</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.000662481946937</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9881481690698024</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0132100570137976</span></code></span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:center"><p>sorted means and formatted text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../_images/code-outputs_22_1.png" src="../_images/code-outputs_22_1.png" /></span></p></td>
-<td><p><span class="pasted-text">3.002</span></p></td>
-<td><p><span class="pasted-text">2.990</span>-<span class="pasted-text">3.015</span></p></td>
+<td><p><span class="pasted-text">3.001</span></p></td>
+<td><p><span class="pasted-text">2.988</span>-<span class="pasted-text">3.013</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -1290,7 +1306,7 @@ that were generated in other cells or other notebooks. For example, the followin
     <div class="container">
       <p>
         
-          By The Jupyter Book community<br/>
+          By Raphael Kim<br/>
         
             &copy; Copyright 2020.<br/>
       </p>
