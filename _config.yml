@@ -5,8 +5,8 @@
 
 #######################################################################################
 # Book settings
-title                       : My Jupyter Book  # The title of the book. Will be placed in the left navbar.
-author                      : The Jupyter Book community  # The author of the book
+title                       : Data Science Study  # The title of the book. Will be placed in the left navbar.
+author                      : Raphael Kim  # The author of the book
 copyright                   : "2020"  # Copyright year to be placed in the footer
 logo                        : ""  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
@@ -37,8 +37,8 @@ parse:
 html:
   favicon                   : ""  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
-  use_repository_button     : false  # Whether to add a link to your repository button
-  use_issues_button         : false  # Whether to add an "open an issue" button
+  use_repository_button     : true  # Whether to add a link to your repository button
+  use_issues_button         : true  # Whether to add an "open an issue" button
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   extra_footer              : ""  # Will be displayed underneath the footer.
   google_analytics_id       : ""  # A GA id that can be used to track book views.
@@ -60,7 +60,7 @@ launch_buttons:
   binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
   jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
-  colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
+  colab_url                 : https://colab.research.google.com" # The URL of Google Colab (https://colab.research.google.com)
 
 repository:
   url                       : https://github.com/DataScientistforAI/DataScienceStudy  # The URL to your book's repository
@@ -73,3 +73,4 @@ sphinx:
   extra_extensions          :   # A list of extra extensions to load by Sphinx (added to those already used by JB).
   local_extensions          :   # A list of local extensions to load by sphinx specified by "name: path" items
   config                    :   # key-value pairs to directly over-ride the Sphinx configuration
+  mathjax_path              : https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
