@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0. 컴퓨터와의 소통을 위한 도구 소개 &#8212; Data Science Study</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Science Study</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Analysis of Time Series Data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../1_Data_Analysis_Cycle.html">
+   데이터 분석의 단계별 목적 이해하기 (분석 싸이클 이해)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../1_Data_Analysis_Cycle.html#id5">
+   분석을 이해하고 공감하는 자세 및 방향
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../1_Data_Analysis_Cycle.html#id10">
+   분석 단계별 의사결정을 위한 수학/통계적 언어를 이해하기
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../2_Learning_TimeSeries.html">
+   학습방향과 알고리즘(Learning Style and Algorithms)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../2_Learning_TimeSeries.html#id2">
+   시계열 데이터/분석과 기계학습의 차이
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../2_Learning_TimeSeries.html#id8">
+   (시계열) 회귀분석 요약
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../2_Learning_TimeSeries.html#id12">
+   시계열 분석
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../3_Algorithms_ML_TS_Linear.html">
+   기계학습(Machine Learning) 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../3_Algorithms_ML_TS_Linear.html#id6">
+   시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../4_Algorithms_TS_NonLinear.html">
+   비선형 시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../4_Algorithms_TS_NonLinear.html#id9">
+   다변량 시계열 알고리즘
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/TimeSeriesData/Practice/Basic/0_Installation_Program.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy/issues/new?title=Issue%20on%20page%20%2FTimeSeriesData/Practice/Basic/0_Installation_Program.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DataScientistforAI/DataScienceStudy/master?urlpath=tree/TimeSeriesData/Practice/Basic/0_Installation_Program.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com"/github/DataScientistforAI/DataScienceStudy/blob/master/TimeSeriesData/Practice/Basic/0_Installation_Program.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    0. 컴퓨터와의 소통을 위한 도구 소개
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   <strong>
+    1. 분석환경 세팅하기(윈도우10기준)
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anaconda-jupyter">
+     <strong>
+      1-1) 기본세팅: Anaconda &amp; Jupyter
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pip-jupyter-notebook-jupyter-lab">
+     <strong>
+      1-2) 고급세팅: PIP &amp; Jupyter Notebook &amp; Jupyter Lab 업데이트 및 확장
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-lab-r">
+     <strong>
+      1-3) 선택세팅: Jupyter Lab에 R연결
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   <strong>
+    2. 분석준비 설정 및 강의시작(윈도우10기준)
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebook-jupyter-lab">
+     <strong>
+      2-1) Jupyter Notebook &amp; Jupyter Lab 열기 및 내부 설정
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   <strong>
+    별첨. 이상 무!
+   </strong>
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1><strong>0. 컴퓨터와의 소통을 위한 도구 소개</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><strong>Python</strong></p>
+<ul class="simple">
+<li><p>간결하고 쉬운 컴퓨터와의 소통언어</p></li>
+<li><p>데이터분석과 머신러닝을 위한 수많은 라이브러리를 포함</p></li>
+<li><p>다양한 확장이 용이(ex. R, SPSS, etc.)</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Anaconda</strong></p>
+<ul class="simple">
+<li><p>Python기반의 Open Data Science Platform</p></li>
+<li><p>Python을 포함하여 Python Library 등을 하나로 정리해 둔 배포판</p></li>
+<li><p>Pandas, Numpy, Matplotlib 등 데이터분석에 유용한 Library를 포함</p></li>
+<li><p>추가적인 Library를 연결 및 확장하여 개발/웹/오피스/비즈니스로 활용가능</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>어떤 라이브러리를 써야할지 잘 모르겠을때: https://github.com/vinta/awesome-python</p></li>
+<li><p>주목받는 파이썬 프로젝트들을 둘러보고 싶을때: https://github.com/trending/python</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Jupyter Notebook / Jupyter Lab</strong></p>
+<ul class="simple">
+<li><p>Interactive 환경을 인간에게 제공하여 컴퓨터(Programming Platform)와 소통을 쉽게함</p></li>
+<li><p>Anaconda 프로그래밍 환경을 그대로 사용</p></li>
+<li><p>코딩하면서 바로 결과를 확인할 수 있음</p></li>
+<li><p>문서화(Markdown)와 클라우드(Git, Google Drive 등) 연결/저장 등이 가능</p></li>
+<li><p>각종 단축키와 튜터리얼 등의 자료가 많음</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h1><strong>1. 분석환경 세팅하기(윈도우10기준)</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="anaconda-jupyter">
+<h2><strong>1-1) 기본세팅: Anaconda &amp; Jupyter</strong><a class="headerlink" href="#anaconda-jupyter" title="Permalink to this headline">¶</a></h2>
+<p><strong>1) PC 내 제어판: 이전에 설치된 기록이 있다면 삭제</strong><br />
+-&gt; 시작 -&gt; “제어판” 타이핑 -&gt; “제어판” 선택<br />
+-&gt; 프로그램및기능 선택<br />
+-&gt; Anaconda3 또는 Python으로 시작되는 이름 선택<br />
+-&gt; 우클릭으로 제거<br />
+<strong>2) 인터넷: 프로그램 다운로드</strong><br />
+-&gt; https://www.anaconda.com/download/ 접속<br />
+-&gt; Windows/macOX/Linux중 Windows 클릭<br />
+-&gt; Python “Download” 클릭<br />
+<strong>3) PC: 다운로드한 프로그램 실행 및 설치</strong><br />
+-&gt; 다운로드한 설치파일 우클릭으로 “관리자 권한으로 실행”<br />
+-&gt;”Next”를 누르며 진행하면 되는데 설치 중 “Advanced Options” 페이지에서<br />
+“Add Anaconda to the system PATH environment variable”을 선택을 체크하고 진행<br />
+(본 링크 https://hobbang143.blog.me/221461726444 “설치 02” 부터 동일하게 참조)</p>
+</div>
+<div class="section" id="pip-jupyter-notebook-jupyter-lab">
+<h2><strong>1-2) 고급세팅: PIP &amp; Jupyter Notebook &amp; Jupyter Lab 업데이트 및 확장</strong><a class="headerlink" href="#pip-jupyter-notebook-jupyter-lab" title="Permalink to this headline">¶</a></h2>
+<p><strong>1) PC: Anaconda Prompt 접속</strong><br />
+-&gt; 시작 -&gt; “Anaconda” 타이핑<br />
+-&gt; “Anaconda Prompt” 우클릭으로 “관리자 권한으로 실행”<br />
+<strong>2) Anaconda Prompt: PIP &amp; Jupyter Notebook &amp; Jupyter Lab 업데이트 및 확장 한번에 설치</strong><br />
+<strong>(하기 내용 복사 후 Anaconda Prompt에 우클릭(붙여넣기))</strong><br />
+:: Update of PIP<br />
+pip install –upgrade pip<br />
+python -m pip install –user –upgrade pip<br />
+:: Jupyter Nbextensions<br />
+pip install jupyter_contrib_nbextensions<br />
+jupyter contrib nbextension install –user<br />
+:: Jupyter Lab<br />
+pip install jupyterlab<br />
+pip install –upgrade jupyterlab<br />
+:: Jupyter Lab Extensions Package<br />
+pip install nodejs<br />
+conda install –yes nodejs<br />
+conda install -c conda-forge –yes nodejs<br />
+:: Table of Contents<br />
+jupyter labextension install &#64;jupyterlab/toc<br />
+:: Shortcut UI<br />
+jupyter labextension install &#64;jupyterlab/shortcutui<br />
+:: Variable Inspector<br />
+jupyter labextension install &#64;lckr/jupyterlab_variableinspector<br />
+:: Go to Definition of Module<br />
+jupyter labextension install &#64;krassowski/jupyterlab_go_to_definition<br />
+:: Interactive Visualization<br />
+jupyter labextension install &#64;jupyter-widgets/jupyterlab-manager<br />
+jupyter labextension install lineup_widget<br />
+:: Connection to Github<br />
+jupyter labextension install &#64;jupyterlab/github<br />
+:: CPU+RAM Monitor<br />
+pip install nbresuse<br />
+jupyter labextension install jupyterlab-topbar-extension jupyterlab-system-monitor<br />
+:: File Tree Viewer<br />
+jupyter labextension install jupyterlab_filetree<br />
+:: Download Folder as Zip File<br />
+conda install –yes jupyter-archive<br />
+jupyter lab build<br />
+jupyter labextension update –all<br />
+:: End</p>
+</div>
+<div class="section" id="jupyter-lab-r">
+<h2><strong>1-3) 선택세팅: Jupyter Lab에 R연결</strong><a class="headerlink" href="#jupyter-lab-r" title="Permalink to this headline">¶</a></h2>
+<p><strong>1) 인터넷: R프로그램 다운로드 및 설치</strong>
+-&gt; https://cran.r-project.org/bin/windows/base/ 접속<br />
+-&gt; “Download” 클릭 및 실행<br />
+<strong>2) 인터넷: Git 설치</strong><br />
+-&gt; https://git-scm.com 접속<br />
+-&gt; “Download” 클릭 및 실행<br />
+<strong>3) PC: Anaconda Prompt 접속</strong><br />
+-&gt; 시작 -&gt; “Anaconda” 타이핑<br />
+-&gt; “Anaconda Prompt” 우클릭으로 “관리자 권한으로 실행”<br />
+<strong>4) Anaconda Prompt: Jupyter Client &amp; R설치</strong><br />
+-&gt; conda install –yes -c anaconda jupyter_client<br />
+-&gt; conda install –yes -c r r-essentials<br />
+<strong>5) Anaconda Prompt: R패키지 설치</strong>
+-&gt; cd C:\Program Files\R\R-3.6.1\bin(R이 설치된 경로로 이동)
+-&gt; R.exe<br />
+-&gt; install.packages(“devtools”)<br />
+-&gt; devtools::install_github(“IRkernel/IRkernel”)<br />
+-&gt; IRkernel::installspec(user = FALSE)</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h1><strong>2. 분석준비 설정 및 강의시작(윈도우10기준)</strong><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="jupyter-notebook-jupyter-lab">
+<h2><strong>2-1) Jupyter Notebook &amp; Jupyter Lab 열기 및 내부 설정</strong><a class="headerlink" href="#jupyter-notebook-jupyter-lab" title="Permalink to this headline">¶</a></h2>
+<p><strong>1) PC: Jupyter Notebook 속성 진입</strong><br />
+-&gt; 시작 -&gt; “Jupyter” 타이핑<br />
+-&gt; “Jupyter Notebook” 우클릭으로 “작업 표시줄에 고정”<br />
+-&gt; 작업 표시줄의 “Jupyter Notebook” 아이콘 우클릭<br />
+-&gt; 상단 “Jupyter Notebook” 우클릭 -&gt; 속성 클릭<br />
+<strong>2) PC: Jupyter Notebook 작업경로 반영</strong><br />
+-&gt; “대상”에서 “%USERPROFILE%/” 삭제후 본인 작업 폴더 반영(ex. D:)<br />
+-&gt; (필요시:기존) jupyter-notebook-script.py (필요시:변경) jupyter-lab-script.py<br />
+-&gt; “시작위치”에서 %HOMEPATH% 삭제후 본인 작업 폴더 반영(ex. D:)<br />
+-&gt; 하단 “확인” 클릭<br />
+<strong>3) PC: Jupyter Notebook 실행</strong><br />
+-&gt; 작업 표시줄의 “Jupyter Notebook” 좌클릭<br />
+-&gt; (만약 인터넷 창이 반응이 없다면) 인터넷 주소창에 http://localhost:8888/tree 타이핑<br />
+<strong>4) PC: Jupyter Notebook Nbextensions 기능 추가</strong><br />
+-&gt; Files/Running/Clusters/Nbextensions 중 Nbextensions 클릭<br />
+-&gt; “disable configuration for nbextensions without explicit compatibility” 체크 해제<br />
+-&gt; 하기 7종 클릭하여 기능확인 후 필요시 추가(Table of Contents는 수업용 필수)</p>
+<ul class="simple">
+<li><p>Table of Contents</p></li>
+<li><p>Autopep8</p></li>
+<li><p>Codefolding</p></li>
+<li><p>Collapsible Headings</p></li>
+<li><p>Hide Input All</p></li>
+<li><p>Execute Time</p></li>
+<li><p>Variable Inspector</p></li>
+</ul>
+<p><strong>5) PC: Jupyter Notebook으로 강의시작(이론대응)</strong><br />
+-&gt; Files/Running/Clusters/Nbextensions 중 Files 클릭<br />
+-&gt; 다운로드 받은 강의자료의 폴더위치로 이동하여 자료 실행<br />
+<strong>6) PC: Jupyter Lab으로 강의시작(실습대응): 확장기능설치는 1-2)에 이미 포함됨</strong><br />
+-&gt; 인터넷 주소창에서 http://localhost:8888/lab 타이핑<br />
+-&gt; 좌측 상단 폴더에서 다운로드 받은 강의자료의 폴더위치로 이동하여 자료 실행</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h1><strong>별첨. 이상 무!</strong><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>위 내용들이 순서대로 진행되야 하며, 제대로 진행하셨다면 문제 발생 확률 낮음</p></li>
+<li><p>만약 이상이 있다면 모두 삭제 후 처음부터 하나씩 다시 진행하시길 권장</p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./TimeSeriesData/Practice/Basic"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Kim<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
