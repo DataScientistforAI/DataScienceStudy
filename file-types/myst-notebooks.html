@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks written entirely in Markdown &#8212; My Jupyter Book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="reStructuredText files" href="restructuredtext.html" />
+    <link rel="prev" title="Jupyter Notebook files" href="notebooks.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="index.html">
+   Types of content source files
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/file-types/myst-notebooks.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/file-types/myst-notebooks.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DataScientistforAI/DataScienceStudy/master?urlpath=tree/file-types/myst-notebooks.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-myst-notebook-with-jupytext">
+   Create a MyST notebook with Jupytext
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-a-markdown-file-into-jupytext-myst-markdown">
+     Convert a Markdown file into Jupytext MyST Markdown
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-of-myst-notebooks">
+   Structure of MyST notebooks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#frontmatter-yaml">
+     Frontmatter YAML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-cells">
+     Code cells
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-content">
+     Markdown content
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="notebooks-written-entirely-in-markdown">
+<h1>Notebooks written entirely in Markdown<a class="headerlink" href="#notebooks-written-entirely-in-markdown" title="Permalink to this headline">¶</a></h1>
+<p>It is possible to store Jupyter notebooks in plain Markdown. This allows you
+to define a notebook structure entirely using MyST Markdown. For more information
+about MyST Markdown, see <a class="reference internal" href="../content/myst.html"><span class="doc">MyST Markdown overview</span></a>.</p>
+<p>Notebooks with Markdown can be read in, executed, and cached by Jupyter Book (see <a class="reference internal" href="../content/execute.html"><span class="doc">Execute and cache your pages</span></a> for information on how to cache pages).
+This allows you to store all of your notebook content in a text format that is much nicer for version control software, while still having all the functionality of a Jupyter notebook.</p>
+<p>:::{note}
+MyST notebooks uses [MyST-NB to convert between ipynb and text files][myst-nb:index].
+See its documentation for more information.
+:::</p>
+<p>To see an example of a MyST notebook, you can look at
+<a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/master/docs">many of the pages of this documentation</a>.
+For example, see <a class="reference download internal" download="" href="../_downloads/729b92cc156767faa402400c7b5e69cf/hiding.md"><code class="xref download docutils literal notranslate"><span class="pre">../interactive/hiding.md</span></code></a> and <a class="reference download internal" download="" href="../_downloads/18ad38d99d8291578233fe35c01dc0b4/layout.md"><code class="xref download docutils literal notranslate"><span class="pre">../content/layout.md</span></code></a>.</p>
+<div class="section" id="create-a-myst-notebook-with-jupytext">
+<h2>Create a MyST notebook with Jupytext<a class="headerlink" href="#create-a-myst-notebook-with-jupytext" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to create a MyST notebook is to use <a class="reference external" href="https://jupytext.readthedocs.io">Jupytext</a>, a tool
+that allows for two-way conversion between <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and a variety of text files.</p>
+<p>You can convert an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file to a MyST notebook with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupytext mynotebook.ipynb --to myst
+</pre></div>
+</div>
+<p>A resulting <code class="docutils literal notranslate"><span class="pre">mynotebook.md</span></code> file will be created.
+This can then be used as a page in your book.</p>
+<p>:::{important}
+For full compatibility with <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code>, it is necessary to use <code class="docutils literal notranslate"><span class="pre">jupytext&gt;=1.6.0</span></code>.
+:::</p>
+<p>Jupytext can also <strong>automatically synchronize an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file with your Markdown</strong>.
+To do so, use a Jupyter interface such as Jupyter Lab or the classic notebook interface
+and follow the <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/paired-notebooks.html">Jupytext instructions for paired notebooks</a>.</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Markdown takes precedence</p>
+<p>If <strong>both</strong> an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file exist in your book’s folders, then
+the <code class="docutils literal notranslate"><span class="pre">.md</span></code> file will take precedence!</p>
+</div>
+<div class="section" id="convert-a-markdown-file-into-jupytext-myst-markdown">
+<h3>Convert a Markdown file into Jupytext MyST Markdown<a class="headerlink" href="#convert-a-markdown-file-into-jupytext-myst-markdown" title="Permalink to this headline">¶</a></h3>
+<p>Jupyter Book has a small CLI to provide common functionality for manipulating and
+creating MyST Markdown files that synchronize with Jupytext. To add Jupytext syntax
+to a Markdown file (that will tell Jupytext it is a MyST Markdown file), run the
+following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book myst init mymarkdownfile.md --kernel kernelname
+</pre></div>
+</div>
+<p>If you do not specify <code class="docutils literal notranslate"><span class="pre">--kernel</span></code>, then the default kernel will be used <em>if there is
+only one available</em>. If there are multiple kernels available, you must specify one
+manually.</p>
+</div>
+</div>
+<div class="section" id="structure-of-myst-notebooks">
+<h2>Structure of MyST notebooks<a class="headerlink" href="#structure-of-myst-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a look at the structure that Jupytext creates, which you may also use
+to create a MyST notebook from scratch. First, let’s take a look at a simple MyST notebook:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+<span class="gh">#</span> My simple notebook
+
+Some <span class="gs">**intro Markdown**</span>!
+
+```{code-cell} ipython3
+:tags: [mytag]
+
+print(&quot;A python cell&quot;)
+```
+
+<span class="gu">##</span> A section
+
+And some more Markdown...
+</pre></div>
+</div>
+<p>There are three main sections to notice:</p>
+<div class="section" id="frontmatter-yaml">
+<h3>Frontmatter YAML<a class="headerlink" href="#frontmatter-yaml" title="Permalink to this headline">¶</a></h3>
+<p>MyST notebooks need special frontmatter YAML to tell Jupytext that they
+can be converted to <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files. The frontmatter YAML block</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">jupytext</span><span class="p">:</span>
+  <span class="nt">formats</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">md:myst</span>
+  <span class="nt">text_representation</span><span class="p">:</span>
+    <span class="nt">extension</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.md</span>
+    <span class="nt">format_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myst</span>
+<span class="nt">kernelspec</span><span class="p">:</span>
+  <span class="nt">display_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Python 3</span>
+  <span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python3</span>
+<span class="nn">---</span>
+</pre></div>
+</div>
+<p>tells Jupytext that the file is in <code class="docutils literal notranslate"><span class="pre">myst</span></code> format, and that its code should
+be run with a Python 3 kernel.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Remember that Jupyter always defines one, and only one, kernel per notebook.</p>
+</div>
+</div>
+<div class="section" id="code-cells">
+<h3>Code cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h3>
+<p>Code blocks in MyST notebooks are defined with the following MyST directive:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell}
+your-code
+```
+</pre></div>
+</div>
+<p>You can optionally add extra metadata to the code cell, which will be converted
+into cell metadata in the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file. For example, you can add tags to your code
+cell like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell}
+:tags: [tag1, tag2, tag3]
+your-code
+```
+</pre></div>
+</div>
+<p>You may also explicitly pass the kernel name after <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> to make it clear which
+kernel you are running. For example:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} python3
+your-code
+```
+</pre></div>
+</div>
+<p>However, remember that there is only one kernel allowed per page.</p>
+</div>
+<div class="section" id="markdown-content">
+<h3>Markdown content<a class="headerlink" href="#markdown-content" title="Permalink to this headline">¶</a></h3>
+<p>Everything in-between your code cells is parsed as Markdown content using the
+<a class="reference external" href="https://myst-parser.readthedocs.io/">MyST Markdown parser</a>. See <a class="reference internal" href="../content/myst.html"><span class="doc">MyST Markdown overview</span></a> for
+more information about MyST Markdown.</p>
+<p>To explicitly split up Markdown content into two Markdown cells, use the following
+pattern:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content in one Markdown cell
+
++++
+
+Content in another Markdown cell
+</pre></div>
+</div>
+<p>You may also attach metadata to the cell by adding a Python dictionary after the <code class="docutils literal notranslate"><span class="pre">+++</span></code>.
+For example, to add tags to the second cell above:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Content in one Markdown cell
+
++++ {&quot;tags&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}
+
+Content in another Markdown cell
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that cell breaks and metadata specified in MyST files via the <code class="docutils literal notranslate"><span class="pre">+++</span></code> syntax
+only propagate to their <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> counterpart. When generating the book’s HTML, <em>Markdown
+cell</em> information is discarded to avoid conflicting hierarchies in the structure of the
+document. In other words, only <em>code cell</em> tags have an effect on the generated HTML.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./file-types"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">Jupyter Notebook files</a>
+    <a class='right-next' id="next-link" href="restructuredtext.html" title="next page">reStructuredText files</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

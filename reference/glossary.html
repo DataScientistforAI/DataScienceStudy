@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary &#8212; My Jupyter Book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="_changelog.html" />
+    <link rel="prev" title="The command-line interface" href="cli.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/reference/glossary.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<p>A glossary of common terms used throughout Jupyter Book.</p>
+<dl class="glossary simple">
+<dt id="term-CommonMark"><a class="reference external" href="https://commonmark.org/">CommonMark</a></dt><dd><p>A standard syntax of Markdown that is used across many communities and projects.
+It is the base flavour of Markdown for Jupyter Notebook, and the base flavour
+for <a class="reference internal" href="#term-MyST"><span class="xref std std-term">MyST Markdown</span></a> and Jupyter Book.</p>
+</dd>
+<dt id="term-ExecutableBookProject"><a class="reference external" href="https://executablebooks.org/en/latest/">ExecutableBookProject</a></dt><dd><p>The project that supports and develops many of the core tools used by Jupyter Book.</p>
+</dd>
+<dt id="term-MyST"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST</a></dt><dd><p>A flavour of Markdown that was designed for use with the <a class="reference internal" href="#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> project.
+It is a combination of <a class="reference internal" href="#term-CommonMark"><span class="xref std std-term">CommonMark Markdown</span></a> and a few extra
+syntax pieces to support features of Sphinx, so that you can write Sphinx
+documentation in plain Markdown. It is one of the
+core technologies that Jupyter Book uses.</p>
+</dd>
+<dt id="term-MyST-Parser"><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-Parser</a></dt><dd><p>A parser for <a class="reference internal" href="#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> that allows it to read in content that is written
+in MyST Markdown. It is also used by <a class="reference internal" href="#term-MyST-NB"><span class="xref std std-term">MyST-NB</span></a> to parse MyST Markdown
+that is inside Jupyter notebooks.</p>
+</dd>
+<dt id="term-MyST-NB"><a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/">MyST-NB</a></dt><dd><p>An extension for <a class="reference internal" href="#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> that uses the <a class="reference internal" href="#term-MyST"><span class="xref std std-term">MyST-Parser</span></a> to
+parse Jupyter notebooks directly into Sphinx. This also allows users to write
+MyST Markdown inside of notebooks that are parsed with Sphinx. It is one of the
+core technologies that Jupyter Book uses.</p>
+</dd>
+<dt id="term-Sphinx"><a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a></dt><dd><p>A documentation engine written in Python. Sphinx supports many features that are
+necessary for scientific and scholarly publishing. It is one of the
+core technologies that Jupyter Book uses.</p>
+</dd>
+<dt id="term-Binder"><a class="reference external" href="https://mybinder.org">Binder</a></dt><dd><p>A free, public service for running reproducible interactive computing environments.
+Binder is a 100% open source infrastructure that is run by members of the Jupyter
+community. The underlying technology behind the Binder project is <a class="reference internal" href="#term-BinderHub"><span class="xref std std-term">BinderHub</span></a>.</p>
+</dd>
+<dt id="term-BinderHub"><a class="reference external" href="https://binderhub.readthedocs.io/en/latest/">BinderHub</a></dt><dd><p>The underlying technology of mybinder.org, BinderHub is an open source tool that
+runs on Kubernetes and utilizes a <a class="reference internal" href="#term-JupyterHub"><span class="xref std std-term">JupyterHub</span></a> in order to provide live, reproducible
+interactive computing environments that users host on GitHub.</p>
+</dd>
+<dt id="term-Google-Colab"><a class="reference external" href="https://colab.research.google.com/">Google Colab</a></dt><dd><p>A Jupyter Notebook service from Google that provides access to free computing resources,
+including GPUs and TPUs.</p>
+</dd>
+<dt id="term-JupyterHub"><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">JupyterHub</a></dt><dd><p>A core open source tool from the Jupyter community, JupyterHub allows you to
+deploy an application that provides remote data science environments to multiple
+users. It can be deployed in the cloud, or on your own hardware.</p>
+</dd>
+<dt id="term-Jupyter-Cache"><a class="reference external" href="https://github.com/executablebooks/jupyter-cache">Jupyter-Cache</a></dt><dd><p>An open source tool for executing and caching the outputs of Jupyter Notebook
+content. Outputs are cached in a hidden folder so that they do not need to be
+included directly with your source files.</p>
+</dd>
+<dt id="term-Sphinx-Book-Theme"><a class="reference external" href="https://github.com/executablebooks/sphinx-book-theme">Sphinx-Book-Theme</a></dt><dd><p>A customized version of the
+<a class="reference external" href="https://pydata-sphinx-theme.readthedocs.io/en/latest/">PyData Sphinx Theme</a>
+that defines the look and feel of Jupyter Book.</p>
+</dd>
+</dl>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./reference"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="cli.html" title="previous page">The command-line interface</a>
+    <a class='right-next' id="next-link" href="_changelog.html" title="next page">&lt;no title&gt;</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

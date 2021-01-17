@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build your book &#8212; My Jupyter Book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Publish your book online" href="publish.html" />
+    <link rel="prev" title="Overview" href="overview.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/start/build.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-your-book-s-html">
+   Build your book’s HTML
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-a-standalone-page">
+   Build a standalone page
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#page-caching">
+   Page caching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#local-preview">
+   Local preview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-builder-types">
+   Other builder types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-step-publish-your-book">
+   Next step: publish your book
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="build-your-book">
+<h1>Build your book<a class="headerlink" href="#build-your-book" title="Permalink to this headline">¶</a></h1>
+<p>Once you’ve added content and configured your book, it’s time to
+build outputs for your book.
+We’ll use the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> command line tool for this.</p>
+<p>Currently, there are two kinds of supported outputs: an HTML website for your
+book, and a PDF that contains all of the pages of your book that is built
+from the book HTML.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>In order to build the HTML for each page, you should have followed the steps
+in <a class="reference internal" href="overview.html"><span class="doc std std-doc">creating your Jupyter Book structure</span></a>.
+You should have a collection of notebook/Markdown files in your <code class="docutils literal notranslate"><span class="pre">mybookname/</span></code> folder, a <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file
+that defines the structure of your book and any configuration you’d like
+in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file.</p>
+</div>
+<div class="section" id="build-your-book-s-html">
+<h2>Build your book’s HTML<a class="headerlink" href="#build-your-book-s-html" title="Permalink to this headline">¶</a></h2>
+<p>Now that your book’s content is in your book folder and you’ve defined your book’s structure in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, you can build the HTML for your book.</p>
+<p><strong>Note:</strong> HTML is the default builder.</p>
+<p>Do so by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build mybookname/
+</pre></div>
+</div>
+<p>This will generate a fully-functioning HTML site using a <strong>static site generator</strong>.
+The site will be placed in the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder. You can then open the pages
+in the site by navigating to that folder and opening the <code class="docutils literal notranslate"><span class="pre">html</span></code> files with your
+web browser.</p>
+<p>:::{tip}
+If you find a lot of unwanted files are being built into your book, you can auto-exclude files outside of your table of contents with <a class="reference internal" href="../customize/config.html#config-exclude-non-toc-files"><span class="std std-ref">only_build_toc_files</span></a>
+:::</p>
+<p>:::{note}
+You can also use the short-hand <code class="docutils literal notranslate"><span class="pre">jb</span></code> for <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>. E.g.,:
+<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">mybookname/</span></code>.
+:::</p>
+<p>:::{tip}
+When debugging your book build, the following options can be helpful:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build -W -n --keep-going mybookname/
+</pre></div>
+</div>
+<p>This will check for missing references (<code class="docutils literal notranslate"><span class="pre">-n</span></code>), turning them into errors (<code class="docutils literal notranslate"><span class="pre">-W</span></code>),
+but will still attempt to run the full build (<code class="docutils literal notranslate"><span class="pre">--keep-going</span></code>),
+so that you can see all errors in one run.</p>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">-v</span></code> or <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> to increase verbosity.
+:::</p>
+</div>
+<div class="section" id="build-a-standalone-page">
+<h2>Build a standalone page<a class="headerlink" href="#build-a-standalone-page" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you’d like to build a single page of content rather than an entire book.
+For example, if you’d like to generate a web-friendly HTML page from a Jupyter notebook for a report or publication.</p>
+<p>You can generate a standalone HTML file for a single page of the Jupyter Book using the same command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build path/to/mypage.ipynb
+</pre></div>
+</div>
+<p>This will execute your content and output the proper HTML in a <code class="docutils literal notranslate"><span class="pre">_build/_page/html/&lt;mypage&gt;</span></code> folder.
+If the file is in a subdirectory relative to the <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder, the HTML will be in a <code class="docutils literal notranslate"><span class="pre">_build/_page/html/&lt;subdirectory-mypage&gt;</span></code> folder.</p>
+<p>Your page will be called <code class="docutils literal notranslate"><span class="pre">mypage.html</span></code>.
+This will work for any <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">content source file</span></a> that is supported by Jupyter Book.</p>
+<p>:::{note}
+Users should note that building <strong>single pages</strong> in the context of a larger project can trigger warnings and incomplete links.
+For example, building <code class="docutils literal notranslate"><span class="pre">docs/start/overview.md</span></code> will issue a number of <code class="docutils literal notranslate"><span class="pre">unknown</span> <span class="pre">document</span></code>, <code class="docutils literal notranslate"><span class="pre">term</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">glossary</span></code>, and <code class="docutils literal notranslate"><span class="pre">undefined</span> <span class="pre">links</span></code> warnings.
+:::</p>
+</div>
+<div class="section" id="page-caching">
+<h2>Page caching<a class="headerlink" href="#page-caching" title="Permalink to this headline">¶</a></h2>
+<p>By default, Jupyter Book will only build the HTML for pages that have
+been updated since the last time you built the book.
+This helps reduce the amount of time needed to build your book.
+If you’d like to force Jupyter Book to re-build a particular page, you can either edit the
+corresponding file in your book’s folder, or delete that page’s HTML in the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder.</p>
+<p>You can also signal a full re-build using the <code class="docutils literal notranslate"><span class="pre">--all</span></code> option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build --all mybookname/
+</pre></div>
+</div>
+</div>
+<div class="section" id="local-preview">
+<h2>Local preview<a class="headerlink" href="#local-preview" title="Permalink to this headline">¶</a></h2>
+<p>To preview your book, you can open the generated HTML files in your browser.
+Either double-click the html file in your local folder, or enter the absolute
+path to the file in your browser navigation bar adding <code class="docutils literal notranslate"><span class="pre">file://</span></code> at the beginning
+(e.g. <code class="docutils literal notranslate"><span class="pre">file://Users/my_path_to_book/_build/index.html</span></code>).</p>
+</div>
+<div class="section" id="other-builder-types">
+<h2>Other builder types<a class="headerlink" href="#other-builder-types" title="Permalink to this headline">¶</a></h2>
+<p>You can build a variety of outputs using Jupyter Book. To choose a different builder, use the <code class="docutils literal notranslate"><span class="pre">--builder</span> <span class="pre">&lt;builder-name&gt;</span></code> configuration when running <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> from the command-line. Here is a list of builders that are available to you:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code>: HTML outputs (default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">singlehtml</span></code>: A single HTML page for your book</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dirhtml</span></code>: HTML outputs with <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;/index.html</span></code> structure.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdfhtml</span></code>: Build a PDF via HTML outputs (see <a class="reference internal" href="../advanced/pdf.html#pdf-html"><span class="std std-ref">Build a PDF from your book HTML</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linkcheck</span></code>: Run the Sphinx link checker</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">latex</span></code>: Build Latex files for your book</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>: Build a PDF of your book via Latex (see <a class="reference internal" href="../advanced/pdf.html#pdf-latex"><span class="std std-ref">Build a PDF using LaTeX</span></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="next-step-publish-your-book">
+<h2>Next step: publish your book<a class="headerlink" href="#next-step-publish-your-book" title="Permalink to this headline">¶</a></h2>
+<p>Now that you’ve created the HTML for your book, it’s time to publish it online.
+That’s covered in the <a class="reference internal" href="publish.html"><span class="doc std std-doc">next section</span></a>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./start"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">Overview</a>
+    <a class='right-next' id="next-link" href="publish.html" title="next page">Publish your book online</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
