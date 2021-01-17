@@ -1,0 +1,3160 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학습방향과 알고리즘(Learning Style and Algorithms) &#8212; Data Science Study</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="기계학습(Machine Learning) 알고리즘" href="3_Algorithms_ML_TS_Linear.html" />
+    <link rel="prev" title="데이터 분석의 단계별 목적 이해하기 (분석 싸이클 이해)" href="1_Data_Analysis_Cycle.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Science Study</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Analysis of Time Series Data
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Data_Analysis_Cycle.html">
+   데이터 분석의 단계별 목적 이해하기 (분석 싸이클 이해)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Data_Analysis_Cycle.html#id5">
+   분석을 이해하고 공감하는 자세 및 방향
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_Data_Analysis_Cycle.html#id10">
+   분석 단계별 의사결정을 위한 수학/통계적 언어를 이해하기
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   학습방향과 알고리즘(Learning Style and Algorithms)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#id2">
+   시계열 데이터/분석과 기계학습의 차이
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#id8">
+   (시계열) 회귀분석 요약
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#id12">
+   시계열 분석
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Algorithms_ML_TS_Linear.html">
+   기계학습(Machine Learning) 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Algorithms_ML_TS_Linear.html#id6">
+   시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Algorithms_TS_NonLinear.html">
+   비선형 시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Algorithms_TS_NonLinear.html#id9">
+   다변량 시계열 알고리즘
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/TimeSeriesData/2_Learning_TimeSeries.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy/issues/new?title=Issue%20on%20page%20%2FTimeSeriesData/2_Learning_TimeSeries.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DataScientistforAI/DataScienceStudy/master?urlpath=tree/TimeSeriesData/2_Learning_TimeSeries.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com"/github/DataScientistforAI/DataScienceStudy/blob/master/TimeSeriesData/2_Learning_TimeSeries.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   학습방향과 알고리즘(Learning Style and Algorithms)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     학습방향
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     학습방향에 따른 알고리즘 (Summary)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#supervised-learning">
+       Supervised Learning
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#unsupervised-learning">
+       Unsupervised Learning
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#time-series-learning">
+       Time-series Learning
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   시계열 데이터/분석과 기계학습의 차이
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feature-engineering">
+     대표적인 시계열 변수추출 방향 7종 (Feature Engineering)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     데이터준비 방향
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#general-validation">
+       비시계열 데이터준비(General Validation)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#time-series-validation">
+       시계열 데이터준비(Time Series Validation)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     시계열 알고리즘의 2가지 차별화 방향
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation-metrics-residuals-diagnostics">
+     검증지표(Evaluation Metrics)과 잔차진단(Residuals Diagnostics) 방향
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#evaluation-metrics">
+       검증지표(Evaluation Metrics)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#residual-diagnostics">
+       잔차진단(Residual Diagnostics)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     시계열이 분석효과에 도움 될 시간영역(해상도)을 선택해야 함
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     시계열 데이터/분석은 높은 정확도를 낳거나 높은 에러를 발생시킴
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     시계열 데이터 관리는 장/단점 존재
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   (시계열) 회귀분석 요약
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     모델링
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     검증방항(계수추정)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deterministic-model">
+       결정론적 모형(Deterministic Model)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilistic-model">
+       확률론적 모형(Probabilistic Model)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     검증(Evaluation)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     잔차진단(Residual Diagnostics)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   시계열 분석
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     분석 주 사용 패키지
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#statsmodels">
+       “statsmodels”
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sklearn-scikit-learn">
+       “sklearn”(scikit-learn)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     데이터준비 방향
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id15">
+       시계열 데이터준비(Time Series Validation)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     전처리 방향
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id17">
+       시간현실 반영
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id18">
+       예측 정확성 향상
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scaling">
+       변수간 스케일 차이 조정(Scaling)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multicollinearity">
+       다중공선성(Multicollinearity) 제거
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     모델링 방향
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stationarity-process">
+       정상성(Stationarity Process)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stationarity-test">
+       정상성 테스트(Stationarity Test)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     검증지표 방향
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metrics">
+       성능비교를 위한 대표적 검증지표(Metrics)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#underfitting-vs-overfitting">
+       검증 유의점(Underfitting vs Overfitting)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bias-variance-trade-off">
+       편향-분산 상충관계(Bias-variance Trade-off)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     잔차진단 방향
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id22">
+       정상성 테스트
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#normality-test">
+       정규분포 테스트(Normality Test)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#autocorrelation-test">
+       자기상관 테스트(Autocorrelation Test)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#homoscedasticity-test">
+       등분산성 테스트(Homoscedasticity Test)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <center><img src='Image/Contents_Part2.png' width='800'></center><div class="section" id="learning-style-and-algorithms">
+<h1>학습방향과 알고리즘(Learning Style and Algorithms)<a class="headerlink" href="#learning-style-and-algorithms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>학습방향<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>알고리즘은 크게 3 가지 또는 4 가지 문제만을 해결할 수 있음</strong><br />
+<strong>내가 풀어야 할 문제가 무엇인지 알면 문제 기획/접근/해결 방향은 단순</strong></p>
+<blockquote>
+<div><ol class="simple">
+<li><p>문제가 어디에 속하는지 -&gt; “분석기획(가설/방향)” 가능</p></li>
+<li><p>알고리즘마다 입력은 무엇인지 -&gt; “데이터전처리(준비)” 가능</p></li>
+<li><p>알고리즘마다 출력은 무엇인지 -&gt; “결과해석(설명/검증)” 가능</p></li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<ul class="simple">
+<li><p>기계학습의 3가지 분류:</p></li>
+</ul>
+<center><img src='Image/ML_Type_Application_Circle.png' width='800'></center>  
+<!-- <center><img src='Image/ML_Type_Application_Circle2.png' width='800'></center>  -->
+<ul class="simple">
+<li><p>기계학습의 4가지 분류:</p></li>
+</ul>
+<center><img src='Image/ML_Type_Application.png' width='600'></center> 
+<center><img src='Image/ML_Type_Application.svg' width='600'></center>  
+<ul class="simple">
+<li><p>각 분류별 특성과 역할:</p></li>
+</ul>
+<center><img src='Image/ML_Type_Glance.jpg' width='600'></center>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>-</p></th>
+<th class="head"><p>Supervised Learning</p></th>
+<th class="head"><p>Unsupervised Learning</p></th>
+<th class="head"><p>Semi-supervised Learning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-</p></td>
+<td><p><img src='Image/Supervised-Learning-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Unsupervised-Learning-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Semi-supervised-Learning-Algorithms.png' width='150'></p></td>
+</tr>
+<tr class="row-odd"><td><p>Input Data</p></td>
+<td><p>labeled</p></td>
+<td><p>unlabeled</p></td>
+<td><p>labeled + unlabeled</p></td>
+</tr>
+<tr class="row-even"><td><p>Output Result</p></td>
+<td><p>labeled</p></td>
+<td><p>unlabeled</p></td>
+<td><p>labeled + unlabeled</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="summary">
+<h2>학습방향에 따른 알고리즘 <a class="reference external" href="https://en.wikipedia.org/wiki/Outline_of_machine_learning">(Summary)</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="supervised-learning">
+<h3>Supervised Learning<a class="headerlink" href="#supervised-learning" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Regression Algorithms</p></th>
+<th class="head"><p>Instance-based Algorithms</p></th>
+<th class="head"><p>Regularization Algorithms</p></th>
+<th class="head"><p>Decision Tree Algorithms</p></th>
+<th class="head"><p>Bayesian Algorithms</p></th>
+<th class="head"><p>Artificial Neural Network Algorithms</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img src='Image/Regression-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Instance-based-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Regularization-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Decision-Tree-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Bayesian-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Artificial-Neural-Network-Algorithms.png' width='150'></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ordinary Least Squares Regression (OLSR)</p></td>
+<td><p>k-Nearest Neighbor (kNN)</p></td>
+<td><p>Ridge Regression</p></td>
+<td><p>Classification and Regression Tree (CART)</p></td>
+<td><p>Naive Bayes</p></td>
+<td><p>Perceptron</p></td>
+</tr>
+<tr class="row-even"><td><p>Linear Regression</p></td>
+<td><p>Learning Vector Quantization (LVQ)</p></td>
+<td><p>Least Absolute Shrinkage and Selection Operator (LASSO)</p></td>
+<td><p>Iterative Dichotomiser 3 (ID3)</p></td>
+<td><p>Gaussian Naive Bayes</p></td>
+<td><p>Back-Propagation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Logistic Regression</p></td>
+<td><p>Self-Organizing Map (SOM)</p></td>
+<td><p>Elastic Net</p></td>
+<td><p>C4.5 and C5.0 (different versions of a powerful approach)</p></td>
+<td><p>Multinomial Naive Bayes</p></td>
+<td><p>Hopfield Network</p></td>
+</tr>
+<tr class="row-even"><td><p>Stepwise Regression</p></td>
+<td><p>Locally Weighted Learning (LWL)</p></td>
+<td><p>Least-Angle Regression (LARS)</p></td>
+<td><p>Chi-squared Automatic Interaction Detection (CHAID)</p></td>
+<td><p>Averaged One-Dependence Estimators (AODE)</p></td>
+<td><p>Radial Basis Function Network (RBFN)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Multivariate Adaptive Regression Splines (MARS)</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Decision Stump</p></td>
+<td><p>Bayesian Belief Network (BBN)</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>Locally Estimated Scatterplot Smoothing (LOESS)</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>M5</p></td>
+<td><p>Bayesian Network (BN)</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Conditional Decision Trees</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="unsupervised-learning">
+<h3>Unsupervised Learning<a class="headerlink" href="#unsupervised-learning" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Clustering Algorithms</p></th>
+<th class="head"><p>Association Rule Learning Algorithms</p></th>
+<th class="head"><p>Dimensionality Reduction Algorithms</p></th>
+<th class="head"><p>Ensemble Algorithms</p></th>
+<th class="head"><p>Deep Learning Algorithms</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img src='Image/Clustering-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Assoication-Rule-Learning-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Dimensional-Reduction-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Ensemble-Algorithms.png' width='150'></p></td>
+<td><p><img src='Image/Deep-Learning-Algorithms.png' width='150'></p></td>
+</tr>
+<tr class="row-odd"><td><p>k-Means</p></td>
+<td><p>Apriori algorithm</p></td>
+<td><p>Principal Component Analysis (PCA)</p></td>
+<td><p>Boosting</p></td>
+<td><p>Deep Boltzmann Machine (DBM)</p></td>
+</tr>
+<tr class="row-even"><td><p>k-Medians</p></td>
+<td><p>Eclat algorithm</p></td>
+<td><p>Principal Component Regression (PCR)</p></td>
+<td><p>Bootstrapped Aggregation (Bagging)</p></td>
+<td><p>Deep Belief Networks (DBN)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Expectation Maximisation (EM)</p></td>
+<td><p>-</p></td>
+<td><p>Partial Least Squares Regression (PLSR)</p></td>
+<td><p>AdaBoost</p></td>
+<td><p>Convolutional Neural Network (CNN)</p></td>
+</tr>
+<tr class="row-even"><td><p>Hierarchical Clustering</p></td>
+<td><p>-</p></td>
+<td><p>Sammon Mapping</p></td>
+<td><p>Stacked Generalization (blending)</p></td>
+<td><p>Stacked Auto-Encoders</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Multidimensional Scaling (MDS)</p></td>
+<td><p>Gradient Boosting Machines (GBM)</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Projection Pursuit</p></td>
+<td><p>Gradient Boosted Regression Trees (GBRT)</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Linear Discriminant Analysis (LDA)</p></td>
+<td><p>Random Forest</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Mixture Discriminant Analysis (MDA)</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Quadratic Discriminant Analysis (QDA)</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>Flexible Discriminant Analysis (FDA)</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="time-series-learning">
+<h3>Time-series Learning<a class="headerlink" href="#time-series-learning" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>“정확성 vs. 설명력 반비례 관계 존재”</strong></p></li>
+</ul>
+<center><img src='Image/Performance_Explanability.png' width='600'></center>
+<ul class="simple">
+<li><p><strong>분석단계 비교: 선형(회귀분석) vs 비선형(신경망)</strong></p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>-</p></th>
+<th class="head"><p>Linear Model</p></th>
+<th class="head"><p>Neural Network Model</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>모델특징</strong></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>분석목적</p></td>
+<td><p>선형성파악(설명가능)</p></td>
+<td><p>비선형성파악(설명불가)</p></td>
+</tr>
+<tr class="row-even"><td><p>이론적(수학적) 근거</p></td>
+<td><p>존재</p></td>
+<td><p>미존재</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>분석단계 특징(전처리)</strong></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>데이터 로딩</p></td>
+<td><p><span style="color:blue">Panel Data</span></p></td>
+<td><p><span style="color:red">다양(운이좋으면 Panel)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>데이터 빈칸 채우기/삭제</p></td>
+<td><p><span style="color:red">분석필요</span></p></td>
+<td><p><span style="color:red">분석필요</span></p></td>
+</tr>
+<tr class="row-even"><td><p>데이터 컬럼 추가/삭제</p></td>
+<td><p><span style="color:red">분석필요+민감</span></p></td>
+<td><p><span style="color:red">분석필요+덜민감</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>데이터 분리</p></td>
+<td><p><span style="color:blue">Train/Validate/Test</span></p></td>
+<td><p><span style="color:blue">Train/Validate/Test</span></p></td>
+</tr>
+<tr class="row-even"><td><p>데이터 스케일링</p></td>
+<td><p><span style="color:red">분석필요/미필요</span></p></td>
+<td><p><span style="color:red">분석필요</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>분석단계 특징(모델링)</strong></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>입력 확인 및 변환</p></td>
+<td><p><span style="color:blue">Panel Data</span></p></td>
+<td><p><span style="color:red">다양(정해지지 않음)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>데이터 모델연결</p></td>
+<td><p><span style="color:blue">자동화</span></p></td>
+<td><p><span style="color:red">반자동화</span></p></td>
+</tr>
+<tr class="row-even"><td><p>비용함수(Cost)</p></td>
+<td><p><span style="color:blue">최소제곱에러(MSE)</span></p></td>
+<td><p><span style="color:red">다양</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>추정함수(Optimizer)</p></td>
+<td><p><span style="color:blue">고정(미분1회 대체가능)</span></p></td>
+<td><p><span style="color:red">다양(미분지속)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>분석단계 특징(검증)</strong></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>정확성지표</p></td>
+<td><p><span style="color:red">다양</span></p></td>
+<td><p><span style="color:red">다양</span></p></td>
+</tr>
+<tr class="row-even"><td><p>잔차진단활용</p></td>
+<td><p><span style="color:red">가능(분석필요)</span></p></td>
+<td><p><span style="color:blue">불가</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>분석단계 특징(결과해석)</strong></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>관계성 시각화/영향력 해석</p></td>
+<td><p><span style="color:red">가능(분석필요)</span></p></td>
+<td><p><span style="color:blue">불가</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h1>시계열 데이터/분석과 기계학습의 차이<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><strong>확률 과정(Stochastic Process)</strong>: 상관 관계를 가지는 무한개의 변수의 순서열</p></li>
+</ul>
+<center>$Y$ = {$\dots$, $Y_{-2}$, $Y_{-1}$, $Y_{0}$, $Y_{1}$, $Y_{2}$, $\dots$}
+and
+$X$ = {$\dots$, $X_{-2}$, $X_{-1}$, $X_{0}$, $X_{1}$, $X_{2}$, $\dots$}</center>
+<center>$X_1$ = {$\dots$, $X_{1,-2}$, $X_{1,-1}$, $X_{1,0}$, $X_{1,1}$, $X_{1,2}$, $\dots$}</center>
+<center>$X_2$ = {$\dots$, $X_{2,-2}$, $X_{2,-1}$, $X_{2,0}$, $X_{2,1}$, $X_{2,2}$, $\dots$}</center>
+<ul class="simple">
+<li><p><strong>시계열 데이터(Time Series Data):</strong> 일정한 시간 간격으로 기록된 확률과정의 샘플</p></li>
+</ul>
+<center>
+$y$ = {$\dots$, $y_{-2}$, $y_{-1}$, $y_{0}$, $y_{1}$, $y_{2}$, $\dots$} or {$y_t$ : $t$ = $\dots$, -2, -1, 0, 1, 2, $\dots$} or $\{y_t\}_{-\infty}^{\infty}$
+</center>
+<center>
+$x$ = {$\dots$, $x_{-2}$, $x_{-1}$, $x_{0}$, $x_{1}$, $x_{2}$, $\dots$} or {$x_t$ : $t$ = $\dots$, -2, -1, 0, 1, 2, $\dots$} or $\{x_t\}_{-\infty}^{\infty}$
+</center>
+<center>$x_1$ = {$\dots$, $x_{1,-2}$, $x_{1,-1}$, $x_{1,0}$, $x_{1,1}$, $x_{1,2}$, $\dots$} or {$x_{1t}$ : $t$ = $\dots$, -2, -1, 0, 1, 2, $\dots$}</center>
+<center>$x_2$ = {$\dots$, $x_{2,-2}$, $x_{2,-1}$, $x_{2,0}$, $x_{2,1}$, $x_{2,2}$, $\dots$} or {$x_{2t}$ : $t$ = $\dots$, -2, -1, 0, 1, 2, $\dots$}</center>
+<blockquote>
+<div><ul class="simple">
+<li><p>독립변수(<span class="math notranslate nohighlight">\(x_t\)</span>)와 알고자 하는 종속변수(<span class="math notranslate nohighlight">\(y_t\)</span>)가 시간단위(<span class="math notranslate nohighlight">\(t\)</span>)를 포함</p></li>
+<li><p>모델의 출력(Output)은 <span class="math notranslate nohighlight">\(y\)</span>의 시간 <span class="math notranslate nohighlight">\(t\)</span>에서의 예측값(<span class="math notranslate nohighlight">\(\hat{y_t}\)</span>)</p></li>
+<li><p>기계학습과 시계열예측 간 큰 차이가 존재하기에, 시계열 변수생성은 약간의 조정들을 요구함</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="feature-engineering">
+<h2>대표적인 시계열 변수추출 방향 7종 (Feature Engineering)<a class="headerlink" href="#feature-engineering" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>데이터 과학자로서 이미 수동/자동 변수 생성(Feature Engineering)에 익숙하지만, 신규 변수를 생성하는 것은 분석에서 가장 중요하고 시간이 많이 걸리는 작업 중 하나입니다.</strong></p>
+<blockquote>
+<div><p><strong>“변수 생성시 주의할 점!”</strong></p>
+<ol class="simple">
+<li><p>미래의 실제 종속변수 예측값이 어떤 독립/종속변수의 FE에 의해 효과가 있을지 단정할 수 없음</p></li>
+<li><p>독립변수의 예측값을 FE를 통해 생성될 수 있지만 이는 종속변수의 예측에 오류증가를 야기할 수 있음</p></li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>빈도(Frequency)</strong>: 계절성 패턴(Seasonality)이 나타나기 전까지의 데이터 갯수로 사람이 정해야 함</p></li>
+</ul>
+<blockquote>
+<div><p>예시: 계설성이 1년에 1회 나타날 경우,</p>
+</div></blockquote>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data</p></th>
+<th class="head"><p>frequency</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Annual</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Quarterly</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Monthly</p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-odd"><td><p>Weekly</p></td>
+<td><p>52</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>예시: 데이터가 “일(Day)” 단위로 수집된 경우,</p>
+</div></blockquote>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Seasonality</p></th>
+<th class="head"><p>frequency</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Weekly</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Annual</p></td>
+<td><p>365</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>예시: 데이터가 “분(Minute)” 단위로 수집된 경우,</p>
+</div></blockquote>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Seasonality</p></th>
+<th class="head"><p>frequency</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hourly</p></td>
+<td><p>60</p></td>
+</tr>
+<tr class="row-odd"><td><p>Daily</p></td>
+<td><p>24 x 60</p></td>
+</tr>
+<tr class="row-even"><td><p>Weekly</p></td>
+<td><p>24 x 60 x 7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Annual</p></td>
+<td><p>24 x 60 x 365</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>빈도 설정을 위한 Python 함수 옵션:</p>
+</div></blockquote>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Alias</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>B</p></td>
+<td><p>Business day</p></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>Calendar day</p></td>
+</tr>
+<tr class="row-even"><td><p>W</p></td>
+<td><p>Weekly</p></td>
+</tr>
+<tr class="row-odd"><td><p>M</p></td>
+<td><p>Month end</p></td>
+</tr>
+<tr class="row-even"><td><p>Q</p></td>
+<td><p>Quarter end</p></td>
+</tr>
+<tr class="row-odd"><td><p>A</p></td>
+<td><p>Year end</p></td>
+</tr>
+<tr class="row-even"><td><p>BA</p></td>
+<td><p>Business year end</p></td>
+</tr>
+<tr class="row-odd"><td><p>AS</p></td>
+<td><p>Year start</p></td>
+</tr>
+<tr class="row-even"><td><p>H</p></td>
+<td><p>Hourly frequency</p></td>
+</tr>
+<tr class="row-odd"><td><p>T, min</p></td>
+<td><p>Minutely frequency</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>Secondly frequency</p></td>
+</tr>
+<tr class="row-odd"><td><p>L, ms</p></td>
+<td><p>Millisecond frequency</p></td>
+</tr>
+<tr class="row-even"><td><p>U, us</p></td>
+<td><p>Microsecond frequency</p></td>
+</tr>
+<tr class="row-odd"><td><p>N, ns</p></td>
+<td><p>Nanosecond frequency</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bfill</p></td>
+<td><p>Backward fill</p></td>
+</tr>
+<tr class="row-odd"><td><p>count</p></td>
+<td><p>Count of values</p></td>
+</tr>
+<tr class="row-even"><td><p>ffill</p></td>
+<td><p>Forward fill</p></td>
+</tr>
+<tr class="row-odd"><td><p>first</p></td>
+<td><p>First valid data value</p></td>
+</tr>
+<tr class="row-even"><td><p>last</p></td>
+<td><p>Last valid data value</p></td>
+</tr>
+<tr class="row-odd"><td><p>max</p></td>
+<td><p>Maximum data value</p></td>
+</tr>
+<tr class="row-even"><td><p>mean</p></td>
+<td><p>Mean of values in time range</p></td>
+</tr>
+<tr class="row-odd"><td><p>median</p></td>
+<td><p>Median of values in time range</p></td>
+</tr>
+<tr class="row-even"><td><p>min</p></td>
+<td><p>Minimum data value</p></td>
+</tr>
+<tr class="row-odd"><td><p>nunique</p></td>
+<td><p>Number of unique values</p></td>
+</tr>
+<tr class="row-even"><td><p>ohlc</p></td>
+<td><p>Opening value, highest value, lowest value, closing value</p></td>
+</tr>
+<tr class="row-odd"><td><p>pad</p></td>
+<td><p>Same as forward fill</p></td>
+</tr>
+<tr class="row-even"><td><p>std</p></td>
+<td><p>Standard deviation of values</p></td>
+</tr>
+<tr class="row-odd"><td><p>sum</p></td>
+<td><p>Sum of values</p></td>
+</tr>
+<tr class="row-even"><td><p>var</p></td>
+<td><p>Variance of values</p></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>추세(Trend, <span class="math notranslate nohighlight">\(T_t\)</span>)</strong>: 시계열이 시간에 따라 증가, 감소 또는 일정 수준을 유지하는 경우</p>
+<ul>
+<li><p><strong>(수학적 이해)</strong></p>
+<ul class="simple">
+<li><p>확률과정의 결정론적 기댓값 함수를 알아내는 것</p></li>
+<li><p>확률과정(<span class="math notranslate nohighlight">\(Y_t\)</span>)이 추정이 가능한 결정론적 추세함수(<span class="math notranslate nohighlight">\(f(t)\)</span>)와 정상확률과정(<span class="math notranslate nohighlight">\(Y^s_t\)</span>)의 합</p></li>
+</ul>
+  <center>$Y_t = f(t) + Y^s_t$</center>
+</li>
+</ul>
+</li>
+</ul>
+<center>
+<img src='Image/Trend_Increasing.png' width='400'>
+<img src='Image/Trend_Decreasing.png' width='400'>
+<img src='Image/Trend_None.png' width='400'>
+</center>
+<ul class="simple">
+<li><p><strong>계절성(Seasonality, <span class="math notranslate nohighlight">\(S_t\)</span>)</strong>: 일정한 빈도로 주기적으로 반복되는 패턴(<span class="math notranslate nohighlight">\(m\)</span>), 특정한 달/요일에 따라 기대값이 달라지는 것</p></li>
+</ul>
+<blockquote>
+<div><p>계설정 반영 방법큰 크게 2가지: 수치값 그대로, 발생 시점으로 분리<br />
+주기적 패턴이 12개월마다 반복(<span class="math notranslate nohighlight">\(m\)</span> = 12)</p>
+</div></blockquote>
+<center><img src='Image/Seasonal.png' width='400'></center>
+<ul class="simple">
+<li><p><strong>주기(Cycle, <span class="math notranslate nohighlight">\(C_t\)</span>)</strong>: 일정하지 않은 빈도로 발생하는 패턴(계절성)</p></li>
+</ul>
+<blockquote>
+<div><p>빈도가 1인 경우에도 발생 가능(<span class="math notranslate nohighlight">\(m\)</span> = 1).</p>
+</div></blockquote>
+<center><img src='Image/Cycle.png' width='400'></center>
+<ul class="simple">
+<li><p><strong>시계열 분해(추세/계절성/잔차(Residual, <span class="math notranslate nohighlight">\(e_t\)</span>))</strong>:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(Y_t = T + S + R\)</span></p></li>
+</ul>
+</li>
+</ul>
+<center><img src='Image/Decomposed-into-its-trend-seasonal-and-irregular.png' width='600'></center>
+<ul class="simple">
+<li><p><strong>더미변수(Dummy Variables, <span class="math notranslate nohighlight">\(D_i\)</span>)</strong>: 이진수(0 또는 1)의 형태로 변수를 생성하는 것으로 휴일, 이벤트, 캠페인, Outlier 등을 생성 가능</p>
+<ul>
+<li><p><strong>생성법:</strong></p>
+<ol class="simple">
+<li><p>범주형 변수(Categorical Variable)의 기준값을 미리 결정 (ex. 계절일 경우 봄)</p></li>
+<li><p>기준값을 제외한 채 더미변수를 생성 (ex. <span class="math notranslate nohighlight">\(D_1\)</span> = 여름, <span class="math notranslate nohighlight">\(D_2\)</span> = 가을, <span class="math notranslate nohighlight">\(D_3\)</span> = 겨울)</p></li>
+<li><p>각 더미변수의 값을 0 또는 1로 채우며 1은 각 더미변수의 정의와 같음을 의미</p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>확실한 패턴이 존재하는 경우에만 효과가 있으며 오히려 모델의 오류를 증가시킬 수 있음</p>
+</div></blockquote>
+<center><img src='Image/Dummy-variable-regression.jpg' width='400'></center>
+<ul class="simple">
+<li><p><strong>지연값(Lagged values, <span class="math notranslate nohighlight">\(Lag_t(X_1)\)</span>)</strong>: 변수의 지연된 값을 독립변수로 반영하는 것으로,ARIMA/VAR/NNAR 등이 활용</p></li>
+</ul>
+<center><img src='Image/Lag-explanation.PNG' width='400'></center>
+<ul>
+<li><p><strong>시간변수</strong>: 시간변수를 미시/거시 적으로 분리하거나 통합하여 생성된 변수</p></li>
+<li><p><strong>요약</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><U>시계열 구성요소는 각 변수의 시간패턴을 파악하는데 중요</p></li>
+<li><p><U>FE를 통해 생성된 변수의 입력(Input) 형태로 모형 선택을 하는데 필요</p></li>
+<li><p><U>생성된 변수의 패턴이 기존 모델에서 반영하지 않던 패턴이라면 예측 성능을 높임</p></li>
+<li><p><U>예측성능 향상 뿐 아니라 결과를 해석하고 해당 속성을 분석하며 가능한 원인 식별에 도움</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>데이터준비 방향<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-validation">
+<h3>비시계열 데이터준비(General Validation)<a class="headerlink" href="#general-validation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>일반적준비(Simple Validation):</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>훈련셋(Training set):</strong> 이름처럼 일반적으로 전체 데이터의 60%를 사용하여 기계학습을 하는데 사용됨</p></li>
+<li><p><strong>검증셋(Validation set):</strong></p>
+<ul>
+<li><p>개발셋이라고도 하며, 일반적으로 전체 데이터의 20%를 사용함</p></li>
+<li><p>훈련된 여러가지 모델들의 성능을 테스트 하는데 사용되며 모델 선택의 기준이 됨</p></li>
+</ul>
+</li>
+<li><p><strong>테스트셋(Testing set):</strong> 전체 데이터의 20%를 사용하며 최종 모델의 정확성을 확인하는 목적에 사용됨</p></li>
+</ul>
+<center><img src='Image/DataSplit_Simple.png' width='500'></center>
+<blockquote>
+<div><p><strong><span class="math notranslate nohighlight">\(K\)</span>교차검사(<span class="math notranslate nohighlight">\(K\)</span>-fold Cross Validation):</strong></p>
+</div></blockquote>
+<ol class="simple">
+<li><p>훈련셋을 복원없이 <span class="math notranslate nohighlight">\(K\)</span>개로 분리한 후, <span class="math notranslate nohighlight">\(K-1\)</span>는 하위훈련셋으로 나머지 1개는 검증셋으로 사용함</p></li>
+<li><p>검증셋과 하위훈련셋을 번갈아가면서 <span class="math notranslate nohighlight">\(K\)</span>번 반복하여 각 모델별로 <span class="math notranslate nohighlight">\(K\)</span>개의 성능 추정치를 계산</p></li>
+<li><p><span class="math notranslate nohighlight">\(K\)</span>개의 성능 추정치 평균을 최종 모델 성능 기준으로 사용</p></li>
+</ol>
+<center><img src='Image/DataSplit_Kfold.png' width='500'></center>
+<blockquote>
+<div><p><strong>간단한준비(Holdout Validation):</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>훈련셋(Training set):</strong> 일반적으로 전체 데이터의 70% 사용</p></li>
+<li><p><strong>테스트셋(Testing set):</strong> 일반적으로 전체 데이터의 30% 사용</p></li>
+</ul>
+<blockquote>
+<div><p><strong><span class="math notranslate nohighlight">\(K\)</span>-fold vs. Random-subsamples vs. Leave-one-out vs. Leave-<span class="math notranslate nohighlight">\(p\)</span>-out</strong></p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(K\)</span>-fold</strong></p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_ver1.png' width='500'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Random-subsamples</strong></p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_ver2.png' width='500'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Leave-one-out</strong></p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_ver3.png' width='500'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Leave-<span class="math notranslate nohighlight">\(p\)</span>-out</strong></p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_ver4.png' width='500'></center></div>
+<div class="section" id="time-series-validation">
+<h3>시계열 데이터준비(Time Series Validation)<a class="headerlink" href="#time-series-validation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>시계열 데이터인 경우 랜덤성(set.seed)을 부여하면 안되고 시간축 유지가 핵심!</strong>
+- <strong>훈련셋(Training set):</strong> 가장 오래된 데이터
+- <strong>검증셋(Validation set):</strong> 그 다음 최근 데이터
+- <strong>테스트셋(Testing set):</strong> 가장 최신의 데이터</p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_TimeSeries.png' width='500'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>과거 정확성이 높더라도 미래의 정확성 보장할 수 없기에, 미래 모든시기 검증 추천!</strong>
+- 1스텝 교차검사(One-step Ahead Cross-validation)<center><img src='Image/DataSplit_TimeSeries_ver1.png' width='500'></center>
+- 2스텝 교차검사(Two-step Ahead Cross-validation)<center><img src='Image/DataSplit_TimeSeries_ver2.png' width='500'></center></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>시계열 알고리즘의 2가지 차별화 방향<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>“학습된 도메인 영역 내의 패턴 뿐 아니라 외부 시점의로 데이터를 확장 할 수 있어야 시계열 알고리즘”</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>시계열 데이터나 FE를 통해 생성된 변수들은 미래시점을 생성시킬 수 있음</p></li>
+<li><p>대다수의 기계학습 알고리즘은 학습된 도메인 영역에서의 패턴만을 추출</p></li>
+</ul>
+<blockquote>
+<div><p><strong>“시계열 알고리즘은 점추정이 아닌 구간추정 알고리즘으로 설명력 효과에 뿌리를 둠”</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>대부분의 기계학습 모델은 통계분포에 기반하지 않기 때문에 점추정 알고리즘</p></li>
+<li><p>신뢰구간의 정확성은 확신 할 수 없지만 점추정 보다 다양한 해석을 가능하게 함</p></li>
+<li><p><strong>“정확성 vs. 설명력 반비례 관계 존재”</strong></p></li>
+</ul>
+<blockquote>
+<div><p><strong>설명력 최근 연구동향:</strong>
+- <a class="reference external" href="https://blog.fastforwardlabs.com/2017/09/01/LIME-for-couples.html">LIME</a>
+- <a class="reference external" href="https://bdtechtalks.com/2019/01/10/darpa-xai-explainable-artificial-intelligence/">DARPA</a></p>
+</div></blockquote>
+<center><img src='Image/Performance_Explanability.png' width='600'></center>
+<center><img src='Image/Performance_Explanability_TimeSeries.png' width='600'></center>
+<ul class="simple">
+<li><p><strong>대표적 알고리즘 예시:</strong></p></li>
+</ul>
+<blockquote>
+<div><p><strong>Dynamic Linear Model:</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Bayesian-based Models</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity">Generalized Autoregressive Conditional Heteroskedasticity(GARCH)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Vector_autoregression">Vector Autoregression(VAR)</a></p></li>
+</ul>
+<blockquote>
+<div><p><strong>Nueral Network Model:</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Neural Networks Autoregression(NNAR)</p></li>
+<li><p>Recurrent Neural Network(RNN)</p></li>
+<li><p>Long Short-Term Memory(LSTM)</p></li>
+<li><p>Gated Recurrent Unit(GRU)</p></li>
+</ul>
+</div>
+<div class="section" id="evaluation-metrics-residuals-diagnostics">
+<h2>검증지표(Evaluation Metrics)과 잔차진단(Residuals Diagnostics) 방향<a class="headerlink" href="#evaluation-metrics-residuals-diagnostics" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>“예측 분석 이후 예측이 잘 되었는지 그리고 데이터의 시간패턴이 잘 추출 되었는지 평가하는 것이 중요합니다.”</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>검증지표는 예측값과 실제값이 얼마나 비슷한지를 측정하는 것이며, 모형이 시간특성을 잘 잡아내는지를 측정하지는 않음</p></li>
+<li><p>시간특성 패턴이 잘 추출되었는지 확인하기 위해선 잔차(또는 에러) 진단을 통해 백색잡음(White Noise)과 얼마나 유사한지 측정=&gt; <U>”Residual Diagnostics” or “Error Analysis”</U></p></li>
+</ul>
+<div class="section" id="evaluation-metrics">
+<h3>검증지표(Evaluation Metrics)<a class="headerlink" href="#evaluation-metrics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>종류</strong></p></li>
+</ul>
+<blockquote>
+<div><p><strong>1) 문제해결 검증지표:</strong> 문제를 잘 풀었는지 평가하기 위한 기준</p>
+</div></blockquote>
+<center><img src='Image/Evaluation_Metric_Types.png' width='600'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Statistical Metrics:</strong> Correlation</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>입력(Input): -무한대 ~ 무한대 범위의 연속형 값</p></li>
+<li><p>출력(Output): 이론적으론 -1 ~ 1 범위의 연속형 값</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Regression Metrics:</strong> MSE, MSPE, RMSE, RMSLE, MAE, MAPE, MPE, R^2, Adjusted R^&amp;2, … (Y의 범위가 무한대가 가능한 연속형일때)</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>입력(Input): -무한대 ~ 무한대 범위의 연속형 값</p></li>
+<li><p>출력(Output): 이론적으론 0 ~ 무한대 범위의 연속형 값</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Classification Metrics:</strong> Log Loss, Cross-entropy, ROC, AUC, Gini, Confusion Matrix, Accuracy, Precision, Recall, F1-score, Classification Report, KS Statistic, Concordant-Discordant Ratio … (Y가 2개 또는 그 이상개수의 이산형일때)</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>입력(Input): -무한대 ~ 무한대 범위의 연속형 값</p></li>
+<li><p>출력(Output): 알고리즘 종류에 따라 출력이 달라질 수 있음</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>확률(Probability): 0 ~ 1 범위의 연속형 값 (Logistic Regression, Random Forest, Gradient Boosting, Adaboost, …)</p></li>
+<li><p>집단(Class): 0 또는 1의 이산형 값 (SVM, KNN, …)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Ranking Metrics:</strong> Gain, Lift, MRR, DCG, NDCG, …</p></li>
+<li><p><strong>Computer Vision Metrics:</strong> PSNR, SSIM, IoU, …</p></li>
+<li><p><strong>NLP Metrics:</strong> Perplexity, BLEU score, …</p></li>
+<li><p><strong>Deep Learning Related Metrics:</strong> Inception score, Frechet Inception distance, …</p></li>
+<li><p><strong>Real Problem:</strong> ??? (현실적으로 어떻게 문제를 검증할지는 현실문제에 맞추어 추가/변경하여 만들어야함)</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p><strong>2) 알고리즘비교 검증지표:</strong> 어떤 알고리즘이 더 성능이 좋은지 평가하기 위한 기준<br />
+: 알고리즘 성능이 좋은것과 문제해결이 가능한 것은 다르기에, 알고리즘 검증지표는 없어도 되지만 문제해결 검증지표는 반드시 필요<br />
+: (이론적)알고리즘은 그저 특정 검증지표를 사용하여 만들어짐</p>
+<ul class="simple">
+<li><p><strong>Regression:</strong> MSE</p></li>
+<li><p><strong>Logistic Regression:</strong> Log Loss</p></li>
+<li><p><strong>Random Forest:</strong> ???</p></li>
+<li><p><strong>ARIMA:</strong> ???</p></li>
+<li><p><strong>CNN, RNN:</strong> ???</p></li>
+<li><p><strong>Example:</strong> <a class="reference external" href="https://pkg.robjhyndman.com/forecast/reference/accuracy.html">Comparison of Algorithm Performance Metrics</a></p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>예시:</strong></p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Regression Metrics:</strong> MSE, MSPE, RMSE, RMSLE, MAE, MAPE, MPE, R^2, Adjusted R^&amp;2, … (Y의 범위가 무한대가 가능한 연속형일때)</p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/Evaluation_Metric1.jpg' width='300'></center>  
+<center><img src='Image/Evaluation_Metric2.jpg' width='300'></center>  
+<center><img src='Image/Evaluation_Metric3.jpg' width='300'></center>  
+<center><img src='Image/Evaluation_Metric4.jpg' width='300'></center>  
+<center><img src='Image/Evaluation_Metric5.jpg' width='250'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Classification Metrics:</strong> Log Loss, Cross-entropy, ROC, AUC, Gini, Confusion Matrix, Accuracy, Precision, Recall, F1-score, Classification Report, KS Statistic, Concordant-Discordant Ratio … (Y가 2개 또는 그 이상개수의 이산형일때)</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="residual-diagnostics">
+<h3>잔차진단(Residual Diagnostics)<a class="headerlink" href="#residual-diagnostics" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>“백색잡음(White Noise)는 2가지의 속성을 만족해야 하며 하나라도 만족하지 못하면 모델이 개선의 여지가 있음을 의미합니다.”</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>백색잡음(White Noise, <span class="math notranslate nohighlight">\(WN\)</span>):</strong></p></li>
+</ul>
+<center><img src='Image/White_Noise.png' width='300'></center>
+<blockquote>
+<div><p><strong>1) 잔차들은 정규분포이고, (unbiased) 평균 0과 일정한 분산을 가져야 함:</strong><br />
+\begin{align*}
+{\epsilon_t : t = \dots, -2, -1, 0, 1, 2, \dots} \sim N(0,\sigma^2_{\epsilon_t}) \
+\end{align*}
+\begin{align*}
+where~~ \epsilon_t \sim  i.i.d(independent~and~identically~distributed) \
+\end{align*}
+\begin{align*}
+\epsilon_t = Y_t - \hat{Y_t}, ;; E(\epsilon_t) = 0, ;; Var(\epsilon_t) = \sigma^2_{\epsilon_t} \
+\end{align*}
+\begin{align*}
+Cov(\epsilon_s, \epsilon_k) = 0~for~different~times!(s \ne k)
+\end{align*}</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>2) 잔차들이 시간의 흐름에 따라 상관성이 없어야 함:</strong></p>
+</div></blockquote>
+<ul>
+<li><p>자기상관함수(Autocorrelation Fundtion(<a class="reference external" href="https://en.wikipedia.org/wiki/Autocorrelation">ACF</a>))를 통해 <span class="math notranslate nohighlight">\(Autocorrelation~=~0\)</span>인지 확인</p>
+<ul class="simple">
+<li><p>공분산(Covariance):</p></li>
+</ul>
+  <center>$Cov(\epsilon_s, \epsilon_k)$ = $E[(\epsilon_s-E(\epsilon_s))$$(\epsilon_k-E(\epsilon_k))]$ = $\gamma_{s,k}$</center>
+  - 자기상관함수(Autocorrelation Function): 
+  <center>$Corr(\epsilon_s, \epsilon_k)$ = $\dfrac{Cov(\epsilon_s, \epsilon_k)}{\sqrt{Var(\epsilon_s)Var(\epsilon_k)}}$ = $\dfrac{\gamma_{s,k}}{\sqrt{\gamma_s \gamma_k}}$</center>
+  - 편자기상관함수(Partial Autocorrelation Function): $s$와 $k$사이의 상관성을 제거한 자기상관함수
+  <center>$Corr[(\epsilon_s-\hat{\epsilon}_s, \epsilon_{s-t}-\hat{\epsilon}_{s-t})]$ for $1<t<k$</center>
+</li>
+<li><p><strong>회귀분석 가정과의 비교:</strong></p>
+<ul class="simple">
+<li><p>종속변수와 독립변수 간에 선형성의 관계를 가져야 함</p></li>
+<li><p>독립변수들 간에 서로 독립이어야 함</p></li>
+<li><p>잔차의 분포가 정규분포이어야 함</p></li>
+<li><p>잔차들이 서로 독립적으로 움직여야 함</p></li>
+<li><p>잔차들의 분산이 서로 같아야 함</p></li>
+</ul>
+</li>
+<li><p><strong>자기상관 테스트 활용예시:</strong></p>
+<ul class="simple">
+<li><p>Apply a portmanteau test to check the hypothesis that residuals are uncorrelated.</p></li>
+</ul>
+  <center><img src='Image/Portmanteau_Test.jpg' width='600'></center>
+  - Plot the Autocorrelation function (ACF) and evaluate that at least 95% of the spikes are on the interval.
+  <center><img src='Image/Residual_Plot.png' width='700'></center>    </li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>시계열이 분석효과에 도움 될 시간영역(해상도)을 선택해야 함<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>예측 정확성이 높은 시간영역을 선택하는 것이 좋습니다.</strong></p>
+</div></blockquote>
+<center><img src='Image/Reduce_Error.png' width='400'></center>
+<ul class="simple">
+<li><p><strong>활용예시:</strong></p>
+<ul>
+<li><p><strong>분석목적:</strong> 연간단위 비즈니스 목표를 예측</p>
+<ul>
+<li><p>Aim for the most granular level possible.</p></li>
+<li><p>일반적으로 월별 또는 분기별 데이터를 사용하면 연간 데이터보다 나은 예측이 가능할 것</p></li>
+<li><p>월/분기별 예측치를 연간으로 환산시 오류가 늘어날 것 같지만 실제로는 반대의 경우가 많음</p></li>
+<li><p>만약 너무 세분화된 시간영역을 사용할 시 오류가 증가될 수 있음</p>
+<ul>
+<li><p>연간 비즈니스 목표를 예측하는데 일별/시간별/분별/이하단위의 데이터를 사용하면 도움이 될까?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>시계열 데이터/분석은 높은 정확도를 낳거나 높은 에러를 발생시킴<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>높은정확도(High Accuracy):</strong> 과거 패턴이 미래에도 그대로 유지가 된다면 예측 정확도가 높아짐</p></li>
+<li><p><strong>높은에러(High Error):</strong> 패턴이 점차적으로 또는 갑자기 변경되면 예측값은 실제값에서 크게 벗어날 수 있음</p>
+<ul>
+<li><p><strong>Black Swan:</strong> <U>일어날 것 같지 않은 일이 일어나는 현상</U></p></li>
+<li><p><strong>White Swan:</strong> <U>과거 경험들로 충분히 예상되는 위기지만 대응책이 없고 반복될 현상</U></p></li>
+<li><p><strong>Gray Swan:</strong> <U>과거 경험들로 충분히 예상되지만 발생되면 충격이 지속되는 현상</U></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h2>시계열 데이터 관리는 장/단점 존재<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>수천/수백만/수십억 데이터를 기계학습에 사용할 수 있지만 시계열로 데이터를 정리하면 데이터 감소 발생가능</p></li>
+<li><p>모든 시간범위가 예측성능에 도움되지 않을 수 있기에 특정기간의 시간영역 분석만 필요할 수도 있음</p></li>
+<li><p><strong>고성능 시계열 Database 필요:</strong></p></li>
+</ul>
+<blockquote>
+<div><p><a class="reference external" href="http://shop.oreilly.com/product/0636920035435.do">Time Series Database(TSDB)</a></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id8">
+<h1>(시계열) 회귀분석 요약<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p><strong>“<span class="math notranslate nohighlight">\(t\)</span>개의 값을 가지는 <span class="math notranslate nohighlight">\(k\)</span>차원 독립변수 <span class="math notranslate nohighlight">\(X_i\)</span>와 이에 대응하는 종속변수 <span class="math notranslate nohighlight">\(Y\)</span>간의 관계를 정량적으로 찾는 알고리즘”</strong></p>
+</div></blockquote>
+<div class="section" id="id9">
+<h2>모델링<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>알고리즘:</strong> 독립 변수나 종속 변수가 반드시 대칭 분포를 보여야 한다는 가정은 없지만 정규 분포에 가까운 분포를 보일 수록 선형회귀모형의 성능이 좋아지는 경우가 많음</p></li>
+</ul>
+<center>
+$Y \approx \hat{Y} = f(X_1, X_2, ..., X_k) = \beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_kX_k \\
+= [\beta_0~\beta_1~\beta_2~\cdots~\beta_k]\begin{bmatrix} 1 \\ X_1 \\ X_2 \\ \vdots \\ X_k \end{bmatrix}
+= [1~X_1~X_2~\cdots~X_k]\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_k \end{bmatrix}
+= \begin{bmatrix} 1~X_{11}~X_{21}~\cdots~X_{k1} \\ 1~X_{12}~X_{22}~\cdots~X_{k2} \\ \vdots \\ 1~X_{1t}~X_{2t}~\cdots~X_{kt} \end{bmatrix}
+\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \vdots \\ \beta_k \end{bmatrix} = X\beta$
+</center>
+<ul class="simple">
+<li><p><strong>비선형변수 효과:</strong> 로그 또는 제곱근 등의 변환된 변수 사용시 회귀분석 성능 향상 가능</p>
+<ul>
+<li><p>독립 변수나 종속 변수가 심하게 한쪽으로 치우친 분포를 보이는 경우</p></li>
+<li><p>독립 변수와 종속 변수간의 관계가 곱셈 혹은 나눗셉으로 연결된 경우</p></li>
+<li><p>종속 변수와 예측치가 비선형 관계를 보이는 경우</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h2>검증방항(계수추정)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="deterministic-model">
+<h3>결정론적 모형(Deterministic Model)<a class="headerlink" href="#deterministic-model" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>“잔차제곱합(Residual Sum of Squares)을 최소로하는 <span class="math notranslate nohighlight">\(\beta\)</span>를 추정”</strong></p>
+</div></blockquote>
+<p><strong>1) 잔차벡터(Residual Vector):</strong></p>
+<center>$\epsilon = Y - \hat{Y} = Y - X\beta$</center> 
+<p><strong>2) 잔차제곱합(Residual Sum of Squares):</strong></p>
+<center>$RSS = \epsilon^T\epsilon = (Y - X\beta)^T(Y - X\beta) = Y^TY-2Y^TX\beta+\beta^TX^TX\beta$</center> 
+<p><strong>3) 잔차제곱합의 그레디언트(Gradient):</strong></p>
+<center>$\dfrac{dRSS}{d\beta} = -2X^TY + 2X^TX\beta$</center> 
+<p><strong>4) 잔차가 최소가 되는 최적화 조건은 최저점에서의 그레디언트(미분,기울기)이 0이 되어야 함:</strong></p>
+<center>$\dfrac{dRSS}{d\beta} = 0$</center> 
+<p><strong>5) 최적화를 위한 잔차제곱합의 그레디언트(Gradient):</strong></p>
+<center>$\dfrac{dRSS}{d\beta} = -2X^TY + 2X^TX\beta = 0 \\ X^TX\beta = X^TY$</center> 
+<p><strong>6) 추정된 계수:</strong></p>
+<center>$\beta = (X^TX)^{-1}X^TY$</center>    
+<ul class="simple">
+<li><p><strong>Summary:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(X^TX\)</span> 행렬이 역행렬이 존재해야 해 추정/존재 가능</p></li>
+<li><p>역행렬이 미존재<br />
+= <span class="math notranslate nohighlight">\(X\)</span>가 서로 독립이 아님<br />
+= <span class="math notranslate nohighlight">\(X\)</span>가 Full Rank가 아님<br />
+= <span class="math notranslate nohighlight">\(X^TX\)</span>가 양의 정부호(Positive Definite)가 아님</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="probabilistic-model">
+<h3>확률론적 모형(Probabilistic Model)<a class="headerlink" href="#probabilistic-model" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>“종속변수의 발생가능성을 최대(최소)로하는 <span class="math notranslate nohighlight">\(\beta\)</span>를 추정”</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>필요성:</strong> 결정론적 선형 회귀모형(OLS)는 데이터의 확률론적 가정이 없기에 단하나의 가중치(점추정)를 계산하나, 이 가중치의 신뢰도(구간추정)는 확인할 수 없음</p></li>
+<li><p><strong>예시:</strong> 집값에 대한 범죄율 영향력(가중치)이 -0.108이라면, 집값은 범죄율에 반비례한다 결론 내릴 수 있을까?</p>
+<ul>
+<li><p>-0.108는 오로지 우리가 보유한 테스트 1회성 결과일 뿐 오차가 존재가능</p></li>
+<li><p>만약 오차가 0.0001이라면 실제 가중치 신뢰구간은 -0.108<span class="math notranslate nohighlight">\(\pm\)</span>0.0001 (-0.1081 ~ -0.1079)이기에 집값과 범죄율 반비례 결론 가능</p></li>
+<li><p>만약 오차가 0.2라면 실제 가중치는 (-0.308 ~ 0.092)이기에 가중치는 0이나 양수도 가능 -&gt; 집값과 범죄율은 정비례도 가능</p></li>
+</ul>
+</li>
+</ul>
+<p>\begin{align*}
+\text{Main Equation} &amp;&amp; Y \approx \hat{Y} &amp;= f(X_1, X_2, …, X_k) \
+&amp;&amp; &amp;= \beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_kX_k \
+&amp;&amp; &amp;= E(Y|X_1, X_2, … , X_k) \
+&amp;&amp; &amp;\sim \mathcal{N}(X \beta, \sigma^2) \
+&amp;&amp; p(Y \mid X, \theta) &amp;= \mathcal{N}(y \mid X \beta, \sigma^2 ) \
+\end{align*}</p>
+<p>\begin{align*}
+\text{Error Poperties} &amp;&amp; p(\epsilon \mid \theta) &amp;= \mathcal{N}(0, \sigma^2 ) \text{  from  } \epsilon = Y - X \beta \
+&amp;&amp; \text{E}(\epsilon \mid X) &amp;= 0 \
+&amp;&amp; \text{E}(\epsilon) &amp;= \text{E}(\text{E}(\epsilon \mid X)) = 0 \
+&amp;&amp; \text{E}(\epsilon X) &amp;= \text{E}(\text{E}(\epsilon X \mid X)) = \text{E}(X \text{E}(\epsilon\mid X)) = 0 \
+&amp;&amp; \text{E}(\epsilon^2) &amp;= \sigma^2 (N-K) \
+&amp;&amp; \text{Cov}(\epsilon_i, \epsilon_j \mid X) &amp;= 0 ;; (i,j=1,2,\ldots,N)
+\end{align*}</p>
+<ul class="simple">
+<li><p><strong>Summary:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(X, Y\)</span> 중 어느 것도 정규분포일 필요는 없음</p></li>
+<li><p><span class="math notranslate nohighlight">\(Y\)</span>는 <span class="math notranslate nohighlight">\(X\)</span>에 대해 조건부로 정규분포를 따르며 <span class="math notranslate nohighlight">\(Y\)</span>자체가 무조건부로 정규분포일 필요는 없음</p></li>
+<li><p>잔차의 기대값은 0</p></li>
+<li><p>잔차의 조건부 기대값은 0</p></li>
+<li><p>잔차와 독립변수 <span class="math notranslate nohighlight">\(X\)</span>는 상관관계 없음</p></li>
+<li><p><span class="math notranslate nohighlight">\(X\)</span>와 무관하게 잔차들간의 공분산은 0</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>1) Y의 발생가능성(Likelihood):</strong></p>
+<p>\begin{align*}
+p(Y_{1:N} ,\big|, X_{1:N}, \theta) &amp;= \prod_{i=1}^N \mathcal{N}(Y_i ,\big|, X_i \beta_i , \sigma^2) \
+&amp;= \prod_{i=1}^N \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left{-\frac{(Y_i- X_i \beta_i)^2}{2\sigma^2} \right}
+\end{align*}</p>
+<p><strong>2) 더하기 사용을 위한 Log 변환(Log-Likelihood):</strong></p>
+<p>\begin{align*}
+\text{LL} &amp;= \log p(Y_{1:N} ,\big|, X_{1:N}, \theta) \
+&amp;= \log \prod_{i=1}^N \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left{-\frac{(Y_i-X_i \beta_i)^2}{2\sigma^2} \right}  \
+&amp;= -\dfrac{1}{2\sigma^2} \sum_{i=1}^N (Y_i-X_i \beta_i)^2 - \dfrac{N}{2} \log{2\pi}{\sigma^2}  \
+\text{LL(Matrix Form)} &amp;= -C_1 (Y - X\beta)^T(y-X\beta) - C_0 \
+&amp;= -C_1(\beta^TX^TX\beta -2 Y^TX\beta + Y^TY) - C_0 \
+&amp; \text{where } C_1=  -\dfrac{1}{2\sigma^2}, C_0 =  \dfrac{N}{2} \log{2\pi}{\sigma^2} \
+\end{align*}</p>
+<p><strong>3) Log-Likelihood의 그레디언트(미분,기울기)는 0이 되어야 함:</strong></p>
+<p>\begin{align*}
+\dfrac{d}{d\beta} \text{LL} &amp;= -C_1 \left( 2X^TX \hat{\beta} - 2X^TY \right) = 0 \
+\hat{\beta} &amp;= (X^TX)^{-1}X^T Y \
+\end{align*}</p>
+<ul class="simple">
+<li><p><strong>Summary:</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(X^TX\)</span> 행렬이 역행렬이 존재해야 해 추정/존재 가능</p></li>
+<li><p>역행렬이 미존재<br />
+= <span class="math notranslate nohighlight">\(X\)</span>가 서로 독립이 아님<br />
+= <span class="math notranslate nohighlight">\(X\)</span>가 Full Rank가 아님<br />
+= <span class="math notranslate nohighlight">\(X^TX\)</span>가 양의 정부호(Positive Definite)가 아님</p></li>
+</ul>
+</li>
+<li><p><strong>회귀계수의 분포:</strong></p></li>
+</ul>
+<p>\begin{align*}
+\text{Main Equation} &amp;&amp; \hat{\beta} &amp;= (X^TX)^{-1} X^T Y \
+&amp;&amp; &amp;= (X^TX)^{-1} X^T (X \beta + \epsilon) \
+&amp;&amp; &amp;= \beta + (X^TX)^{-1} X^T \epsilon \
+\text{Expectation} &amp;&amp; \text{E}(\hat{\beta}) &amp;=  \text{E}( \beta + (X^TX)^{-1} X^T \epsilon ) \
+&amp;&amp; &amp;=  \beta + (X^TX)^{-1} X^T \text{E}( \epsilon ) \
+&amp;&amp; &amp;= \beta \
+\text{Variance} &amp;&amp; \text{Var}(\hat{\beta}<em>i)  &amp;= \left( \text{Cov}(\hat{\beta}) \right)</em>{ii} ;; (i=0, \ldots, K-1) \
+\text{Covariance} &amp;&amp; \text{Cov}(\hat{\beta}) &amp;= E\left((\hat{\beta} - \beta)(\hat{\beta} - \beta)^T \right) \
+&amp;&amp; &amp;= E\left(((X^TX)^{-1} X^T \epsilon)((X^TX)^{-1} X^T \epsilon)^T \right) \
+&amp;&amp; &amp;= E\left((X^TX)^{-1} X^T \epsilon \epsilon^T X(X^TX)^{−1} \right) \
+&amp;&amp; &amp;= (X^TX)^{-1} X^T E(\epsilon \epsilon^T) X(X^TX)^{−1} \
+&amp;&amp; &amp;= (X^TX)^{-1} X^T (\sigma^2 I) X(X^TX)^{−1} \
+&amp;&amp; &amp;= \sigma^2  (X^TX)^{-1} \
+\text{Standard Deviation} &amp;&amp; \sqrt{\text{Var}(\hat{\beta}<em>i)} \approx {se</em>{\hat{\beta}<em>i}} &amp;= \sqrt{\sigma^2 \big((X^TX)^{-1}\big)</em>{ii}} ;; (i=0, \ldots, K-1) \
+\text{Asymptotic} &amp;&amp; \dfrac{\hat{\beta}<em>i - \beta_i}{se</em>{\hat{\beta}<em>i}} &amp;\sim t</em>{N-K} ;; (i=0, \ldots, K-1) \
+\end{align*}</p>
+</div>
+</div>
+<div class="section" id="evaluation">
+<h2>검증(Evaluation)<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>검증지표(Metrics):</strong></p></li>
+</ul>
+<p><strong>1) R-squared(R^2):</strong> 추정된 (선형)모형이 주어진 데이터에 잘 적합된 정도, <span class="math notranslate nohighlight">\((- \infty, 1]\)</span></p>
+<center>
+$R^2$ = $\dfrac{ESS}{TSS}$ = $\dfrac{\sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$ = $1 - \dfrac{RSS}{TSS}$ = $1 - \dfrac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$
+</center>
+<blockquote>
+<div><center><img src='Image/R2_decomposition1.png' width='600'></center>
+</div></blockquote>
+<blockquote>
+<div><center><img src='Image/R2_decomposition2.png' width='600'></center>
+</div></blockquote>
+<ul>
+<li><p><strong>(비수학적 이해)</strong></p>
+<ul class="simple">
+<li><p>TSS: 종속변수값의 움직임의 범위</p></li>
+<li><p>ESS: 모형에서 나온 예측값의 움직임의 범위</p></li>
+<li><p>RSS: 잔차의 움직임의 범위, 즉 오차의 크기</p></li>
+</ul>
+<blockquote>
+<div><p>모형 예측치의 움직임의 크기(분산)은 종속변수의 움직임의 크기(분산)보다 클 수 없다<br />
+모형의 성능이 좋을수록 모형 예측치의 움직임의 크기는 종속변수의 움직임의 크기와 비슷해진다</p>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>2) t-검정:</strong> t분포를 따르는 추정계수로 독립변수와 종속변수 간의 선형관계(관련성) 존재 의사결정을 위한 신뢰성 정도</p>
+<ul class="simple">
+<li><p><strong>검정통계량(t-통계량)</strong>: <center><span class="math notranslate nohighlight">\(t = \dfrac{\hat{\beta}_i - \beta_i}{se_{\hat{\beta}_i}}\)</span></center></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> 값이 작다는 것은 표준편차가 크다는 것 -&gt; 독립변수와 종속변수의 상관성이 낮음</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> 값이 크다는 것은 표준편차가 작다는 것 -&gt; 독립변수와 종속변수의 상관성이 높음</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>가설확인</strong>
+- <strong>대중주장(귀무가설, Null Hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>)</strong><br />
+: <span class="math notranslate nohighlight">\(\beta_i = 0 \;\; (i=0, \ldots, K-1)\)</span> / 추정계수는 0이다 / 독립변수와 종속변수의 상관관계(선형관계)가 없다
+- <strong>나의주장(대립가설, Alternate Hypothesis, <span class="math notranslate nohighlight">\(H_1\)</span>)</strong><br />
+: <span class="math notranslate nohighlight">\(\beta_i \neq 0 \;\; (i=0, \ldots, K-1)\)</span> / 추정계수는 0이 아니다 / 독립변수와 종속변수의 상관관계(선형관계)가 있다</p></li>
+<li><p><strong>의사결정</strong>
+- <strong>p-value &gt;= 내기준(ex. 0.05):</strong> 내가 분석한 계수는 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓<br />
+: <strong>분석한 변수는 모델링에 영향력이 없다</strong>
+- <strong>p-value &lt; 내기준(ex. 0.05):</strong> 내가 분석한 계수는 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참<br />
+: <strong>분석한 변수는 모델링에 영향력이 있다</strong></p></li>
+</ul>
+</div></blockquote>
+<p><strong>3) 분산분석을 통한 F-검정:</strong></p>
+<ul class="simple">
+<li><p><strong>필요성:</strong></p>
+<ul>
+<li><p>변수의 단위 즉, 스케일이 달라지면 회귀분석과 상관없이 잔차제곱합(Residula Sum of Square) 달라짐</p></li>
+<li><p>분산 분석(Analysis of Variance(ANOVA))은 종속변수의 분산과 독립변수의 분산간의 관계를 사용하여 성능 평가</p></li>
+</ul>
+</li>
+<li><p><strong>검정통계량(F-통계량):</strong> 분산분석표(ANOVA Table)를 통해 쉽게 계산되며, <span class="math notranslate nohighlight">\(T\)</span>는 데이터의 갯수, <span class="math notranslate nohighlight">\(K\)</span>는 변수의 갯수</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Source</p></th>
+<th class="head"><p>Degree of Freedom</p></th>
+<th class="head"><p>Sum of Square</p></th>
+<th class="head"><p>Mean Square</p></th>
+<th class="head"><p>F test-statstics</p></th>
+<th class="head"><p>p-value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Regression</p></td>
+<td><p><span class="math notranslate nohighlight">\(K-1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(ESS\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sigma_{\hat{Y}}^2 = \dfrac{ESS}{K-1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F = \dfrac{\sigma_{\hat{Y}}^2}{\sigma_{\epsilon}^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(p-value\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Residual</p></td>
+<td><p><span class="math notranslate nohighlight">\(T-K\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(RSS\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sigma_{\epsilon}^2 = \dfrac{RSS}{T-K}\)</span></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p><span class="math notranslate nohighlight">\(T-1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(TSS\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sigma_{Y}^2 = \dfrac{TSS}{T-1}\)</span></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R^2\)</span></p></td>
+<td><p>-</p></td>
+<td><p><span class="math notranslate nohighlight">\(ESS/TSS\)</span></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+<center>$\dfrac{ESS}{K-1} \div \dfrac{RSS}{T-K} \sim F(K-1, T-K)$</center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>가설확인</strong>
+- <strong>대중주장(귀무가설, Null Hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>)</strong><br />
+: <span class="math notranslate nohighlight">\(\beta_0  = \beta_1 = \cdots = \beta_{K-1} = 0\)</span> / 모든 추정계수는 0이다 / 모형은 아무 효과가 없다 / <span class="math notranslate nohighlight">\(R^2\)</span> = 0
+- <strong>나의주장(대립가설, Alternate Hypothesis, <span class="math notranslate nohighlight">\(H_1\)</span>)</strong><br />
+: <span class="math notranslate nohighlight">\(\beta_0  \neq \beta_1 \neq \cdots \neq \beta_{K-1} \neq 0\)</span> / 모든 추정계수는 0이 아니다 / 모형은 효과가 있다 / <span class="math notranslate nohighlight">\(R^2 \neq 0\)</span></p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>의사결정</strong>
+- <strong>p-value &gt;= 내기준(ex. 0.05):</strong> 내가 분석한 결과는 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓<br />
+: <strong>분석한 모델링은 효과가 없다 / 모델은 데이터 패턴을 잘 추정하지 못한다</strong>
+- <strong>p-value &lt; 내기준(ex. 0.05):</strong> 내가 분석한 결과는 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참<br />
+: <strong>분석한 모델링은 효과가 있다 / 모델은 데이터 패턴을 잘 추정한다</strong></p></li>
+</ul>
+</div></blockquote>
+<p><strong>3) 정보량기준(Information Criterion):</strong> 회귀분석 외에도 다양한 알고리즘에 활용, 값이 작을수록 올바른 모형 (Likelihood는 클수록 올바른 모형)</p>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Akaike_information_criterion">AIC(Akaike Information Criterion)</a></strong><br />
+: 모형과 데이터의 확률 분포 사이의 Kullback-Leibler 수준을 가장 크게하기 위한 시도</p></li>
+</ul>
+<center>$AIC = -2log(L) + 2K$</center>
+<center>($L$: likelihood, $K$: 추정할 파라미터의 수(일반적으로 column수))</center>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">BIC(Bayesian Information Criterion)</a></strong><br />
+: 데이터가 exponential family라는 가정하에 주어진 데이터에서 모형의 likelihood를 측정하기 위한 값에서 유도</p></li>
+</ul>
+<center>$BIC = -2log(L) + Klog(T)$</center>
+<center>($L$: likelihood, $K$: 추정할 파라미터의 수(일반적으로 column수), $T$: 데이터의 수(일반적으로 row수))</center>
+<center><img src='Image/AIC_BIC.gif' width='600'></center></div>
+<div class="section" id="id11">
+<h2>잔차진단(Residual Diagnostics)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>회귀분석 가정 내:</strong></p>
+<ul>
+<li><p>~~종속변수와 독립변수 간에 선형성의 관계를 가져야 함~~</p></li>
+<li><p>~~독립변수들 간에 서로 독립이어야 함~~</p></li>
+<li><p>잔차의 분포가 정규분포이어야 함</p></li>
+<li><p>잔차들이 서로 독립적으로 움직여야 함</p></li>
+<li><p>잔차들의 분산이 서로 같아야 함</p></li>
+</ul>
+</li>
+<li><p><strong>시계열 회귀분석 잔차진단 차이 적용:</strong></p>
+<ul>
+<li><p>정상성 테스트: 잔차가 백색잡음의 형태인지</p></li>
+<li><p>정규분포 테스트: 잔차가 정규분포의 형태인지</p></li>
+<li><p>자기상관 테스트: 잔차가 서로 시간흐름에서 독립적인지</p></li>
+<li><p>등분산성 테스트: 잔차가 분산이 일정한지</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id12">
+<h1>시계열 분석<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id13">
+<h2>분석 주 사용 패키지<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="statsmodels">
+<h3>“statsmodels”<a class="headerlink" href="#statsmodels" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>R-style 모형 기술을 가능하게 하는 patsy 패키지를 포함하고 있어 R에서만 가능했던 회귀 분석 / 시계열 분석을 그대로 파이썬에서 이용가능</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>검정 및 추정(test and estimation)</p></li>
+<li><p>회귀 분석(regression analysis)</p></li>
+<li><p>시계열 분석(time-series analysis)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get_rdataset</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="p">[</span><span class="n">package</span><span class="o">=</span><span class="s2">&quot;datasets&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>statsmodels 데이터셋 예시:</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#대기중 CO2농도 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;CO2&quot;</span><span class="p">,</span> <span class="n">package</span><span class="o">=</span><span class="s2">&quot;datasets&quot;</span><span class="p">)</span>
+<span class="c1">#황체형성 호르몬(Luteinizing Hormone)의 수치를 나타내는 시계열 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;lh&quot;</span><span class="p">)</span>
+<span class="c1">#1974-1979년 사이의 영국의 호흡기 질환 사망자 수를 나타내는 시계열 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;deaths&quot;</span><span class="p">,</span> <span class="s2">&quot;MASS&quot;</span><span class="p">)</span>
+<span class="c1">#1949-1960년 사이의 국제 항공 운송인원을 나타내는 시계열 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;AirPassengers&quot;</span><span class="p">)</span>
+<span class="c1">#미국의 강수량 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;precip&quot;</span><span class="p">)</span>
+<span class="c1">#타이타닉호의 탑승자들에 대한 데이터</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_rdataset</span><span class="p">(</span><span class="s2">&quot;Titanic&quot;</span><span class="p">,</span> <span class="n">package</span><span class="o">=</span><span class="s2">&quot;datasets&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Output:</strong></p>
+<ul>
+<li><p>package: 데이터를 제공하는 R 패키지 이름</p></li>
+<li><p>title: 데이터 이름</p></li>
+<li><p>data: 데이터를 담고 있는 데이터프레임</p></li>
+<li><p><strong>doc</strong>: 데이터에 대한 설명 문자열(R 패키지의 내용 기준)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="sklearn-scikit-learn">
+<h3>“sklearn”(scikit-learn)<a class="headerlink" href="#sklearn-scikit-learn" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>벤치마크용 데이터셋 예제</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>데이터 전처리(preprocessing)</p></li>
+<li><p>지도 학습(Supervised learning)</p></li>
+<li><p>비지도 학습(Unsupervised learning)</p></li>
+<li><p>모형 평가 및 선택(evaluation and selection)</p></li>
+<li><p><strong>sklearn 데이터셋 예시:</strong></p>
+<ol class="simple">
+<li><p>scikit-learn 설치 패키지에 같이 포함된 소량의 데이터(load 계열 명령)</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">load_boston</span><span class="p">:</span> <span class="n">회귀</span> <span class="n">분석용</span> <span class="n">보스턴</span> <span class="n">집값</span>
+<span class="o">-</span> <span class="n">load_diabetes</span><span class="p">:</span> <span class="n">회귀</span> <span class="n">분석용</span> <span class="n">당뇨병</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">load_linnerud</span><span class="p">:</span> <span class="n">회귀</span> <span class="n">분석용</span> <span class="n">linnerud</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">load_iris</span><span class="p">:</span> <span class="n">분류용</span> <span class="n">붓꽃</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">load_digits</span><span class="p">:</span> <span class="n">분류용</span> <span class="n">숫자</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span> <span class="n">필기</span> <span class="n">이미지</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">load_wine</span><span class="p">:</span> <span class="n">분류용</span> <span class="n">포도주</span><span class="p">(</span><span class="n">wine</span><span class="p">)</span> <span class="n">등급</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">load_breast_cancer</span><span class="p">:</span> <span class="n">분류용</span> <span class="n">유방암</span><span class="p">(</span><span class="n">breast</span> <span class="n">cancer</span><span class="p">)</span> <span class="n">진단</span> <span class="n">자료</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2) 인터넷에서 다운로드할 수 있는 대량의 데이터(fetch 계열 명령)
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">fetch_california_housing</span><span class="p">:</span> <span class="p">:</span> <span class="n">회귀분석용</span> <span class="n">캘리포니아</span> <span class="n">집값</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">fetch_covtype</span> <span class="p">:</span> <span class="n">회귀분석용</span> <span class="n">토지</span> <span class="n">조사</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">fetch_20newsgroups</span> <span class="p">:</span> <span class="n">뉴스</span> <span class="n">그룹</span> <span class="n">텍스트</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">fetch_olivetti_faces</span> <span class="p">:</span> <span class="n">얼굴</span> <span class="n">이미지</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">fetch_lfw_people</span> <span class="p">:</span> <span class="n">유명인</span> <span class="n">얼굴</span> <span class="n">이미지</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">fetch_lfw_pairs</span> <span class="p">:</span> <span class="n">유명인</span> <span class="n">얼굴</span> <span class="n">이미지</span> <span class="n">자료</span>
+<span class="o">-</span> <span class="n">fetch_rcv1</span> <span class="p">:</span> <span class="n">로이터</span> <span class="n">뉴스</span> <span class="n">말뭉치</span>
+<span class="o">-</span> <span class="n">fetch_kddcup99</span> <span class="p">:</span> <span class="n">Kddcup</span> <span class="mi">99</span> <span class="n">Tcp</span> <span class="n">dump</span> <span class="n">자료</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>3) 확률분포를 사용하여 가상의 데이터를 생성(make 계열 명령)
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">make_regression</span><span class="p">:</span> <span class="n">회귀</span> <span class="n">분석용</span> <span class="n">가상</span> <span class="n">데이터</span> <span class="n">생성</span>
+<span class="o">-</span> <span class="n">make_classification</span><span class="p">:</span> <span class="n">분류용</span> <span class="n">가상</span> <span class="n">데이터</span> <span class="n">생성</span>
+<span class="o">-</span> <span class="n">make_blobs</span><span class="p">:</span> <span class="n">클러스터링용</span> <span class="n">가상</span> <span class="n">데이터</span> <span class="n">생성</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Output:</strong> Bunch 라는 클래스 객체 형식으로 생성, 이 클래스 객체는 다음과 같은 속성을 가짐.</p>
+<ul>
+<li><p>data: (필수) 독립 변수 ndarray 배열</p></li>
+<li><p>target: (필수) 종속 변수 ndarray 배열</p></li>
+<li><p>feature_names: (옵션) 독립 변수 이름 리스트</p></li>
+<li><p>target_names: (옵션) 종속 변수 이름 리스트</p></li>
+<li><p>DESCR: (옵션) 자료에 대한 설명</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>데이터준비 방향<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>시계열 데이터준비(Time Series Validation)<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>시계열 데이터인 경우 랜덤성(set.seed)을 부여하면 안되고 시간축 유지가 핵심!
+- <strong>훈련셋(Training set):</strong> 가장 오래된 데이터
+- <strong>검증셋(Validation set):</strong> 그 다음 최근 데이터
+- <strong>테스트셋(Testing set):</strong> 가장 최신의 데이터</p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_TimeSeries.png' width='500'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>1스텝 교차검사(One-step Ahead Cross-validation)</strong></p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_TimeSeries_ver1.png' width='500'></center>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>2스텝 교차검사(Two-step Ahead Cross-validation)</strong></p></li>
+</ul>
+</div></blockquote>
+<center><img src='Image/DataSplit_TimeSeries_ver2.png' width='500'></center></div>
+</div>
+<div class="section" id="id16">
+<h2>전처리 방향<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>시간현실 반영<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>“미래의 시간패턴을 미리 반영하는건 비현실적, 이는 과적합(Overfitting)을 유발”</strong></p>
+</div></blockquote>
+</div>
+<div class="section" id="id18">
+<h3>예측 정확성 향상<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>**방향:</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>Train <span class="math notranslate nohighlight">\(\uparrow\)</span> + Test <span class="math notranslate nohighlight">\(\uparrow\)</span></p></li>
+<li><p>Train &lt;&lt;&lt; Test <span class="math notranslate nohighlight">\(\Longleftrightarrow\)</span> 조건수(Condition Number) 감소**</p></li>
+</ol>
+<ul>
+<li><p><strong>조건수 감소 목적:</strong></p>
+<ul>
+<li><p><strong>(비수학적 이해)</strong><br />
+: 독립변수들의 절대적 수치크기나 서로간의 의존도가 분석결과에 주는 영향을 줄이고 독립변수의 상대적인 비교효과 반영</p></li>
+<li><p><strong>(수학적 이해)</strong><br />
+: 공분산 행렬의 변동성을 줄여 분석결과의 변동을 줄임</p>
+<blockquote>
+<div><p><strong>공분산 행렬의 변동성?:</strong> 모델링 계수추정시 영향을 주는 역행렬에 오차가 미치는 영향</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<center>
+$조건수(Condition~Number) = \dfrac{\lambda_{max}}{\lambda_{min}} \\ where \\
+\lambda_{max} = max[eigenvalue\{Cov(X^T X)\}] \\
+\lambda_{min} = min[eigenvalue\{Cov(X^T X)\}]$
+</center>  
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 조건수가 작을 때</span>
+<span class="c1"># X 데이터</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Y 데이터</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">Y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 1., 1., 1.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 계수 추정</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 1., 1., 1.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># X 데이터 오차반영</span>
+<span class="n">A_new</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="mf">0.0001</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">A_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.0001, 0.    , 0.    , 0.    ],
+       [0.    , 1.0001, 0.    , 0.    ],
+       [0.    , 0.    , 1.0001, 0.    ],
+       [0.    , 0.    , 0.    , 1.0001]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 계수 추정</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A_new</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.99990001, 0.99990001, 0.99990001, 0.99990001])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 조건수 확인</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cond</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 조건수가 클 때</span>
+<span class="c1"># X 데이터</span>
+<span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">hilbert</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">hilbert</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.        , 0.5       , 0.33333333, 0.25      ],
+       [0.5       , 0.33333333, 0.25      , 0.2       ],
+       [0.33333333, 0.25      , 0.2       , 0.16666667],
+       [0.25      , 0.2       , 0.16666667, 0.14285714]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Y 데이터</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">Y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 1., 1., 1.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 계수 추정</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  -4.,   60., -180.,  140.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># X 데이터 오차반영</span>
+<span class="n">A_new</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="mf">0.0001</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">A_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.0001    , 0.5       , 0.33333333, 0.25      ],
+       [0.5       , 0.33343333, 0.25      , 0.2       ],
+       [0.33333333, 0.25      , 0.2001    , 0.16666667],
+       [0.25      , 0.2       , 0.16666667, 0.14295714]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 계수 추정</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A_new</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ -0.58897672,  21.1225671 , -85.75912499,  78.45650825])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 조건수 확인</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">cond</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15513.738738929038
+</pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li><p><strong>조건수 감소 방법(분석 결과 안정성 확보 방법):</strong></p>
+<blockquote>
+<div><p><strong>1) 변수들의 단위차이로 숫자의 스케일들이 크게 다른 경우, 스케일링(Scaling)으로 해결 가능</strong><br />
+<strong>2) 독립변수들 간에 상관관계가 높은 “다중공선성” 존재할 경우,<br />
+Variance Inflation Factor(VIF)나 Principal Component Analysis(PCA)를 통한 변수선별로 해결 가능</strong><br />
+<strong>3) 독립변수들 간 의존성이 높은 변수들에 패널티를 부여하는 정규화(Resularization)로 해결 가능</strong></p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="scaling">
+<h3>변수간 스케일 차이 조정(Scaling)<a class="headerlink" href="#scaling" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>목적:</strong></p>
+<ul>
+<li><p><strong>(하드웨어)</strong><br />
+: PC 메모리를 고려하여 오버플로우(Overflow)나 언더플로우(Underflow)를 방지</p></li>
+<li><p><strong>(소프트웨어)</strong><br />
+: 독립 변수의 공분산 행렬 조건수(Condition Number)를 감소시켜 최적화 안정성 및 수렴 속도 향상</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>1) Standard Scaler:</strong> <center><span class="math notranslate nohighlight">\(\dfrac{X_{it} - E(X_i)}{SD(X_i)}\)</span></center></p>
+<blockquote>
+<div><p>기본 스케일로 평균을 제외하고 표준편차를 나누어 변환<br />
+각 변수(Feature)가 정규분포를 따른다는 가정이기에 정규분포가 아닐 시 최선이 아닐 수 있음</p>
+</div></blockquote>
+<center><img src='Image/Scaling_StandardScaler.png' width='500'></center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>2) Min-Max Scaler:</strong> <center><span class="math notranslate nohighlight">\(\dfrac{X_{it} - min(X_i)}{max(X_i) - min(X_i)}\)</span></center></p>
+<blockquote>
+<div><p>가장 많이 활용되는 알고리즘으로 최소~최대 값이 0~1 또는 -1~1 사이의 값으로 변환<br />
+각 변수(Feature)가 정규분포가 아니거나 표준편차가 매우 작을 때 효과적</p>
+</div></blockquote>
+<center><img src='Image/Scaling_MinMaxScaler.png' width='500'></center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>3) Robust Scaler:</strong> <center><span class="math notranslate nohighlight">\(\dfrac{X_{it} - Q_1(X_i)}{Q_3(X_i) - Q_1(X_i)}\)</span></center></p>
+<blockquote>
+<div><p>최소-최대 스케일러와 유사하지만 최소/최대 대신에 IQR(Interquartile Range) 중 25%값/75%값을 사용하여 변환<br />
+이상치(Outlier)에 영향을 최소화하였기에 이상치가 있는 데이터에 효과적이고 적은 데이터에도 효과적인 편</p>
+</div></blockquote>
+<center><img src='Image/Scaling_RobustScaler.png' width='500'></center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">RobustScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">RobustScaler</span><span class="p">()</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">RobustScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>4) Normalizer:</strong> <center><span class="math notranslate nohighlight">\(\dfrac{X_{it}}{\sqrt{X_{i}^2 + X_{j}^2 + ... + X_{k}^2}}\)</span></center></p>
+<blockquote>
+<div><p>각 변수(Feature)를 전체 <span class="math notranslate nohighlight">\(n\)</span>개 모든 변수들의 크기들로 나누어서 변환(by Cartesian Coordinates)<br />
+각 변수들의 값은 원점으로부터 반지름 1만큼 떨어진 범위 내로 변환</p>
+</div></blockquote>
+<center><img src='Image/Scaling_Normalizer.png' width='500'></center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">()</span><span class="o">.</span><span class="n">transform</span><span class="p">()</span>
+<span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/auto_examples/preprocessing/plot_all_scaling.html#sphx-glr-download-auto-examples-preprocessing-plot-all-scaling-py"><strong>비교 예시</strong></a></p></li>
+</ul>
+</div>
+<div class="section" id="multicollinearity">
+<h3>다중공선성(Multicollinearity) 제거<a class="headerlink" href="#multicollinearity" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>다중공선성(Multicollinearity) 발생:</strong></p>
+<ul>
+<li><p>독립변수의 일부가 다른 독립변수의 조합으로 표현될 수 있는 경우</p></li>
+<li><p>독립변수들이 서로 독립이 아니라 상호상관관계가 강한 경우</p></li>
+<li><p>독립변수의 공분산 행렬(Covariance Matrix) 벡터공간(Vector Space)의 차원과 독립변수의 차원이 같지 않는 경우(Full Rank가 아니다)</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p><strong>=&gt; “다중공선성이 있으면 독립변수 공분산 행렬의 조건수(Condition Number)가 증가”</strong><br />
+<strong>=&gt; “조건수(Condition Number)가 증가하면 분석결과 과적합(Overfitting)이 발생할 가능성 증가”</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Variance Inflation Factor(VIF) 변수선택</strong></p></li>
+</ul>
+<blockquote>
+<div><p><strong>“VIF는 독립변수를 다른 독립변수들로 선형회귀한 성능을 의미하며, 이를 통해 상호 가장 의존적인 독립변수를 제거”</strong><br />
+: 의존성이 낮은(분산이 작은) 독립변수들을 선택하거나, 의존성이 높은(분산이 높은) 독립변수들을 제거할 수 있음</p>
+</div></blockquote>
+<center>
+$VIF_i = Var(\hat{\beta}_i) = \dfrac{\sigma^2_{\epsilon}}{(n-1)Var(X_i)} \cdot \dfrac{1}{1-R_i^2} \\
+(R_i^2:~독립변수~X_i를~다른~독립변수들로~선형회귀한~성능(결정계수))$
+</center>  
+<ul class="simple">
+<li><p><strong>Principal Component Analysis(PCA) 변수선택</strong></p></li>
+</ul>
+<blockquote>
+<div><p><strong>“PCA는 다차원인 독립변수 행렬을 서로 독립인 소차원의 독립변수 행렬로 바꾸는 알고리즘으로, 이를 통해 상호 의존성을 제거”</strong></p>
+</div></blockquote>
+<center><img src='Image/PCA.PNG' width='350'></center>
+<center><img src='Image/PCA_Visual.png' width='600'></center>
+<center><img src='Image/PCA_Visualization.png' width='600'></center></div>
+</div>
+<div class="section" id="id19">
+<h2>모델링 방향<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="stationarity-process">
+<h3><a class="reference external" href="https://en.wikipedia.org/wiki/Stationary_process">정상성(Stationarity Process)</a><a class="headerlink" href="#stationarity-process" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>시계열이 정상성이다:</strong> 시간의 흐름에 따라 “통계적 특성(Statistical Properties)”이 변하지 않음</p>
+<ul>
+<li><p><strong>통계적 특성(Statistical Properties):</strong> 주로 평균(Mean)과 분산(Variance)/공분산(Covariance)를 얘기하지만 이를 포함한 모든 분포적 특성을 총칭함</p></li>
+<li><p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Homoscedasticity">Homoscedasticity</a></strong>: 일정한(유한한, 발산하지않는) 분산을 가짐을 의미 <span class="math notranslate nohighlight">\(\leftrightarrow\)</span> <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Heteroscedasticity">Heteroscedasticity</a></strong>: 발산하는 분산을 가짐을 의미</p></li>
+</ul>
+</li>
+</ul>
+<center><img src='Image/Stationary(on).png' width='300'></center>
+<center><img src='Image/Stationary(non).png' width='700'></center>
+<ul>
+<li><p><strong>약정상(Weak Stationarity, Wide-sense Stationary Process):</strong></p>
+<ul class="simple">
+<li><p><strong>(비수학적 이해)</strong><br />
+if <span class="math notranslate nohighlight">\(\{X_{it}\}^{t=+\infty}_{t=-\infty}\)</span> is a weak stationary process,</p></li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(X_{i1}\)</span>, <span class="math notranslate nohighlight">\(X_{i2}\)</span>, <span class="math notranslate nohighlight">\(X_{i3}\)</span>, … have the same distribution.</p></li>
+<li><p><span class="math notranslate nohighlight">\((X_{i1}, X_{i3})\)</span>, <span class="math notranslate nohighlight">\((X_{i5}, X_{i7})\)</span>, <span class="math notranslate nohighlight">\((X_{i9}, X_{i11})\)</span>, … have the same joint distribution. That’s it.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>(수학적 이해)</strong><br />
+if <span class="math notranslate nohighlight">\(\{X_{it}\}^{t=+\infty}_{t=-\infty}\)</span> is a weak stationary process,</p></li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(E(X_{it}) = \mu\)</span>, for all time <span class="math notranslate nohighlight">\(t\)</span> (The first moment estimation)</p></li>
+<li><p><span class="math notranslate nohighlight">\(Var(X_{it}) = E(X_{it}^2) - E(X_{it})^2 &lt; \infty\)</span>, for all time <span class="math notranslate nohighlight">\(t\)</span> (The second moment estimation)</p></li>
+<li><p><span class="math notranslate nohighlight">\(Cov(X_{is}, X_{ik}) = Cov(X_{i(s+h)}, X_{i(k+h)}) = f(h)\)</span>, for all time <span class="math notranslate nohighlight">\(s, k, h\)</span> (The cross moment estimation)<br />
+=&gt; covariance just depends on <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
+</ol>
+</li>
+<li><p><strong>강정상(Strong Stationarity, Strictly Stationary Process):</strong></p></li>
+</ul>
+<blockquote>
+<div><p><strong>“확률과정의 모든 분포 모멘트(Moment)가 시간 차이에만 의존하는 것(절대시간 미의존)”</strong></p>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- **(비수학적 이해)**  
+if $\{X_{it}\}^{t=+\infty}_{t=-\infty}$ is a strong stationary process,  
+1) $X_{i1}$, $X_{i2}$, $X_{i3}$, ... have the same distribution.  
+2) $(X_{i1}, X_{i3})$, $(X_{i5}, X_{i7})$, $(X_{i9}, X_{i11})$, ... have the same joint distribution.  
+3) $(X_{i1}, X_{i3}, X_{i5})$, $(X_{i7}, X_{i9}, X_{i11})$, $(X_{i13}, X_{i15}, X_{i17})$, ... must have the same joint distribution.  
+4) $(X_{i1}, X_{i3}, ... , X_{i\infty})$ is invariant under all time translation.  
+
+- **백색잡음(White Noise, $WN$): &lt;U&gt;강정상 예시로 시계열분석 기본알고리즘 중 가장 중요함&lt;/U&gt;**    
+&lt;center&gt;&lt;img src=&#39;Image/White_Noise.png&#39; width=&#39;300&#39;&gt;&lt;/center&gt;
+
+&gt;**1) 잔차들은 정규분포이고, (unbiased) 평균 0과 일정한 분산을 가져야 함:**  
+\begin{align*}
+\{\epsilon_t : t = \dots, -2, -1, 0, 1, 2, \dots\} \sim N(0,\sigma^2_{\epsilon_t}) \\
+\end{align*}
+\begin{align*}
+where~~ \epsilon_t \sim  i.i.d(independent~and~identically~distributed) \\
+\end{align*}
+\begin{align*}
+\epsilon_t = Y_t - \hat{Y_t}, \;\; E(\epsilon_t) = 0, \;\; Var(\epsilon_t) = \sigma^2_{\epsilon_t} \\
+\end{align*}
+\begin{align*}
+Cov(\epsilon_s, \epsilon_k) = 0~for~different~times!(s \ne k)
+\end{align*}
+
+&gt;**2) 잔차들이 시간의 흐름에 따라 상관성이 없어야 함:**  
+    - 자기상관함수(Autocorrelation Fundtion([ACF](https://en.wikipedia.org/wiki/Autocorrelation)))를 통해 $Autocorrelation~=~0$인지 확인
+        - 공분산(Covariance): 
+        &lt;center&gt;$Cov(Y_s, Y_k)$ = $E[(Y_s-E(Y_s))$$(Y_k-E(Y_k))]$ = $\gamma_{s,k}$&lt;/center&gt;
+        - 자기상관함수(Autocorrelation Function): 
+        &lt;center&gt;$Corr(Y_s, Y_k)$ = $\dfrac{Cov(Y_s, Y_k)}{\sqrt{Var(Y_s)Var(Y_k)}}$ = $\dfrac{\gamma_{s,k}}{\sqrt{\gamma_s \gamma_k}}$&lt;/center&gt;
+        - 편자기상관함수(Partial Autocorrelation Function): $s$와 $k$사이의 상관성을 제거한 자기상관함수
+        &lt;center&gt;$Corr[(Y_s-\hat{Y}_s, Y_{s-t}-\hat{Y}_{s-t})]$  for $1&lt;t&lt;k$&lt;/center&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>강정상과 약정상 관계:</strong></p></li>
+</ul>
+<blockquote>
+<div><p><strong>“약정상 <span class="math notranslate nohighlight">\(\{x_{it}\}^{t=+\infty}_{t=-\infty}\)</span>가 3차 이상의 모멘텀(Skewness, Kurtosis 등)에서도 시간에따라 일정하면, <span class="math notranslate nohighlight">\(\{x_{it}\}^{t=+\infty}_{t=-\infty}\)</span>는 강정상이다”</strong><br />
+<strong>강정상 <span class="math notranslate nohighlight">\(\{x_{it}\}^{t=+\infty}_{t=-\infty}\)</span>의 특정 샘플 <span class="math notranslate nohighlight">\(\{x_{it}\}^{t={i_2}}_{t={i_1}}\)</span>는 평균과 분산까지만 일정한 약정상 일 수 있다</strong><br />
+<strong>“강정상 <span class="math notranslate nohighlight">\(\Rightarrow\)</span> 약정상, but 약정상 <span class="math notranslate nohighlight">\(\nRightarrow\)</span> 강정상”</strong></p>
+</div></blockquote>
+<ul>
+<li><p><strong>비정상 확률과정(Non-stationary Process):</strong></p>
+<ul class="simple">
+<li><p>추세가 있어서 일차 모멘트(<span class="math notranslate nohighlight">\(E(y_t)\)</span>)가 0이 아니며 시간에 따라 변화함</p></li>
+<li><p>추세가 없지만(<span class="math notranslate nohighlight">\(E(y_t) = 0\)</span>) 이차 모멘트(<span class="math notranslate nohighlight">\(Var(y_t)\)</span>)가 시간에 따라 변화함</p></li>
+<li><p><strong>랜덤 워크(Random Walk):</strong> 비정상(Non-stationary) 데이터 예시, 차분시 백색잡음(정상성) 전환</p></li>
+</ul>
+  <center>$Y_{it} = Y_{it-1} + \epsilon_t \\ Y_{it} - Y_{it-1} = \epsilon_t \\ \epsilon_t \sim WN(0,\sigma_{\epsilon_t}^2)$</center>
+</li>
+</ul>
+<center><img src='Image/Random_Walk.png' width='400'></center>
+<ul class="simple">
+<li><p><strong>활용주요목적:</strong></p>
+<ol class="simple">
+<li><p>시계열 모형은 데이터가 Stationary라 가정한다 =&gt; Stationary여야 분석 효과가 높다</p></li>
+<li><p>백색잡음 또한 Stationary이다 =&gt; 잔차검증 역시 Stationary 가정을 전재로 한다</p></li>
+</ol>
+</li>
+<li><p><strong>활용단어예시:</strong></p>
+<ul>
+<li><p>Stationary Process: 정상성인 시계열데이터를 발생시키는 데이터셋(프로세스)</p></li>
+<li><p>Stationary Model: 정상성인 시계열데이터를 설명하는 모델</p></li>
+<li><p>Trend Stationary: 트랜드를 제거하면 정상성인 시계열데이터</p></li>
+<li><p>Seasonal Stationary: 계절성을 제거하면 정상성인 시계열데이터</p></li>
+<li><p>Difference Stationary: 차분을하면 정상성인 시계열데이터</p></li>
+<li><p>Strictly Stationary: 시간 흐름에 따라 “통계적 특성”이 변하지 않음</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 라이브러리 호출</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">seed</span><span class="p">,</span> <span class="n">random</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">reload_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="kn">from</span> <span class="nn">module</span> <span class="kn">import</span> <span class="n">stationarity_adf_test</span><span class="p">,</span> <span class="n">stationarity_kpss_test</span>
+
+<span class="c1"># 랜덤워크 데이터 생성 및 통계량 Test (rho=0)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">random_walk</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="n">movement</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">random_walk</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">movement</span>
+    <span class="n">random_walk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_walk</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rho: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> ADF p-value: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">stationarity_adf_test</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="p">[]))[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># 랜덤워크 데이터 생성 및 통계량 Test (rho=0.6)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">0.6</span>
+<span class="n">random_walk</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="n">movement</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">random_walk</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">movement</span>
+    <span class="n">random_walk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_walk</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rho: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> ADF p-value: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">stationarity_adf_test</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="p">[]))[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># 랜덤워크 데이터 생성 및 통계량 Test (rho=0.9)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">random_walk</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="n">movement</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">random_walk</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">movement</span>
+    <span class="n">random_walk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_walk</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rho: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> ADF p-value: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">stationarity_adf_test</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="p">[]))[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># 랜덤워크 데이터 생성 및 통계량 Test (rho=1)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">random_walk</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="n">movement</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="mi">1</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">random_walk</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">movement</span>
+    <span class="n">random_walk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">random_walk</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Rho: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> ADF p-value: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">stationarity_adf_test</span><span class="p">(</span><span class="n">random_walk</span><span class="p">,</span> <span class="p">[]))[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2_Learning_TimeSeries_52_0.png" src="../_images/2_Learning_TimeSeries_52_0.png" />
+<img alt="../_images/2_Learning_TimeSeries_52_1.png" src="../_images/2_Learning_TimeSeries_52_1.png" />
+<img alt="../_images/2_Learning_TimeSeries_52_2.png" src="../_images/2_Learning_TimeSeries_52_2.png" />
+<img alt="../_images/2_Learning_TimeSeries_52_3.png" src="../_images/2_Learning_TimeSeries_52_3.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>계수가 1에 가가울수록 시계열 데이터는 평균에서 벗어나는 경향을 보임</p></li>
+<li><p>데이터의 계수가 1에 가까운지(있는지 없는지)를 체크하는 통계량 등장: Augmented Dickey-Fuller Test</p></li>
+<li><p>1일 경우 단위근이 있다 표현하며, 단위근을 제거하기 위해 차분하면 WN인 정상 데이터로 변환되는 수학형태임</p></li>
+</ul>
+</div>
+<div class="section" id="stationarity-test">
+<h3>정상성 테스트(Stationarity Test)<a class="headerlink" href="#stationarity-test" title="Permalink to this headline">¶</a></h3>
+<p><strong>1) 시각화 테스트(by Visual):</strong> 트랜드와 계절성이 없는지를 파악하여 안정성 확인</p>
+<center><img src='Image/Stationary_Visual.png' width='500'></center>
+<p><strong>2) 기초통계 테스트(by Summary Statistics):</strong> 특정시간(ex. 계절)에 따른 기초통계가 랜덤한지 파악하여 안정성 확인<br />
+<strong>3) 검정통계량 테스트(by Statistical Statistics Test):</strong> 정상성을 테스트하는 검정통계량을 통해 안정성 가설 확인</p>
+<blockquote>
+<div><p><a class="reference external" href="https://en.wikipedia.org/wiki/Unit_root_test"><strong>“In statistics, a unit root test tests whether a time series variable is non-stationary and possesses a unit root.”</strong></a></p>
+</div></blockquote>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test"><strong>Augmented Dickey-Fuller(ADF) test:</strong></a></p>
+<ul>
+<li><p><strong>가설확인</strong></p>
+<ul class="simple">
+<li><p><strong>대중주장(귀무가설, Null Hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>):</strong> 시계열 데이터는 단위근(Unit Root)를 있다 / 비정상 상태이다 / 시간의존 구조이다</p></li>
+<li><p><strong>나의주장(대립가설, Alternative Hypothesis, <span class="math notranslate nohighlight">\(H_1\)</span>):</strong> 시계열 데이터는 단위근이 없다 / 정상 상태이다 / 시간의존 구조가 아니다</p></li>
+</ul>
+</li>
+<li><p><strong>의사결정</strong></p>
+<ul class="simple">
+<li><p><strong>p-value &gt;= 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 시계열 데이터가 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓</p></li>
+</ul>
+<blockquote>
+<div><p><strong>수집한(분석한) 시계열 데이터는 단위근이 있다 / 비정상 상태이다 / 시간의존 구조이다</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>p-value &lt; 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 시계열 데이터가 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참</p></li>
+</ul>
+<blockquote>
+<div><p><strong>수집한(분석한) 시계열 데이터는 단위근이 없다 / 정상 상태이다 / 시간의존 구조가 아니다</strong></p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ADF-GLS_test"><strong>ADF-GLS test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> ADF와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phillips%E2%80%93Perron_test"><strong>Phillips–Perron(PP) test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> ADF와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phillips%E2%80%93Perron_test"><strong>Kwiatkowski Phillips Schmidt Shin(KPSS) test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> ADF와 <strong>반대</strong></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>검증지표 방향<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="metrics">
+<h3>성능비교를 위한 대표적 검증지표(Metrics)<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>R-squared(R^2):</strong> 추정된 (선형)모형이 주어진 데이터에 잘 적합된 정도, 계량경제학에서는 모델에 의해 설명되는 데이터 분산의 정도(퍼센트), <span class="math notranslate nohighlight">\((- \infty, 1]\)</span></p></li>
+</ul>
+<center>$R^2$ = $\dfrac{ESS}{TSS}$ = $\dfrac{\sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$ = $1 - \dfrac{RSS}{TSS}$ = $1 - \dfrac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$</center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">r2_score</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Mean Absolute Error(MAE):</strong> 각 데이터의 단위를 보존하는 성능지표, <span class="math notranslate nohighlight">\([0, +\infty)\)</span></p></li>
+</ul>
+<center>$MAE = \dfrac{1}{n}$ $\sum\limits_{i=1}^{n} |y_i - \hat{y}_i|$</center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_absolute_error</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Mean Squared Error(MSE):</strong> 가장 많이 사용되며 큰 오차에 패널티(Penalty)를 높게 부여하는 성능지표, <span class="math notranslate nohighlight">\([0, +\infty)\)</span></p></li>
+</ul>
+<center>$MSE = \dfrac{1}{n}$ $\sum\limits_{i=1}^{n} (y_i - \hat{y}_i)^2$</center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Mean Squared Logarithmic Error(MSLE):</strong> MSE와 유사하나 큰값/작은값에 적은/많은 비중(Weignt)을 부여하는 성능지표, Exponential 추세가 있는 데이터에 많이 활용, <span class="math notranslate nohighlight">\([0, +\infty)\)</span></p></li>
+</ul>
+<center>$MSLE = \dfrac{1}{n}$ $\sum\limits_{i=1}^{n} (log(1+y_i) - log(1+\hat{y}_i))^2$</center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_log_error</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Median Absolute Error(MedAE):</strong> 이상치에 영향을 받지 않는(Robust) 성능지표, <span class="math notranslate nohighlight">\([0, +\infty)\)</span></p></li>
+</ul>
+<center>$MedAE = median(|y_1 - \hat{y}_1|, |y_2 - \hat{y}_2|, ... , |y_n - \hat{y}_n|)$</center>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">median_absolute_error</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Root Mean Squared Error(RMSE):</strong> MSE의 제곱값을 보정한 성능지표, <span class="math notranslate nohighlight">\([0, +\infty)\)</span></p></li>
+</ul>
+<center>$RMSE = \sqrt{MSE}$</center>
+<ul class="simple">
+<li><p><strong>Mean Absolute Percentage Error(MAPE):</strong> MAE와 유사하나 퍼센트 형식으로 표시한 성능지표, <span class="math notranslate nohighlight">\([0, +\infty)\)</span></p></li>
+</ul>
+<center>$MAPE = \dfrac{100}{n}$ $\sum\limits_{i=1}^{n} \dfrac{|y_i - \hat{y}_i|}{y_i}$</center>
+<ul class="simple">
+<li><p><strong>Mean Percentage Error(MPE):</strong> MAPE와 유사하나 오차의 부호(+/-)까지 고려한 성능지표, <span class="math notranslate nohighlight">\((-\infty, +\infty)\)</span></p></li>
+</ul>
+<center>$MPE = \dfrac{100}{n}$ $\sum\limits_{i=1}^{n} \dfrac{y_i - \hat{y}_i}{y_i}$</center>
+<ul class="simple">
+<li><p><strong>Summary:</strong></p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Acroynm</p></th>
+<th class="head"><p>Full Name</p></th>
+<th class="head"><p>Residual Operation?</p></th>
+<th class="head"><p>Robust To Outliers?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MAE</p></td>
+<td><p>Mean Absolute Error</p></td>
+<td><p>Absolute Value</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>MSE</p></td>
+<td><p>Mean Squared Error</p></td>
+<td><p>Square</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>MedAE</p></td>
+<td><p>Median Absolute Error</p></td>
+<td><p>Absolute Value</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>RMSE</p></td>
+<td><p>Root Mean Squared Error</p></td>
+<td><p>Square</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>MAPE</p></td>
+<td><p>Mean Absolute Percentage Error</p></td>
+<td><p>Absolute Value</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>MPE</p></td>
+<td><p>Mean Percentage Error</p></td>
+<td><p>N/A</p></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="underfitting-vs-overfitting">
+<h3>검증 유의점(Underfitting vs Overfitting)<a class="headerlink" href="#underfitting-vs-overfitting" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>과소적합(Underfitting):</strong> 단순모델 또는 높은편향(충분하지 않은 데이터패턴 학습)</p></li>
+<li><p><strong>과적합(Overfitting):</strong> 복잡한모델 또는 높은분산(주어진 데이터패턴에만 효과)</p>
+<ul>
+<li><p><strong>발생:</strong> 같은 조건에 대해 추정되는 답이 복수개 존재할 수 있는 상황</p>
+<ul>
+<li><p>독립변수 갯수에 비해 추정해야 할 파라미터/모수의 수가 과도하게 큰 경우</p></li>
+<li><p>독립변수가 서로 독립이 아닌 경우</p></li>
+</ul>
+</li>
+<li><p><strong>문제이유:</strong></p>
+<ul>
+<li><p>학습에 사용되지 않는 새로운 독립변수 값을 입력하면 오차가 커짐 (Cross-validation 오차)</p></li>
+<li><p>샘플 데이터가 조금만 변화해도 추정되는 파라미터/모수의 값이 크게 달라짐 (추정의 불안정성/부정확성)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<center><img src='Image/Underfitting_Overfitting.jpg' width='600'></center>
+<center><img src='Image/Underfitting_Overfitting.png' width='600'></center></div>
+<div class="section" id="bias-variance-trade-off">
+<h3>편향-분산 상충관계(Bias-variance Trade-off)<a class="headerlink" href="#bias-variance-trade-off" title="Permalink to this headline">¶</a></h3>
+<p><strong>1) 편향과 분산의 정의</strong></p>
+<blockquote>
+<div><p><strong>(비수학적 이해)</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>편향(Bias):</strong> 점추정</p>
+<ul>
+<li><p>예측값과 실제값의 차이</p></li>
+<li><p>모델 학습시 여러 데이터로 학습 후 예측값의 범위가 정답과 얼마나 멀리 있는지 측정</p></li>
+</ul>
+</li>
+<li><p><strong>편향(Bias(Real)):</strong> 모형화(단순화)로 미처 반영하지 못한 복잡성<br />
+<U>=&gt; 편향이 작다면 Training 데이터 패턴(복잡성)을 최대반영 의미</U><br />
+<U>=&gt; 편향이 크다면 Training 데이터 패턴(복잡성)을 최소반영 의미</U></p></li>
+<li><p><strong>분산(Variance):</strong> 구간추정</p>
+<ul>
+<li><p>학습한 모델의 예측값이 평균으로부터 퍼진 정도(변동성/분산)</p></li>
+<li><p>여러 모델로 학습을 반복한다면, 학습된 모델별로 예측한 값들의 차이를 측정</p></li>
+</ul>
+</li>
+<li><p><strong>분산(Variance(Real)):</strong> 다른 데이터(Testing)를 사용했을때 발생할 변화<br />
+<U>=&gt; 분산이 작다면 다른 데이터로 예측시 적은 변동 예상</U><br />
+<U>=&gt; 분산이 크다면 다른 데이터로 예측시 많은 변동 예상</U></p></li>
+</ul>
+<center><img src='Image/Bias_Variance1.jpeg' width='400'></center>
+<blockquote>
+<div><p><strong>(수학적 이해)</strong></p>
+</div></blockquote>
+<p>\begin{align*}
+\text{Equation of Error} &amp;&amp; Err(x) &amp;= E\Bigl[\bigl(Y-\hat{f}(x)\bigr)^2 \Bigr] \
+&amp;&amp; &amp;= \Bigl(E[\hat{f}(x)] - f(x)\Bigr)^2 + E \Bigl[\bigl(\hat{f}(x) - E[\hat{f}(x)]\bigr)^2 \Bigr] + \sigma_{\epsilon}^2 \
+&amp;&amp; &amp;= \text{Bias}^2 + \text{Variance} + \text{Irreducible Error}
+\end{align*}</p>
+<p><strong>2) 편향과 분산의 관계</strong></p>
+<ul class="simple">
+<li><p><strong>모델의 복잡도가 낮으면 Bias가 증가하고 Variance가 감소(Underfitting)</strong><br />
+: 구간추정 범위는 좁으나 점추정 정확성 낮음<br />
+: Training/Testing 모두 예측력이 낮음</p></li>
+<li><p><strong>모델의 복잡도가 높으면 Bias가 감소하고 Variance가 증가(Overfitting)</strong><br />
+: 점추정 정확성은 높으나 구간추정 범위는 넓음<br />
+: Training만 잘 예측력 높고 Testing은 예측력 낮음</p></li>
+<li><p><strong>Bias와 Variance가 최소화 되는 수준에서 모델의 복잡도 선택</strong></p></li>
+</ul>
+<center><img src='Image/Bias-Variance-Tradeoff.png' width='400'></center>
+<center><img src='Image/Bias_Variance4.png' width='400'></center>
+<p><strong>3) 편향과 분산 모두를 최소화하는 방법</strong></p>
+<center><img src='Image/Bias_Variance_Reduce.png' width='600'></center></div>
+</div>
+<div class="section" id="id21">
+<h2>잔차진단 방향<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><strong>“모델링이 데이터의 패턴을 최대한 반영했을 경우 분석을 마무리 해도 좋다”</strong></p>
+</div></blockquote>
+<div class="section" id="id22">
+<h3><a class="reference external" href="https://en.wikipedia.org/wiki/Unit_root_test">정상성 테스트</a><a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test"><strong>Augmented Dickey-Fuller(ADF) test:</strong></a></p>
+<ul>
+<li><p><strong>가설확인</strong></p>
+<ul class="simple">
+<li><p><strong>대중주장(귀무가설, Null Hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>):</strong> 시계열 데이터는 단위근(Unit Root)를 있다 / 비정상 상태이다 / 시간의존 구조이다</p></li>
+<li><p><strong>나의주장(대립가설, Alternative Hypothesis, <span class="math notranslate nohighlight">\(H_1\)</span>):</strong> 시계열 데이터는 단위근이 없다 / 정상 상태이다 / 시간의존 구조가 아니다</p></li>
+</ul>
+</li>
+<li><p><strong>의사결정</strong></p>
+<ul class="simple">
+<li><p><strong>p-value &gt;= 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 시계열 데이터가 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓</p></li>
+</ul>
+<blockquote>
+<div><p><strong>수집한(분석한) 시계열 데이터는 단위근이 있다 / 비정상 상태이다 / 시간의존 구조이다</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>p-value &lt; 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 시계열 데이터가 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참</p></li>
+</ul>
+<blockquote>
+<div><p><strong>수집한(분석한) 시계열 데이터는 단위근이 없다 / 정상 상태이다 / 시간의존 구조가 아니다</strong></p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ADF-GLS_test"><strong>ADF-GLS test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> ADF와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phillips%E2%80%93Perron_test"><strong>Phillips–Perron(PP) test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> ADF와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phillips%E2%80%93Perron_test"><strong>Kwiatkowski Phillips Schmidt Shin(KPSS) test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> ADF와 <strong>반대</strong></p></li>
+</ul>
+</li>
+<li><p><strong>예시:</strong></p></li>
+</ul>
+<center><img src='Image/ADF_example1.png' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/ADF_example2.png' width='300'></center>
+<hr class="docutils" />
+<center><img src='Image/ADF_example3.png' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/ADF_example4.png' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/ADF_example5.png' width='600'></center></div>
+<div class="section" id="normality-test">
+<h3><a class="reference external" href="https://en.wikipedia.org/wiki/Normality_test">정규분포 테스트(Normality Test)</a><a class="headerlink" href="#normality-test" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Shapiro%E2%80%93Wilk_test"><strong>Shapiro–Wilk test:</strong></a></p>
+<ul>
+<li><p><strong>가설확인</strong></p>
+<ul class="simple">
+<li><p><strong>대중주장(귀무가설, Null Hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>):</strong> 데이터는 정규분포 형태이다</p></li>
+<li><p><strong>나의주장(대립가설, Alternative Hypothesis, <span class="math notranslate nohighlight">\(H_1\)</span>):</strong> 데이터는 정규분포가 아닌 형태다</p></li>
+</ul>
+</li>
+<li><p><strong>의사결정</strong></p>
+<ul class="simple">
+<li><p><strong>p-value &gt;= 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 데이터가 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓</p></li>
+</ul>
+<blockquote>
+<div><p>내가 수집한(분석한) 데이터는 정규분포 형태이다</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>p-value &lt; 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 데이터가 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참</p></li>
+</ul>
+<blockquote>
+<div><p>내가 수집한(분석한) 데이터는 정규분포가 아닌 형태다</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test"><strong>Kolmogorov–Smirnov test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Shapiro–Wilk와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Lilliefors_test"><strong>Lilliefors test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Shapiro–Wilk와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Anderson%E2%80%93Darling_test"><strong>Anderson–Darling test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Shapiro–Wilk와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Jarque%E2%80%93Bera_test"><strong>Jarque–Bera test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Shapiro–Wilk와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test"><strong>Pearson’s chi-squared test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Shapiro–Wilk와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/D%27Agostino%27s_K-squared_test"><strong>D’Agostino’s K-squared test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Shapiro–Wilk와 동일</p></li>
+</ul>
+</li>
+<li><p><strong>예시:</strong></p></li>
+</ul>
+<center><img src='Image/SW_example1.png' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/SW_example2.png' width='300'></center>
+<hr class="docutils" />
+<center><img src='Image/SW_example3.png' width='400'></center>
+<hr class="docutils" />
+<center><img src='Image/SW_example4.png' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/SW_example5.png' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/SW_example6.png' width='600'></center></div>
+<div class="section" id="autocorrelation-test">
+<h3>자기상관 테스트(Autocorrelation Test)<a class="headerlink" href="#autocorrelation-test" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ljung%E2%80%93Box_test"><strong>Ljung–Box test:</strong></a></p>
+<ul>
+<li><p><strong>가설확인</strong></p>
+<ul class="simple">
+<li><p><strong>대중주장(귀무가설, Null Hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>):</strong> 시계열 데이터의 Autocorrelation은 0이다(존재하지 않는다)</p></li>
+<li><p><strong>나의주장(대립가설, Alternative Hypothesis, <span class="math notranslate nohighlight">\(H_1\)</span>):</strong> 시계열 데이터의 Autocorrelation은 0이 아니다(존재한다)</p></li>
+</ul>
+</li>
+<li><p><strong>의사결정</strong></p>
+<ul class="simple">
+<li><p><strong>p-value &gt;= 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 데이터가 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓</p></li>
+</ul>
+<blockquote>
+<div><p><strong>내가 수집한(분석한) 시계열 데이터의 Autocorrelation은 존재하지 않는다</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>p-value &lt; 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 데이터가 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참</p></li>
+</ul>
+<blockquote>
+<div><p><strong>내가 수집한(분석한) 시계열 데이터의 Autocorrelation은 존재한다</strong></p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Portmanteau_test"><strong>Portmanteau test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Ljung–Box와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Breusch%E2%80%93Godfrey_test"><strong>Breusch–Godfrey test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Ljung–Box와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Durbin%E2%80%93Watson_statistic"><strong>Durbin–Watson statistic:</strong></a></p>
+<ul>
+<li><p><strong>가설확인:</strong> Ljung–Box와 동일</p></li>
+<li><p><strong>의사결정:</strong> 검정통계량 범위 - <span class="math notranslate nohighlight">\([0, 4]\)</span></p>
+<ul class="simple">
+<li><p><strong>2 근방:</strong> 내가 수집한(분석한) 데이터가 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓</p></li>
+</ul>
+<blockquote>
+<div><p><strong>내가 수집한(분석한) 시계열 데이터의 Autocorrelation은 존재하지 않는다</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>0 또는 4 근방:</strong> 내가 수집한(분석한) 데이터가 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참</p></li>
+</ul>
+<blockquote>
+<div><p><strong>내가 수집한(분석한) 시계열 데이터의 Autocorrelation은 존재한다</strong>
+- 0: 양(Positive)의 Autocorrelation 존재한다
+- 4: 음(Negative)의 Autocorrelation 존재한다</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>예시:</strong></p></li>
+</ul>
+<center><img src='Image/LB_example1.jpg' width='400'></center>
+<hr class="docutils" />
+<center><img src='Image/LB_example2.jpg' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/DW_example1.png' width='600'></center>
+<hr class="docutils" />
+<center><img src='Image/DW_example2.png' width='300'></center>
+<hr class="docutils" />
+<center><img src='Image/DW_example3.png' width='600'></center></div>
+<div class="section" id="homoscedasticity-test">
+<h3><a class="reference external" href="https://en.wikipedia.org/wiki/Homoscedasticity">등분산성 테스트(Homoscedasticity Test)</a><a class="headerlink" href="#homoscedasticity-test" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Goldfeld%E2%80%93Quandt_test"><strong>Goldfeld–Quandt test:</strong></a></p>
+<ul>
+<li><p><strong>가설확인</strong></p>
+<ul class="simple">
+<li><p><strong>대중주장(귀무가설, Null Hypothesis, <span class="math notranslate nohighlight">\(H_0\)</span>):</strong> 시계열 데이터의 Homoscedasticity 상태다(등분산이다)</p></li>
+<li><p><strong>나의주장(대립가설, Alternative Hypothesis, <span class="math notranslate nohighlight">\(H_1\)</span>):</strong> 시계열 데이터의 Heteroscedasticity 상태다(등분산이 아니다 / 발산하는 분산이다)</p></li>
+</ul>
+</li>
+<li><p><strong>의사결정</strong></p>
+<ul class="simple">
+<li><p><strong>p-value &gt;= 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 데이터가 대중주장과 유사하기 때문에 대중주장 참 &amp; 나의주장 거짓</p></li>
+</ul>
+<blockquote>
+<div><p><strong>내가 수집한(분석한) 시계열 데이터는 등분산이다</strong></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>p-value &lt; 내기준(ex. 0.05):</strong> 내가 수집한(분석한) 데이터가 대중주장을 벗어나기 때문에 대중주장 거짓 &amp; 나의주장 참</p></li>
+</ul>
+<blockquote>
+<div><p><strong>내가 수집한(분석한) 시계열 데이터는 등분산이 아니다</strong></p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Breusch%E2%80%93Pagan_test"><strong>Breusch–Pagan test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Goldfeld–Quandt와 동일</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bartlett%27s_test"><strong>Bartlett’s test:</strong></a></p>
+<ul class="simple">
+<li><p><strong>가설확인:</strong> Goldfeld–Quandt와 동일</p></li>
+</ul>
+</li>
+<li><p><strong>예시:</strong></p></li>
+</ul>
+<center><img src='Image/GQ_example1.jpg' width='500'></center>
+<hr class="docutils" />
+<center><img src='Image/GQ_example2.jpg' width='400'></center></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./TimeSeriesData"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="1_Data_Analysis_Cycle.html" title="previous page">데이터 분석의 단계별 목적 이해하기 (분석 싸이클 이해)</a>
+    <a class='right-next' id="next-link" href="3_Algorithms_ML_TS_Linear.html" title="next page">기계학습(Machine Learning) 알고리즘</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Kim<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -48,6 +48,24 @@
   - file: advanced/advanced
   - file: contribute/intro
 
+
+- part: Analysis of Time Series Data
+  chapters:
+  - file: TimeSeriesData/1_Data_Analysis_Cycle
+  - file: TimeSeriesData/2_Learning_TimeSeries
+  - file: TimeSeriesData/3_Algorithms_ML_TS_Linear
+  - file: TimeSeriesData/4_Algorithms_TS_NonLinear
+  - file: TimeSeriesData/Practice
+    sections:
+    - file: TimeSeriesData/Practice/Basic/0_Installation_Program
+    - file: TimeSeriesData/Practice/Basic/1_Tutorial_Pandas
+    - file: TimeSeriesData/Practice/Basic/2_Tutorial_Numpy
+    - file: TimeSeriesData/Practice/3_Setting_Analysis
+    - file: TimeSeriesData/Practice/4_FE_Analysis
+    - file: TimeSeriesData/Practice/5_Agile_Analysis
+    - file: TimeSeriesData/Practice/6_TimeSeries_Analysis
+
+
 - part: Reference
   chapters:
   - url: https://executablebooks.org/en/latest/gallery.html

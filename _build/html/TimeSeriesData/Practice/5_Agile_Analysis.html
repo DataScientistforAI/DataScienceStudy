@@ -1,0 +1,2535 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Library: 분석에 사용할 모듈 설치 &#8212; Data Science Study</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Science Study</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Analysis of Time Series Data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Data_Analysis_Cycle.html">
+   데이터 분석의 단계별 목적 이해하기 (분석 싸이클 이해)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Data_Analysis_Cycle.html#id5">
+   분석을 이해하고 공감하는 자세 및 방향
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Data_Analysis_Cycle.html#id10">
+   분석 단계별 의사결정을 위한 수학/통계적 언어를 이해하기
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html">
+   학습방향과 알고리즘(Learning Style and Algorithms)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html#id2">
+   시계열 데이터/분석과 기계학습의 차이
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html#id8">
+   (시계열) 회귀분석 요약
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html#id12">
+   시계열 분석
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Algorithms_ML_TS_Linear.html">
+   기계학습(Machine Learning) 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Algorithms_ML_TS_Linear.html#id6">
+   시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Algorithms_TS_NonLinear.html">
+   비선형 시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Algorithms_TS_NonLinear.html#id9">
+   다변량 시계열 알고리즘
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/TimeSeriesData/Practice/5_Agile_Analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy/issues/new?title=Issue%20on%20page%20%2FTimeSeriesData/Practice/5_Agile_Analysis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DataScientistforAI/DataScienceStudy/master?urlpath=tree/TimeSeriesData/Practice/5_Agile_Analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com"/github/DataScientistforAI/DataScienceStudy/blob/master/TimeSeriesData/Practice/5_Agile_Analysis.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Import Library: 분석에 사용할 모듈 설치
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-base-model-y-regression">
+   Applying Base Model: Y예측을 위한 Regression분석 실행
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-summary-raw-data">
+     Code Summary (Raw Data)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-summary-feature-engineering-data">
+     Code Summary (Feature Engineering Data)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-agile-model-y-ml">
+   Applying Agile Model: Y예측을 위한 ML분석 실행
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regularization">
+     Regularization
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bagging">
+     Bagging
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boosting">
+     Boosting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fe-effect-by-top-agile-algorithms">
+   FE Effect by Top Agile Algorithms
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="import-library">
+<h1>Import Library: 분석에 사용할 모듈 설치<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h1>
+<p><strong>1. Import Library</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python -m pip install --user --upgrade pip
+<span class="o">!</span>pip install tqdm
+<span class="o">!</span>pip install xgboost
+<span class="o">!</span>pip install lightgbm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pip in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (20.3.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tqdm in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (4.47.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting xgboost
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading xgboost-1.3.1-py3-none-macosx_10_14_x86_64.macosx_10_15_x86_64.macosx_11_0_x86_64.whl (1.2 MB)
+?25l
+     |▎                               | 10 kB 16.9 MB/s eta 0:00:01
+     |▋                               | 20 kB 3.8 MB/s eta 0:00:01
+     |▉                               | 30 kB 2.9 MB/s eta 0:00:01
+     |█▏                              | 40 kB 2.4 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |█▍                              | 51 kB 997 kB/s eta 0:00:02
+     |█▊                              | 61 kB 1.2 MB/s eta 0:00:01
+     |██                              | 71 kB 1.3 MB/s eta 0:00:01
+     |██▎                             | 81 kB 1.4 MB/s eta 0:00:01
+     |██▌                             | 92 kB 1.5 MB/s eta 0:00:01
+     |██▉                             | 102 kB 1.6 MB/s eta 0:00:01
+     |███                             | 112 kB 1.6 MB/s eta 0:00:01
+     |███▍                            | 122 kB 1.6 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |███▋                            | 133 kB 1.6 MB/s eta 0:00:01
+     |████                            | 143 kB 1.6 MB/s eta 0:00:01
+     |████▏                           | 153 kB 1.6 MB/s eta 0:00:01
+     |████▌                           | 163 kB 1.6 MB/s eta 0:00:01
+     |████▊                           | 174 kB 1.6 MB/s eta 0:00:01
+     |█████                           | 184 kB 1.6 MB/s eta 0:00:01
+     |█████▎                          | 194 kB 1.6 MB/s eta 0:00:01
+     |█████▋                          | 204 kB 1.6 MB/s eta 0:00:01
+     |█████▉                          | 215 kB 1.6 MB/s eta 0:00:01
+     |██████▏                         | 225 kB 1.6 MB/s eta 0:00:01
+     |██████▍                         | 235 kB 1.6 MB/s eta 0:00:01
+     |██████▊                         | 245 kB 1.6 MB/s eta 0:00:01
+     |███████                         | 256 kB 1.6 MB/s eta 0:00:01
+     |███████▎                        | 266 kB 1.6 MB/s eta 0:00:01
+     |███████▌                        | 276 kB 1.6 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |███████▉                        | 286 kB 1.6 MB/s eta 0:00:01
+     |████████                        | 296 kB 1.6 MB/s eta 0:00:01
+     |████████▍                       | 307 kB 1.6 MB/s eta 0:00:01
+     |████████▋                       | 317 kB 1.6 MB/s eta 0:00:01
+     |█████████                       | 327 kB 1.6 MB/s eta 0:00:01
+     |█████████▏                      | 337 kB 1.6 MB/s eta 0:00:01
+     |█████████▌                      | 348 kB 1.6 MB/s eta 0:00:01
+     |█████████▊                      | 358 kB 1.6 MB/s eta 0:00:01
+     |██████████                      | 368 kB 1.6 MB/s eta 0:00:01
+     |██████████▎                     | 378 kB 1.6 MB/s eta 0:00:01
+     |██████████▋                     | 389 kB 1.6 MB/s eta 0:00:01
+     |██████████▉                     | 399 kB 1.6 MB/s eta 0:00:01
+     |███████████▏                    | 409 kB 1.6 MB/s eta 0:00:01
+     |███████████▍                    | 419 kB 1.6 MB/s eta 0:00:01
+     |███████████▊                    | 430 kB 1.6 MB/s eta 0:00:01
+     |████████████                    | 440 kB 1.6 MB/s eta 0:00:01
+     |████████████▎                   | 450 kB 1.6 MB/s eta 0:00:01
+     |████████████▌                   | 460 kB 1.6 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████████████▉                   | 471 kB 1.6 MB/s eta 0:00:01
+     |█████████████                   | 481 kB 1.6 MB/s eta 0:00:01
+     |█████████████▍                  | 491 kB 1.6 MB/s eta 0:00:01
+     |█████████████▋                  | 501 kB 1.6 MB/s eta 0:00:01
+     |██████████████                  | 512 kB 1.6 MB/s eta 0:00:01
+     |██████████████▏                 | 522 kB 1.6 MB/s eta 0:00:01
+     |██████████████▌                 | 532 kB 1.6 MB/s eta 0:00:01
+     |██████████████▊                 | 542 kB 1.6 MB/s eta 0:00:01
+     |███████████████                 | 552 kB 1.6 MB/s eta 0:00:01
+     |███████████████▎                | 563 kB 1.6 MB/s eta 0:00:01
+     |███████████████▋                | 573 kB 1.6 MB/s eta 0:00:01
+     |███████████████▉                | 583 kB 1.6 MB/s eta 0:00:01
+     |████████████████▏               | 593 kB 1.6 MB/s eta 0:00:01
+     |████████████████▍               | 604 kB 1.6 MB/s eta 0:00:01
+     |████████████████▊               | 614 kB 1.6 MB/s eta 0:00:01
+     |█████████████████               | 624 kB 1.6 MB/s eta 0:00:01
+     |█████████████████▎              | 634 kB 1.6 MB/s eta 0:00:01
+     |█████████████████▌              | 645 kB 1.6 MB/s eta 0:00:01
+     |█████████████████▉              | 655 kB 1.6 MB/s eta 0:00:01
+     |██████████████████              | 665 kB 1.6 MB/s eta 0:00:01
+     |██████████████████▍             | 675 kB 1.6 MB/s eta 0:00:01
+     |██████████████████▋             | 686 kB 1.6 MB/s eta 0:00:01
+     |███████████████████             | 696 kB 1.6 MB/s eta 0:00:01
+     |███████████████████▏            | 706 kB 1.6 MB/s eta 0:00:01
+     |███████████████████▌            | 716 kB 1.6 MB/s eta 0:00:01
+     |███████████████████▊            | 727 kB 1.6 MB/s eta 0:00:01
+     |████████████████████            | 737 kB 1.6 MB/s eta 0:00:01
+     |████████████████████▎           | 747 kB 1.6 MB/s eta 0:00:01
+     |████████████████████▋           | 757 kB 1.6 MB/s eta 0:00:01
+     |████████████████████▉           | 768 kB 1.6 MB/s eta 0:00:01
+     |█████████████████████▏          | 778 kB 1.6 MB/s eta 0:00:01
+     |█████████████████████▍          | 788 kB 1.6 MB/s eta 0:00:01
+     |█████████████████████▊          | 798 kB 1.6 MB/s eta 0:00:01
+     |██████████████████████          | 808 kB 1.6 MB/s eta 0:00:01
+     |██████████████████████▎         | 819 kB 1.6 MB/s eta 0:00:01
+     |██████████████████████▌         | 829 kB 1.6 MB/s eta 0:00:01
+     |██████████████████████▉         | 839 kB 1.6 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |███████████████████████         | 849 kB 1.6 MB/s eta 0:00:01
+     |███████████████████████▍        | 860 kB 1.6 MB/s eta 0:00:01
+     |███████████████████████▋        | 870 kB 1.6 MB/s eta 0:00:01
+     |████████████████████████        | 880 kB 1.6 MB/s eta 0:00:01
+     |████████████████████████▏       | 890 kB 1.6 MB/s eta 0:00:01
+     |████████████████████████▌       | 901 kB 1.6 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████████████████████████▊       | 911 kB 1.6 MB/s eta 0:00:01
+     |█████████████████████████       | 921 kB 1.6 MB/s eta 0:00:01
+     |█████████████████████████▎      | 931 kB 1.6 MB/s eta 0:00:01
+     |█████████████████████████▋      | 942 kB 1.6 MB/s eta 0:00:01
+     |█████████████████████████▉      | 952 kB 1.6 MB/s eta 0:00:01
+     |██████████████████████████▏     | 962 kB 1.6 MB/s eta 0:00:01
+     |██████████████████████████▍     | 972 kB 1.6 MB/s eta 0:00:01
+     |██████████████████████████▊     | 983 kB 1.6 MB/s eta 0:00:01
+     |███████████████████████████     | 993 kB 1.6 MB/s eta 0:00:01
+     |███████████████████████████▎    | 1.0 MB 1.6 MB/s eta 0:00:01
+     |███████████████████████████▌    | 1.0 MB 1.6 MB/s eta 0:00:01
+     |███████████████████████████▉    | 1.0 MB 1.6 MB/s eta 0:00:01
+     |████████████████████████████    | 1.0 MB 1.6 MB/s eta 0:00:01
+     |████████████████████████████▍   | 1.0 MB 1.6 MB/s eta 0:00:01
+     |████████████████████████████▋   | 1.1 MB 1.6 MB/s eta 0:00:01
+     |█████████████████████████████   | 1.1 MB 1.6 MB/s eta 0:00:01
+     |█████████████████████████████▏  | 1.1 MB 1.6 MB/s eta 0:00:01
+     |█████████████████████████████▌  | 1.1 MB 1.6 MB/s eta 0:00:01
+     |█████████████████████████████▊  | 1.1 MB 1.6 MB/s eta 0:00:01
+     |██████████████████████████████  | 1.1 MB 1.6 MB/s eta 0:00:01
+     |██████████████████████████████▎ | 1.1 MB 1.6 MB/s eta 0:00:01
+     |██████████████████████████████▋ | 1.1 MB 1.6 MB/s eta 0:00:01
+     |██████████████████████████████▉ | 1.1 MB 1.6 MB/s eta 0:00:01
+     |███████████████████████████████▏| 1.1 MB 1.6 MB/s eta 0:00:01
+     |███████████████████████████████▍| 1.2 MB 1.6 MB/s eta 0:00:01
+     |███████████████████████████████▊| 1.2 MB 1.6 MB/s eta 0:00:01
+     |████████████████████████████████| 1.2 MB 1.6 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████████████████████████████████| 1.2 MB 1.6 MB/s 
+?25hRequirement already satisfied: numpy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from xgboost) (1.18.5)
+Requirement already satisfied: scipy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from xgboost) (1.5.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: xgboost
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed xgboost-1.3.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lightgbm
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading lightgbm-3.1.1-py2.py3-none-macosx_10_13_x86_64.macosx_10_14_x86_64.macosx_10_15_x86_64.whl (1.0 MB)
+?25l
+     |▎                               | 10 kB 2.8 MB/s eta 0:00:01
+     |▋                               | 20 kB 2.4 MB/s eta 0:00:01
+     |█                               | 30 kB 1.7 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |█▎                              | 40 kB 664 kB/s eta 0:00:02
+     |█▋                              | 51 kB 816 kB/s eta 0:00:02
+     |█▉                              | 61 kB 891 kB/s eta 0:00:02
+     |██▏                             | 71 kB 951 kB/s eta 0:00:02
+     |██▌                             | 81 kB 1.1 MB/s eta 0:00:01
+     |██▉                             | 92 kB 1.1 MB/s eta 0:00:01
+     |███▏                            | 102 kB 1.2 MB/s eta 0:00:01
+     |███▍                            | 112 kB 1.2 MB/s eta 0:00:01
+     |███▊                            | 122 kB 1.2 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████                            | 133 kB 1.2 MB/s eta 0:00:01
+     |████▍                           | 143 kB 1.2 MB/s eta 0:00:01
+     |████▊                           | 153 kB 1.2 MB/s eta 0:00:01
+     |█████                           | 163 kB 1.2 MB/s eta 0:00:01
+     |█████▎                          | 174 kB 1.2 MB/s eta 0:00:01
+     |█████▋                          | 184 kB 1.2 MB/s eta 0:00:01
+     |██████                          | 194 kB 1.2 MB/s eta 0:00:01
+     |██████▎                         | 204 kB 1.2 MB/s eta 0:00:01
+     |██████▋                         | 215 kB 1.2 MB/s eta 0:00:01
+     |██████▉                         | 225 kB 1.2 MB/s eta 0:00:01
+     |███████▏                        | 235 kB 1.2 MB/s eta 0:00:01
+     |███████▌                        | 245 kB 1.2 MB/s eta 0:00:01
+     |███████▉                        | 256 kB 1.2 MB/s eta 0:00:01
+     |████████▏                       | 266 kB 1.2 MB/s eta 0:00:01
+     |████████▌                       | 276 kB 1.2 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████████▊                       | 286 kB 1.2 MB/s eta 0:00:01
+     |█████████                       | 296 kB 1.2 MB/s eta 0:00:01
+     |█████████▍                      | 307 kB 1.2 MB/s eta 0:00:01
+     |█████████▊                      | 317 kB 1.2 MB/s eta 0:00:01
+     |██████████                      | 327 kB 1.2 MB/s eta 0:00:01
+     |██████████▎                     | 337 kB 1.2 MB/s eta 0:00:01
+     |██████████▋                     | 348 kB 1.2 MB/s eta 0:00:01
+     |███████████                     | 358 kB 1.2 MB/s eta 0:00:01
+     |███████████▎                    | 368 kB 1.2 MB/s eta 0:00:01
+     |███████████▋                    | 378 kB 1.2 MB/s eta 0:00:01
+     |███████████▉                    | 389 kB 1.2 MB/s eta 0:00:01
+     |████████████▏                   | 399 kB 1.2 MB/s eta 0:00:01
+     |████████████▌                   | 409 kB 1.2 MB/s eta 0:00:01
+     |████████████▉                   | 419 kB 1.2 MB/s eta 0:00:01
+     |█████████████▏                  | 430 kB 1.2 MB/s eta 0:00:01
+     |█████████████▌                  | 440 kB 1.2 MB/s eta 0:00:01
+     |█████████████▊                  | 450 kB 1.2 MB/s eta 0:00:01
+     |██████████████                  | 460 kB 1.2 MB/s eta 0:00:01
+     |██████████████▍                 | 471 kB 1.2 MB/s eta 0:00:01
+     |██████████████▊                 | 481 kB 1.2 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |███████████████                 | 491 kB 1.2 MB/s eta 0:00:01
+     |███████████████▎                | 501 kB 1.2 MB/s eta 0:00:01
+     |███████████████▋                | 512 kB 1.2 MB/s eta 0:00:01
+     |████████████████                | 522 kB 1.2 MB/s eta 0:00:01
+     |████████████████▎               | 532 kB 1.2 MB/s eta 0:00:01
+     |████████████████▋               | 542 kB 1.2 MB/s eta 0:00:01
+     |█████████████████               | 552 kB 1.2 MB/s eta 0:00:01
+     |█████████████████▏              | 563 kB 1.2 MB/s eta 0:00:01
+     |█████████████████▌              | 573 kB 1.2 MB/s eta 0:00:01
+     |█████████████████▉              | 583 kB 1.2 MB/s eta 0:00:01
+     |██████████████████▏             | 593 kB 1.2 MB/s eta 0:00:01
+     |██████████████████▌             | 604 kB 1.2 MB/s eta 0:00:01
+     |██████████████████▊             | 614 kB 1.2 MB/s eta 0:00:01
+     |███████████████████             | 624 kB 1.2 MB/s eta 0:00:01
+     |███████████████████▍            | 634 kB 1.2 MB/s eta 0:00:01
+     |███████████████████▊            | 645 kB 1.2 MB/s eta 0:00:01
+     |████████████████████            | 655 kB 1.2 MB/s eta 0:00:01
+     |████████████████████▍           | 665 kB 1.2 MB/s eta 0:00:01
+     |████████████████████▋           | 675 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████           | 686 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████▎          | 696 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████▋          | 706 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████          | 716 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████▏         | 727 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████▌         | 737 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████▉         | 747 kB 1.2 MB/s eta 0:00:01
+     |███████████████████████▏        | 757 kB 1.2 MB/s eta 0:00:01
+     |███████████████████████▌        | 768 kB 1.2 MB/s eta 0:00:01
+     |███████████████████████▊        | 778 kB 1.2 MB/s eta 0:00:01
+     |████████████████████████        | 788 kB 1.2 MB/s eta 0:00:01
+     |████████████████████████▍       | 798 kB 1.2 MB/s eta 0:00:01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     |████████████████████████▊       | 808 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████████       | 819 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████████▍      | 829 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████████▋      | 839 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████████      | 849 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████████▎     | 860 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████████▋     | 870 kB 1.2 MB/s eta 0:00:01
+     |███████████████████████████     | 880 kB 1.2 MB/s eta 0:00:01
+     |███████████████████████████▏    | 890 kB 1.2 MB/s eta 0:00:01
+     |███████████████████████████▌    | 901 kB 1.2 MB/s eta 0:00:01
+     |███████████████████████████▉    | 911 kB 1.2 MB/s eta 0:00:01
+     |████████████████████████████▏   | 921 kB 1.2 MB/s eta 0:00:01
+     |████████████████████████████▌   | 931 kB 1.2 MB/s eta 0:00:01
+     |████████████████████████████▉   | 942 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████████████   | 952 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████████████▍  | 962 kB 1.2 MB/s eta 0:00:01
+     |█████████████████████████████▊  | 972 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████████████  | 983 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████████████▍ | 993 kB 1.2 MB/s eta 0:00:01
+     |██████████████████████████████▋ | 1.0 MB 1.2 MB/s eta 0:00:01
+     |███████████████████████████████ | 1.0 MB 1.2 MB/s eta 0:00:01
+     |███████████████████████████████▎| 1.0 MB 1.2 MB/s eta 0:00:01
+     |███████████████████████████████▋| 1.0 MB 1.2 MB/s eta 0:00:01
+     |████████████████████████████████| 1.0 MB 1.2 MB/s eta 0:00:01
+     |████████████████████████████████| 1.0 MB 1.2 MB/s 
+?25hRequirement already satisfied: wheel in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (0.34.2)
+Requirement already satisfied: scipy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (1.5.0)
+Requirement already satisfied: numpy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (1.18.5)
+Requirement already satisfied: scikit-learn!=0.22.0 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (0.23.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from scikit-learn!=0.22.0-&gt;lightgbm) (2.1.0)
+Requirement already satisfied: joblib&gt;=0.11 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from scikit-learn!=0.22.0-&gt;lightgbm) (0.16.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: lightgbm
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed lightgbm-3.1.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ignore the warnings</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;always&#39;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># System related and data input controls</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Data manipulation, visualization and useful functions</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Modeling algorithms</span>
+<span class="c1"># General(Statistics/Econometrics)</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.tsa.api</span> <span class="k">as</span> <span class="nn">smt</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="c1"># Regression</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span><span class="p">,</span> <span class="n">Ridge</span><span class="p">,</span> <span class="n">Lasso</span><span class="p">,</span> <span class="n">ElasticNet</span>
+<span class="kn">from</span> <span class="nn">sklearn.kernel_ridge</span> <span class="kn">import</span> <span class="n">KernelRidge</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span><span class="p">,</span> <span class="n">BaggingRegressor</span><span class="p">,</span> <span class="n">GradientBoostingRegressor</span><span class="p">,</span> <span class="n">AdaBoostRegressor</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBRegressor</span>
+<span class="kn">from</span> <span class="nn">lightgbm</span> <span class="kn">import</span> <span class="n">LGBMRegressor</span>
+
+<span class="c1"># Classification</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span><span class="p">,</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span><span class="p">,</span> <span class="n">GradientBoostingClassifier</span>
+
+<span class="c1"># Model selection</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span><span class="n">cross_validate</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="c1"># Evaluation metrics</span>
+<span class="c1"># for regression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_log_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span>  <span class="n">r2_score</span><span class="p">,</span> <span class="n">mean_absolute_error</span>
+<span class="c1"># for classification</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+XGBoostError                              Traceback (most recent call last)
+&lt;ipython-input-2-beb30023c678&gt; in &lt;module&gt;
+     33 from sklearn.tree import DecisionTreeRegressor
+     34 from sklearn.ensemble import RandomForestRegressor, BaggingRegressor, GradientBoostingRegressor, AdaBoostRegressor
+---&gt; 35 from xgboost import XGBRegressor
+     36 from lightgbm import LGBMRegressor
+     37 
+
+~/opt/anaconda3/lib/python3.7/site-packages/xgboost/__init__.py in &lt;module&gt;
+      7 import os
+      8 
+----&gt; 9 from .core import DMatrix, DeviceQuantileDMatrix, Booster
+     10 from .training import train, cv
+     11 from . import rabit  # noqa
+
+~/opt/anaconda3/lib/python3.7/site-packages/xgboost/core.py in &lt;module&gt;
+    172 
+    173 # load the XGBoost library globally
+--&gt; 174 _LIB = _load_lib()
+    175 
+    176 
+
+~/opt/anaconda3/lib/python3.7/site-packages/xgboost/core.py in _load_lib()
+    163             &#39;`brew install libomp` to install OpenMP runtime.\n&#39; +
+    164             &#39;  * You are running 32-bit Python on a 64-bit OS\n&#39; +
+--&gt; 165             &#39;Error message(s): {}\n&#39;.format(os_error_list))
+    166     lib.XGBGetLastError.restype = ctypes.c_char_p
+    167     lib.callback = _get_log_callback_func()
+
+XGBoostError: XGBoost Library (libxgboost.dylib) could not be loaded.
+Likely causes:
+  * OpenMP runtime is not installed (vcomp140.dll or libgomp-1.dll for Windows, libomp.dylib for Mac OSX, libgomp.so for Linux and other UNIX-like OSes). Mac OSX users: Run `brew install libomp` to install OpenMP runtime.
+  * You are running 32-bit Python on a 64-bit OS
+Error message(s): [&#39;dlopen(/Users/21ceo/opt/anaconda3/lib/python3.7/site-packages/xgboost/lib/libxgboost.dylib, 6): Library not loaded: /usr/local/opt/libomp/lib/libomp.dylib\n  Referenced from: /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages/xgboost/lib/libxgboost.dylib\n  Reason: image not found&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Feature engineering of default</span>
+<span class="k">def</span> <span class="nf">non_feature_engineering</span><span class="p">(</span><span class="n">raw</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s1">&#39;datetime&#39;</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+        <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;int64&#39;</span><span class="p">:</span>
+        <span class="n">raw</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># bring back</span>
+    <span class="c1"># if raw.index.dtype != &#39;int64&#39;:</span>
+    <span class="c1">#     raw.reset_index(drop=False, inplace=True)</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">asfreq</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+    <span class="n">raw_nfe</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">raw_nfe</span>
+<span class="c1"># raw_rd = non_feature_engineering(raw_all)</span>
+
+
+<span class="c1">### Feature engineering of all</span>
+<span class="k">def</span> <span class="nf">feature_engineering</span><span class="p">(</span><span class="n">raw</span><span class="p">):</span>
+    <span class="k">if</span> <span class="s1">&#39;datetime&#39;</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+        <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;int64&#39;</span><span class="p">:</span>
+        <span class="n">raw</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">asfreq</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">seasonal_decompose</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;additive&#39;</span><span class="p">)</span>
+    <span class="n">Y_trend</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">trend</span><span class="p">)</span>
+    <span class="n">Y_trend</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_trend</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_trend</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">]</span>
+    <span class="n">Y_seasonal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">seasonal</span><span class="p">)</span>
+    <span class="n">Y_seasonal</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_seasonal</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_seasonal</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_seasonal&#39;</span><span class="p">]</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">raw</span><span class="p">,</span> <span class="n">Y_trend</span><span class="p">,</span> <span class="n">Y_seasonal</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">if</span> <span class="s1">&#39;count_trend&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;count_seasonal&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">raw</span><span class="p">,</span> <span class="n">Y_trend</span><span class="p">,</span> <span class="n">Y_seasonal</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">Y_count_Day</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[[</span><span class="s1">&#39;count&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">Y_count_Day</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_count_Day</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_count_Day</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_Day&#39;</span><span class="p">]</span>
+    <span class="n">Y_count_Week</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[[</span><span class="s1">&#39;count&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">Y_count_Week</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_count_Week</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_count_Week</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_Week&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s1">&#39;count_Day&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">raw</span><span class="p">,</span> <span class="n">Y_count_Day</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;count_Week&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">raw</span><span class="p">,</span> <span class="n">Y_count_Week</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">Y_diff</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[[</span><span class="s1">&#39;count&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+    <span class="n">Y_diff</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_diff</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Y_diff</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s1">&#39;count_diff&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">raw</span><span class="p">,</span> <span class="n">Y_diff</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;temp_group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Quater&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">quarter</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Quater_ver2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Quater&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">Year</span> <span class="o">-</span> <span class="n">raw</span><span class="o">.</span><span class="n">Year</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">*</span> <span class="mi">4</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Hour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;DayofWeek&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span>
+
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s1">&#39;Quater&#39;</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;Quater_Dummy&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">col</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[:</span><span class="mi">2</span><span class="p">])</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">]:</span>
+            <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">raw</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Quater&#39;</span><span class="p">],</span> 
+                                                 <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;Quater_Dummy&#39;</span><span class="p">,</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">del</span> <span class="n">raw</span><span class="p">[</span><span class="s1">&#39;Quater&#39;</span><span class="p">]</span>
+    <span class="n">raw_fe</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">raw_fe</span>
+<span class="c1"># raw_fe = feature_engineering(raw_all)</span>
+
+
+<span class="c1">### duplicate previous year values to next one</span>
+<span class="k">def</span> <span class="nf">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="n">raw_fe</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">target</span><span class="p">:</span>
+        <span class="n">raw_fe</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2012-01-01&#39;</span><span class="p">:</span><span class="s1">&#39;2012-02-28&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-01-01&#39;</span><span class="p">:</span><span class="s1">&#39;2011-02-28&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">raw_fe</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2012-03-01&#39;</span><span class="p">:</span><span class="s1">&#39;2012-12-31&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-03-01&#39;</span><span class="p">:</span><span class="s1">&#39;2011-12-31&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-03-01 00:00:00&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">-</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-02-28 23:00:00&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">])</span><span class="o">/</span><span class="mi">25</span>
+        <span class="n">step_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-02-28 23:00:00&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">+</span><span class="n">step</span><span class="p">,</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-03-01 00:00:00&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">],</span> <span class="n">step</span><span class="p">)</span>
+        <span class="n">step_value</span> <span class="o">=</span> <span class="n">step_value</span><span class="p">[:</span><span class="mi">24</span><span class="p">]</span>
+        <span class="n">raw_fe</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2012-02-29&#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">step_value</span>
+    <span class="k">return</span> <span class="n">raw_fe</span>
+<span class="c1"># target = [&#39;count_trend&#39;, &#39;count_seasonal&#39;, &#39;count_Day&#39;, &#39;count_Week&#39;, &#39;count_diff&#39;]</span>
+<span class="c1"># raw_fe = feature_engineering_year_duplicated(raw_fe, target)</span>
+
+
+<span class="c1">### modify lagged values of X_test</span>
+<span class="k">def</span> <span class="nf">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="n">X_test_lm</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">target</span><span class="p">:</span>
+        <span class="n">X_test_lm</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">Y_test</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">X_test_lm</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">X_test_lm</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">Y_test</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">X_test_lm</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X_test_lm</span>
+<span class="c1"># target = [&#39;count_lag1&#39;, &#39;count_lag2&#39;]</span>
+<span class="c1"># X_test_fe = feature_engineering_lag_modified(Y_test_fe, X_test_fe, target)</span>
+
+
+<span class="c1">### Data split of cross sectional</span>
+<span class="k">def</span> <span class="nf">datasplit_cs</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="n">test_size</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">123</span><span class="p">):</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">X_colname</span><span class="p">],</span> <span class="n">raw</span><span class="p">[</span><span class="n">Y_colname</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_seed</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;X_train:&#39;</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;Y_train:&#39;</span><span class="p">,</span> <span class="n">Y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;X_test:&#39;</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;Y_test:&#39;</span><span class="p">,</span> <span class="n">Y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span>
+<span class="c1"># X_train, X_test, Y_train, Y_test = datasplit_cs(raw_fe, Y_colname, X_colname, 0.2)</span>
+
+
+<span class="c1">### Data split of time series</span>
+<span class="k">def</span> <span class="nf">datasplit_ts</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="n">criteria</span><span class="p">):</span>
+    <span class="n">raw_train</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">criteria</span><span class="p">,:]</span>
+    <span class="n">raw_test</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">raw</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="n">criteria</span><span class="p">,:]</span>
+    <span class="n">Y_train</span> <span class="o">=</span> <span class="n">raw_train</span><span class="p">[</span><span class="n">Y_colname</span><span class="p">]</span>
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">raw_train</span><span class="p">[</span><span class="n">X_colname</span><span class="p">]</span>
+    <span class="n">Y_test</span> <span class="o">=</span> <span class="n">raw_test</span><span class="p">[</span><span class="n">Y_colname</span><span class="p">]</span>
+    <span class="n">X_test</span> <span class="o">=</span> <span class="n">raw_test</span><span class="p">[</span><span class="n">X_colname</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Train_size:&#39;</span><span class="p">,</span> <span class="n">raw_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;Test_size:&#39;</span><span class="p">,</span> <span class="n">raw_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;X_train:&#39;</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;Y_train:&#39;</span><span class="p">,</span> <span class="n">Y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;X_test:&#39;</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;Y_test:&#39;</span><span class="p">,</span> <span class="n">Y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span>
+<span class="c1"># X_train, X_test, Y_train, Y_test = datasplit_ts(raw_fe, Y_colname, X_colname, &#39;2012-07-01&#39;)</span>
+
+
+<span class="c1">### scaling of X_train and X_test by X_train_scaler</span>
+<span class="k">def</span> <span class="nf">feature_engineering_scaling</span><span class="p">(</span><span class="n">scaler</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">):</span>
+    <span class="c1"># preprocessing.MinMaxScaler()</span>
+    <span class="c1"># preprocessing.StandardScaler()</span>
+    <span class="c1"># preprocessing.RobustScaler()</span>
+    <span class="c1"># preprocessing.Normalizer()</span>
+    <span class="n">scaler</span> <span class="o">=</span> <span class="n">scaler</span>
+    <span class="n">scaler_fit</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+    <span class="n">X_train_scaling</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaler_fit</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span> 
+                               <span class="n">index</span><span class="o">=</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    <span class="n">X_test_scaling</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaler_fit</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> 
+                               <span class="n">index</span><span class="o">=</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">X_test</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X_train_scaling</span><span class="p">,</span> <span class="n">X_test_scaling</span>
+<span class="c1"># X_train_feRS, X_test_feRS = feature_engineering_scaling(preprocessing.Normalizer(), X_train_feR, X_test_feR)</span>
+
+
+<span class="c1">### extract non-multicollinearity variables by VIF </span>
+<span class="k">def</span> <span class="nf">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">num_variables</span><span class="p">):</span>
+    <span class="n">vif</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="n">vif</span><span class="p">[</span><span class="s1">&#39;VIF_Factor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> 
+                         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+    <span class="n">vif</span><span class="p">[</span><span class="s1">&#39;Feature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">columns</span>
+    <span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">vif</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;VIF_Factor&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s1">&#39;Feature&#39;</span><span class="p">][:</span><span class="n">num_variables</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="k">return</span> <span class="n">X_colname_vif</span>
+<span class="c1"># X_colname_vif = feature_engineering_XbyVIF(X_train_femm, 10)</span>
+<span class="c1"># X_colname_vif</span>
+
+
+<span class="c1">### Evaluation of 1 pair of set</span>
+<span class="k">def</span> <span class="nf">evaluation</span><span class="p">(</span><span class="n">Y_real</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">loss_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y_real</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y_pred</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">loss_length</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">Y_real</span> <span class="o">=</span> <span class="n">Y_real</span><span class="p">[</span><span class="n">loss_length</span><span class="p">:]</span>
+    <span class="k">if</span> <span class="n">graph_on</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">Y_real</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_pred</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_real</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">])],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
+                                                                                                           <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">Y_real</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="n">Y_real</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+                                                                                                           <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Time Series of Target&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Index&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Target Value&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">MAE</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">Y_real</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">MSE</span> <span class="o">=</span> <span class="p">((</span><span class="n">Y_real</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">MAPE</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">Y_real</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">)</span><span class="o">/</span><span class="n">Y_real</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">Score</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">MAE</span><span class="p">,</span> <span class="n">MSE</span><span class="p">,</span> <span class="n">MAPE</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MAE&#39;</span><span class="p">,</span> <span class="s1">&#39;MSE&#39;</span><span class="p">,</span> <span class="s1">&#39;MAPE&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Score&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">Residual</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_real</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">-</span> <span class="n">Y_pred</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_real</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">Score</span><span class="p">,</span> <span class="n">Residual</span>
+<span class="c1"># Score_tr, Residual_tr = evaluation(Y_train, pred_tr_reg1, graph_on=True)</span>
+
+
+<span class="c1">### Evaluation of train/test pairs</span>
+<span class="k">def</span> <span class="nf">evaluation_trte</span><span class="p">(</span><span class="n">Y_real_tr</span><span class="p">,</span> <span class="n">Y_pred_tr</span><span class="p">,</span> <span class="n">Y_real_te</span><span class="p">,</span> <span class="n">Y_pred_te</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">Score_tr</span><span class="p">,</span> <span class="n">Residual_tr</span> <span class="o">=</span> <span class="n">evaluation</span><span class="p">(</span><span class="n">Y_real_tr</span><span class="p">,</span> <span class="n">Y_pred_tr</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="n">graph_on</span><span class="p">)</span>
+    <span class="n">Score_te</span><span class="p">,</span> <span class="n">Residual_te</span> <span class="o">=</span> <span class="n">evaluation</span><span class="p">(</span><span class="n">Y_real_te</span><span class="p">,</span> <span class="n">Y_pred_te</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="n">graph_on</span><span class="p">)</span>
+    <span class="n">Score_trte</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">Score_tr</span><span class="p">,</span> <span class="n">Score_te</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">Score_trte</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Train&#39;</span><span class="p">,</span> <span class="s1">&#39;Test&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">Score_trte</span><span class="p">,</span> <span class="n">Residual_tr</span><span class="p">,</span> <span class="n">Residual_te</span>
+<span class="c1"># Score_reg1, Resid_tr_reg1, Resid_te_reg1 = evaluation_trte(Y_train, pred_tr_reg1, Y_test, pred_te_reg1, graph_on=True)</span>
+
+
+<span class="c1">### Error analysis</span>
+<span class="k">def</span> <span class="nf">error_analysis</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">,</span> <span class="n">Target_name</span><span class="p">,</span> <span class="n">X_Data</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Target_name</span><span class="p">:</span>
+        <span class="n">Target_name</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="n">X_Data</span> <span class="o">=</span> <span class="n">X_Data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Y_Data</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">graph_on</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1">##### Error Analysis(Plot)</span>
+        <span class="n">Y_Data</span><span class="p">[</span><span class="s1">&#39;RowNum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Y_Data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">index</span>
+
+        <span class="c1"># Stationarity(Trend) Analysis</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">palette</span><span class="o">=</span><span class="s2">&quot;muted&quot;</span><span class="p">,</span> <span class="n">color_codes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;RowNum&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Target_name</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Y_Data</span><span class="p">,</span> <span class="n">fit_reg</span><span class="o">=</span><span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mf">5.2</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">Y_Data</span><span class="p">[</span><span class="s1">&#39;RowNum&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Normal Distribution Analysis</span>
+        <span class="n">figure</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">norm_hist</span><span class="o">=</span><span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="n">fit</span><span class="o">=</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">)</span>
+
+        <span class="c1"># Lag Analysis</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">])</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">figure</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">lag_plot</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">lag_plot</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lag</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">lag_plot</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lag</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">lag_plot</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lag</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+        <span class="c1"># Autocorrelation Analysis</span>
+        <span class="n">figure</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+        <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_acf</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">use_vlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_pacf</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">use_vlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> 
+
+    <span class="c1">##### Error Analysis(Statistics)</span>
+    <span class="c1"># Checking Stationarity</span>
+    <span class="c1"># Null Hypothesis: The Time-series is non-stationalry</span>
+    <span class="n">Stationarity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">stattools</span><span class="o">.</span><span class="n">adfuller</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">])[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span>
+                             <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Test Statistics&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span> <span class="s1">&#39;Used Lag&#39;</span><span class="p">,</span> <span class="s1">&#39;Used Observations&#39;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">stattools</span><span class="o">.</span><span class="n">adfuller</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">])[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">Stationarity</span><span class="p">[</span><span class="s1">&#39;Critical Value(</span><span class="si">%s</span><span class="s1">)&#39;</span><span class="o">%</span><span class="k">key</span>] = value
+        <span class="n">Stationarity</span><span class="p">[</span><span class="s1">&#39;Maximum Information Criteria&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">stattools</span><span class="o">.</span><span class="n">adfuller</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">])[</span><span class="mi">5</span><span class="p">]</span>
+        <span class="n">Stationarity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Stationarity</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Stationarity&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Checking of Normality</span>
+    <span class="c1"># Null Hypothesis: The residuals are normally distributed</span>
+    <span class="n">Normality</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">stats</span><span class="o">.</span><span class="n">shapiro</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">])],</span>
+                             <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Normality&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Test Statistics&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+
+    <span class="c1"># Checking for Autocorrelation</span>
+    <span class="c1"># Null Hypothesis: Autocorrelation is absent</span>
+    <span class="n">Autocorrelation</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">diagnostic</span><span class="o">.</span><span class="n">acorr_ljungbox</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Test Statistics&#39;</span><span class="p">]),</span>
+                                 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">diagnostic</span><span class="o">.</span><span class="n">acorr_ljungbox</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;p-value&#39;</span><span class="p">])],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">Autocorrelation</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Autocorr(lag1)&#39;</span><span class="p">,</span> <span class="s1">&#39;Autocorr(lag5)&#39;</span><span class="p">,</span> <span class="s1">&#39;Autocorr(lag10)&#39;</span><span class="p">,</span> <span class="s1">&#39;Autocorr(lag50)&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Checking Heteroscedasticity</span>
+    <span class="c1"># Null Hypothesis: Error terms are homoscedastic</span>
+    <span class="n">Heteroscedasticity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">diagnostic</span><span class="o">.</span><span class="n">het_goldfeldquandt</span><span class="p">(</span><span class="n">Y_Data</span><span class="p">[</span><span class="n">Target_name</span><span class="p">],</span> <span class="n">X_Data</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;two-sided&#39;</span><span class="p">)],</span>
+                                      <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Heteroscedasticity&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Test Statistics&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span> <span class="s1">&#39;Alternative&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">Score</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">Stationarity</span><span class="p">,</span> <span class="n">Normality</span><span class="p">,</span> <span class="n">Autocorrelation</span><span class="p">,</span> <span class="n">Heteroscedasticity</span><span class="p">],</span> <span class="n">join</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">index_new</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Test Statistics&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span> <span class="s1">&#39;Alternative&#39;</span><span class="p">,</span> <span class="s1">&#39;Used Lag&#39;</span><span class="p">,</span> <span class="s1">&#39;Used Observations&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Critical Value(1%)&#39;</span><span class="p">,</span> <span class="s1">&#39;Critical Value(5%)&#39;</span><span class="p">,</span> <span class="s1">&#39;Critical Value(10%)&#39;</span><span class="p">,</span> <span class="s1">&#39;Maximum Information Criteria&#39;</span><span class="p">]</span>
+    <span class="n">Score</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">index_new</span><span class="p">)</span>
+<span class="c1"># error_analysis(Resid_tr_reg1[1:], [&#39;Error&#39;], X_train, graph_on=True)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Auto reload</span>
+<span class="c1"># %reload_ext autoreload</span>
+<span class="c1"># %autoreload 2</span>
+<span class="c1"># from module_KK import *</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="applying-base-model-y-regression">
+<h1>Applying Base Model: Y예측을 위한 Regression분석 실행<a class="headerlink" href="#applying-base-model-y-regression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="code-summary-raw-data">
+<h2>Code Summary (Raw Data)<a class="headerlink" href="#code-summary-raw-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_rd</span> <span class="o">=</span> <span class="n">non_feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_rd</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_rd</span><span class="p">,</span> <span class="n">X_test_rd</span><span class="p">,</span> <span class="n">Y_train_rd</span><span class="p">,</span> <span class="n">Y_test_rd</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_rd</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+
+<span class="c1"># Applying Base Model</span>
+<span class="n">fit_reg1_rd</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y_train_rd</span><span class="p">,</span> <span class="n">X_train_rd</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fit_reg1_rd</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="n">pred_tr_reg1_rd</span> <span class="o">=</span> <span class="n">fit_reg1_rd</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_rd</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">pred_te_reg1_rd</span> <span class="o">=</span> <span class="n">fit_reg1_rd</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_rd</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg1_rd</span><span class="p">,</span> <span class="n">Resid_tr_reg1_rd</span><span class="p">,</span> <span class="n">Resid_te_reg1_rd</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_rd</span><span class="p">,</span> <span class="n">pred_tr_reg1_rd</span><span class="p">,</span> 
+                                                                <span class="n">Y_test_rd</span><span class="p">,</span> <span class="n">pred_te_reg1_rd</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg1_rd</span><span class="p">)</span>
+
+<span class="c1"># Error Analysis</span>
+<span class="n">error_analysis</span><span class="p">(</span><span class="n">Resid_tr_reg1_rd</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">],</span> <span class="n">X_train_rd</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 12) Test_size: (4416, 12)
+X_train: (13128, 8) Y_train: (13128, 1)
+X_test: (4416, 8) Y_test: (4416, 1)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>count</td>      <th>  R-squared (uncentered):</th>      <td>   0.638</td> 
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.638</td> 
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   2889.</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Fri, 31 Jul 2020</td> <th>  Prob (F-statistic):</th>           <td>  0.00</td>  
+</tr>
+<tr>
+  <th>Time:</th>                 <td>22:40:58</td>     <th>  Log-Likelihood:    </th>          <td> -83421.</td> 
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td> 13128</td>      <th>  AIC:               </th>          <td>1.669e+05</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td> 13120</td>      <th>  BIC:               </th>          <td>1.669e+05</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     8</td>      <th>                     </th>              <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>season</th>     <td>    3.3659</td> <td>    1.286</td> <td>    2.618</td> <td> 0.009</td> <td>    0.846</td> <td>    5.886</td>
+</tr>
+<tr>
+  <th>holiday</th>    <td>   -6.2896</td> <td>    7.466</td> <td>   -0.842</td> <td> 0.400</td> <td>  -20.924</td> <td>    8.345</td>
+</tr>
+<tr>
+  <th>workingday</th> <td>   10.3553</td> <td>    2.641</td> <td>    3.921</td> <td> 0.000</td> <td>    5.178</td> <td>   15.533</td>
+</tr>
+<tr>
+  <th>weather</th>    <td>    7.1906</td> <td>    2.093</td> <td>    3.436</td> <td> 0.001</td> <td>    3.089</td> <td>   11.292</td>
+</tr>
+<tr>
+  <th>temp</th>       <td>   -7.8544</td> <td>    1.222</td> <td>   -6.429</td> <td> 0.000</td> <td>  -10.249</td> <td>   -5.460</td>
+</tr>
+<tr>
+  <th>atemp</th>      <td>   16.0695</td> <td>    1.095</td> <td>   14.676</td> <td> 0.000</td> <td>   13.923</td> <td>   18.216</td>
+</tr>
+<tr>
+  <th>humidity</th>   <td>   -1.7353</td> <td>    0.063</td> <td>  -27.356</td> <td> 0.000</td> <td>   -1.860</td> <td>   -1.611</td>
+</tr>
+<tr>
+  <th>windspeed</th>  <td>    2.2749</td> <td>    0.136</td> <td>   16.745</td> <td> 0.000</td> <td>    2.009</td> <td>    2.541</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>2168.771</td> <th>  Durbin-Watson:     </th> <td>   0.419</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th>  <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>3942.747</td>
+</tr>
+<tr>
+  <th>Skew:</th>           <td> 1.050</td>  <th>  Prob(JB):          </th> <td>    0.00</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>       <td> 4.672</td>  <th>  Cond. No.          </th> <td>    450.</td>
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>103.09</td>
+      <td>19,360.42</td>
+      <td>458.48</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>150.03</td>
+      <td>43,410.27</td>
+      <td>316.61</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+</pre></div>
+</div>
+<img alt="../../_images/5_Agile_Analysis_7_4.png" src="../../_images/5_Agile_Analysis_7_4.png" />
+<img alt="../../_images/5_Agile_Analysis_7_5.png" src="../../_images/5_Agile_Analysis_7_5.png" />
+<img alt="../../_images/5_Agile_Analysis_7_6.png" src="../../_images/5_Agile_Analysis_7_6.png" />
+<img alt="../../_images/5_Agile_Analysis_7_7.png" src="../../_images/5_Agile_Analysis_7_7.png" />
+<img alt="../../_images/5_Agile_Analysis_7_8.png" src="../../_images/5_Agile_Analysis_7_8.png" />
+<img alt="../../_images/5_Agile_Analysis_7_9.png" src="../../_images/5_Agile_Analysis_7_9.png" />
+</div>
+</div>
+</div>
+<div class="section" id="code-summary-feature-engineering-data">
+<h2>Code Summary (Feature Engineering Data)<a class="headerlink" href="#code-summary-feature-engineering-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># Applying Base Model</span>
+<span class="n">fit_reg1_feRSM</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">X_train_feRSM</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fit_reg1_feRSM</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="n">pred_tr_reg1_feRSM</span> <span class="o">=</span> <span class="n">fit_reg1_feRSM</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">pred_te_reg1_feRSM</span> <span class="o">=</span> <span class="n">fit_reg1_feRSM</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg1_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg1_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg1_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg1_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg1_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg1_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Error Analysis</span>
+<span class="n">error_analysis</span><span class="p">(</span><span class="n">Resid_tr_reg1_feRSM</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">],</span> <span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>count</td>      <th>  R-squared (uncentered):</th>      <td>   0.864</td> 
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.864</td> 
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   6925.</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Fri, 31 Jul 2020</td> <th>  Prob (F-statistic):</th>           <td>  0.00</td>  
+</tr>
+<tr>
+  <th>Time:</th>                 <td>22:41:07</td>     <th>  Log-Likelihood:    </th>          <td> -77008.</td> 
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td> 13128</td>      <th>  AIC:               </th>          <td>1.540e+05</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td> 13116</td>      <th>  BIC:               </th>          <td>1.541e+05</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>    12</td>      <th>                     </th>              <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>              <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+         <td></td>           <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>count_diff</th>     <td> 1289.2806</td> <td>   25.881</td> <td>   49.816</td> <td> 0.000</td> <td> 1238.550</td> <td> 1340.011</td>
+</tr>
+<tr>
+  <th>holiday</th>        <td> 7.141e+04</td> <td> 1.01e+04</td> <td>    7.044</td> <td> 0.000</td> <td> 5.15e+04</td> <td> 9.13e+04</td>
+</tr>
+<tr>
+  <th>count_seasonal</th> <td> 1270.9307</td> <td>   16.107</td> <td>   78.906</td> <td> 0.000</td> <td> 1239.359</td> <td> 1302.503</td>
+</tr>
+<tr>
+  <th>Day</th>            <td> 1151.2606</td> <td>  168.230</td> <td>    6.843</td> <td> 0.000</td> <td>  821.505</td> <td> 1481.017</td>
+</tr>
+<tr>
+  <th>windspeed</th>      <td> -234.1084</td> <td>  180.733</td> <td>   -1.295</td> <td> 0.195</td> <td> -588.370</td> <td>  120.154</td>
+</tr>
+<tr>
+  <th>Quater_ver2</th>    <td> 2.865e+04</td> <td>  930.475</td> <td>   30.787</td> <td> 0.000</td> <td> 2.68e+04</td> <td> 3.05e+04</td>
+</tr>
+<tr>
+  <th>Hour</th>           <td>-3514.0425</td> <td>  282.316</td> <td>  -12.447</td> <td> 0.000</td> <td>-4067.422</td> <td>-2960.663</td>
+</tr>
+<tr>
+  <th>weather</th>        <td>-2.423e+04</td> <td> 2238.550</td> <td>  -10.825</td> <td> 0.000</td> <td>-2.86e+04</td> <td>-1.98e+04</td>
+</tr>
+<tr>
+  <th>Quater_Dummy_2</th> <td> 6.725e+04</td> <td> 3436.993</td> <td>   19.566</td> <td> 0.000</td> <td> 6.05e+04</td> <td>  7.4e+04</td>
+</tr>
+<tr>
+  <th>DayofWeek</th>      <td> 1.621e+04</td> <td>  912.387</td> <td>   17.768</td> <td> 0.000</td> <td> 1.44e+04</td> <td>  1.8e+04</td>
+</tr>
+<tr>
+  <th>workingday</th>     <td> 7.695e+04</td> <td> 4056.717</td> <td>   18.970</td> <td> 0.000</td> <td>  6.9e+04</td> <td> 8.49e+04</td>
+</tr>
+<tr>
+  <th>count_lag2</th>     <td> 1061.0008</td> <td>   14.379</td> <td>   73.788</td> <td> 0.000</td> <td> 1032.816</td> <td> 1089.186</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>1665.324</td> <th>  Durbin-Watson:     </th> <td>   0.829</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th>  <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>5853.426</td>
+</tr>
+<tr>
+  <th>Skew:</th>           <td> 0.626</td>  <th>  Prob(JB):          </th> <td>    0.00</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>       <td> 6.022</td>  <th>  Cond. No.          </th> <td>1.53e+03</td>
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.53e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>60.84</td>
+      <td>7,288.40</td>
+      <td>202.42</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>99.87</td>
+      <td>19,151.40</td>
+      <td>153.34</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+</pre></div>
+</div>
+<img alt="../../_images/5_Agile_Analysis_9_4.png" src="../../_images/5_Agile_Analysis_9_4.png" />
+<img alt="../../_images/5_Agile_Analysis_9_5.png" src="../../_images/5_Agile_Analysis_9_5.png" />
+<img alt="../../_images/5_Agile_Analysis_9_6.png" src="../../_images/5_Agile_Analysis_9_6.png" />
+<img alt="../../_images/5_Agile_Analysis_9_7.png" src="../../_images/5_Agile_Analysis_9_7.png" />
+<img alt="../../_images/5_Agile_Analysis_9_8.png" src="../../_images/5_Agile_Analysis_9_8.png" />
+<img alt="../../_images/5_Agile_Analysis_9_9.png" src="../../_images/5_Agile_Analysis_9_9.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Score_reg1_rd</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg1_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>103.09</td>
+      <td>19,360.42</td>
+      <td>458.48</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>150.03</td>
+      <td>43,410.27</td>
+      <td>316.61</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>60.84</td>
+      <td>7,288.40</td>
+      <td>202.42</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>99.87</td>
+      <td>19,151.40</td>
+      <td>153.34</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="applying-agile-model-y-ml">
+<h1>Applying Agile Model: Y예측을 위한 ML분석 실행<a class="headerlink" href="#applying-agile-model-y-ml" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="regularization">
+<h2>Regularization<a class="headerlink" href="#regularization" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Regularization</span>
+<span class="c1"># Ridge</span>
+<span class="n">fit_reg2</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg2_feRSM</span> <span class="o">=</span> <span class="n">fit_reg2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">pred_te_reg2_feRSM</span> <span class="o">=</span> <span class="n">fit_reg2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg2_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg2_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg2_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg2_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg2_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg2_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>60.04</td>
+      <td>7,959.30</td>
+      <td>118.70</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>98.43</td>
+      <td>21,413.08</td>
+      <td>88.86</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lasso</span>
+<span class="n">fit_reg3</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg3_feRSM</span> <span class="o">=</span> <span class="n">fit_reg3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg3_feRSM</span> <span class="o">=</span> <span class="n">fit_reg3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg3_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg3_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg3_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg3_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg3_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg3_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>61.82</td>
+      <td>8,437.85</td>
+      <td>97.47</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>98.13</td>
+      <td>22,101.64</td>
+      <td>75.46</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ElasticNet</span>
+<span class="n">fit_reg4</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">l1_ratio</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg4_feRSM</span> <span class="o">=</span> <span class="n">fit_reg4</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg4_feRSM</span> <span class="o">=</span> <span class="n">fit_reg4</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg4_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg4_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg4_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg4_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg4_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg4_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>58.71</td>
+      <td>7,562.05</td>
+      <td>123.42</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>96.85</td>
+      <td>20,015.70</td>
+      <td>94.72</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="bagging">
+<h2>Bagging<a class="headerlink" href="#bagging" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Bagging</span>
+<span class="c1"># DecisionTree</span>
+<span class="n">fit_reg5</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg5_feRSM</span> <span class="o">=</span> <span class="n">fit_reg5</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg5_feRSM</span> <span class="o">=</span> <span class="n">fit_reg5</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg5_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg5_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg5_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg5_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg5_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg5_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>61.99</td>
+      <td>9,821.96</td>
+      <td>44.69</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RandomForestRegressor</span>
+<span class="n">fit_reg6</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg6_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg6_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg6_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>6.54</td>
+      <td>123.38</td>
+      <td>9.11</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>51.52</td>
+      <td>6,749.92</td>
+      <td>40.49</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="boosting">
+<h2>Boosting<a class="headerlink" href="#boosting" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Boosting</span>
+<span class="c1"># GradientBoostingRegression</span>
+<span class="n">fit_reg7</span> <span class="o">=</span> <span class="n">GradientBoostingRegressor</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;huber&#39;</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;friedman_mse&#39;</span><span class="p">,</span>
+                                           <span class="n">n_estimators</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg7_feRSM</span> <span class="o">=</span> <span class="n">fit_reg7</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg7_feRSM</span> <span class="o">=</span> <span class="n">fit_reg7</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg7_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg7_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg7_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg7_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg7_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg7_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>22.37</td>
+      <td>1,719.24</td>
+      <td>27.47</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>70.18</td>
+      <td>9,756.98</td>
+      <td>89.02</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># XGBoost</span>
+<span class="n">fit_reg8</span> <span class="o">=</span> <span class="n">XGBRegressor</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg8_feRSM</span> <span class="o">=</span> <span class="n">fit_reg8</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg8_feRSM</span> <span class="o">=</span> <span class="n">fit_reg8</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg8_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg8_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg8_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg8_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg8_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg8_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>16.96</td>
+      <td>692.21</td>
+      <td>30.81</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>52.55</td>
+      <td>6,319.44</td>
+      <td>49.61</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># LightGMB</span>
+<span class="n">fit_reg9</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg9_feRSM</span> <span class="o">=</span> <span class="n">fit_reg9</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg9_feRSM</span> <span class="o">=</span> <span class="n">fit_reg9</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg9_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg9_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg9_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg9_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg9_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg9_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>19.09</td>
+      <td>821.14</td>
+      <td>42.11</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>51.46</td>
+      <td>5,862.43</td>
+      <td>53.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="fe-effect-by-top-agile-algorithms">
+<h1>FE Effect by Top Agile Algorithms<a class="headerlink" href="#fe-effect-by-top-agile-algorithms" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Raw Data</span>
+<span class="c1"># Tatget Setting</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train_rd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test_rd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">Y_train</span> <span class="o">=</span> <span class="n">Y_train_rd</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># RandomForestRegressor</span>
+
+<span class="n">fit_reg6</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+<span class="n">pred_tr_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">pred_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg6_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg6_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg6_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>42.30</td>
+      <td>4,095.47</td>
+      <td>170.65</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>149.49</td>
+      <td>43,966.29</td>
+      <td>301.65</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># FE + Reality Data</span>
+<span class="c1"># Tatget Setting</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train_feR</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test_feR</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">Y_train</span> <span class="o">=</span> <span class="n">Y_train_feR</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># RandomForestRegressor</span>
+<span class="n">fit_reg6</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+<span class="n">pred_tr_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">pred_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg6_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg6_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg6_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>4.42</td>
+      <td>88.79</td>
+      <td>5.25</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>80.77</td>
+      <td>15,453.91</td>
+      <td>62.90</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># FE + Reality + Scaling Data</span>
+<span class="c1"># Tatget Setting</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test_feRS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">Y_train</span> <span class="o">=</span> <span class="n">Y_train_feR</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># RandomForestRegressor</span>
+<span class="n">fit_reg6</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+<span class="n">pred_tr_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">pred_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg6_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg6_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg6_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>4.56</td>
+      <td>92.38</td>
+      <td>5.50</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>82.80</td>
+      <td>15,857.91</td>
+      <td>69.02</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># FE + Reality + Scaling + Multicolinearity Data</span>
+<span class="c1"># Tatget Setting</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train_feRSM</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test_feRSM</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">Y_train</span> <span class="o">=</span> <span class="n">Y_train_feR</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># RandomForestRegressor</span>
+<span class="n">fit_reg6</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+<span class="n">pred_tr_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">pred_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg6_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg6_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg6_feRSM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Train</th>
+      <td>6.54</td>
+      <td>123.38</td>
+      <td>9.11</td>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <td>51.52</td>
+      <td>6,749.92</td>
+      <td>40.49</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prediction Effect of Variables</span>
+<span class="n">Variable_Importances</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">fit_reg6</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">],</span> 
+                                    <span class="n">columns</span><span class="o">=</span><span class="n">X_train_feRSM</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> 
+                                    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;importance&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;importance&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Variable_Importances</span><span class="p">)</span>
+<span class="n">Variable_Importances</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Variable Importances&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>importance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count_seasonal</th>
+      <td>0.47</td>
+    </tr>
+    <tr>
+      <th>weather</th>
+      <td>0.16</td>
+    </tr>
+    <tr>
+      <th>count_lag2</th>
+      <td>0.11</td>
+    </tr>
+    <tr>
+      <th>count_diff</th>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <th>Quater_ver2</th>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>Hour</th>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>workingday</th>
+      <td>0.04</td>
+    </tr>
+    <tr>
+      <th>DayofWeek</th>
+      <td>0.02</td>
+    </tr>
+    <tr>
+      <th>Day</th>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>windspeed</th>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Quater_Dummy_2</th>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>holiday</th>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/5_Agile_Analysis_28_1.png" src="../../_images/5_Agile_Analysis_28_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Error Analysis</span>
+<span class="n">error_analysis</span><span class="p">(</span><span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">],</span> <span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+*c* argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with *x* &amp; *y*.  Please use the *color* keyword-argument or provide a 2-D array with a single row if you intend to specify the same RGB or RGBA value for all points.
+</pre></div>
+</div>
+<img alt="../../_images/5_Agile_Analysis_29_1.png" src="../../_images/5_Agile_Analysis_29_1.png" />
+<img alt="../../_images/5_Agile_Analysis_29_2.png" src="../../_images/5_Agile_Analysis_29_2.png" />
+<img alt="../../_images/5_Agile_Analysis_29_3.png" src="../../_images/5_Agile_Analysis_29_3.png" />
+<img alt="../../_images/5_Agile_Analysis_29_4.png" src="../../_images/5_Agile_Analysis_29_4.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./TimeSeriesData/Practice"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Kim<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

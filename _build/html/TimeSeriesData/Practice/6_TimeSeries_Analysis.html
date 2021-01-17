@@ -1,0 +1,2565 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Library: 분석에 사용할 모듈 설치 &#8212; Data Science Study</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Science Study</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Analysis of Time Series Data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Data_Analysis_Cycle.html">
+   데이터 분석의 단계별 목적 이해하기 (분석 싸이클 이해)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Data_Analysis_Cycle.html#id5">
+   분석을 이해하고 공감하는 자세 및 방향
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_Data_Analysis_Cycle.html#id10">
+   분석 단계별 의사결정을 위한 수학/통계적 언어를 이해하기
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html">
+   학습방향과 알고리즘(Learning Style and Algorithms)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html#id2">
+   시계열 데이터/분석과 기계학습의 차이
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html#id8">
+   (시계열) 회귀분석 요약
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_Learning_TimeSeries.html#id12">
+   시계열 분석
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Algorithms_ML_TS_Linear.html">
+   기계학습(Machine Learning) 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_Algorithms_ML_TS_Linear.html#id6">
+   시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Algorithms_TS_NonLinear.html">
+   비선형 시계열 알고리즘
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_Algorithms_TS_NonLinear.html#id9">
+   다변량 시계열 알고리즘
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/TimeSeriesData/Practice/6_TimeSeries_Analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/DataScientistforAI/DataScienceStudy/issues/new?title=Issue%20on%20page%20%2FTimeSeriesData/Practice/6_TimeSeries_Analysis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DataScientistforAI/DataScienceStudy/master?urlpath=tree/TimeSeriesData/Practice/6_TimeSeries_Analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com"/github/DataScientistforAI/DataScienceStudy/blob/master/TimeSeriesData/Practice/6_TimeSeries_Analysis.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Import Library: 분석에 사용할 모듈 설치
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-agile-model-y-ml">
+   Applying Agile Model: Y예측을 위한 ML분석 실행
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-higher-model-y-ts">
+   Applying Higher Model: Y예측을 위한 TS분석 실행
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sarima">
+     수요예측 SARIMA 모델링
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       정상성 변환 미실행
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       정상성 변환 오류
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       정상성 변환 및 복원
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-summary">
+       Code Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sarimax">
+     수요예측 SARIMAX 모델링
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auto-sarimax">
+     수요예측 Auto-SARIMAX 모델링
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auto-arima">
+     수요예측 Auto-ARIMA 모델링
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="import-library">
+<h1>Import Library: 분석에 사용할 모듈 설치<a class="headerlink" href="#import-library" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python -m pip install --user --upgrade pip
+<span class="o">!</span>pip install pandas-datareader
+<span class="o">!</span>pip install tqdm
+<span class="o">!</span>pip install xgboost
+<span class="o">!</span>pip install lightgbm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pip in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (20.3.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas-datareader in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (0.8.1)
+Requirement already satisfied: requests&gt;=2.3.0 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from pandas-datareader) (2.24.0)
+Requirement already satisfied: lxml in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from pandas-datareader) (4.5.1)
+Requirement already satisfied: pandas&gt;=0.21 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from pandas-datareader) (1.0.5)
+Requirement already satisfied: python-dateutil&gt;=2.6.1 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from pandas&gt;=0.21-&gt;pandas-datareader) (2.8.1)
+Requirement already satisfied: pytz&gt;=2017.2 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from pandas&gt;=0.21-&gt;pandas-datareader) (2020.1)
+Requirement already satisfied: numpy&gt;=1.13.3 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from pandas&gt;=0.21-&gt;pandas-datareader) (1.18.5)
+Requirement already satisfied: six&gt;=1.5 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas&gt;=0.21-&gt;pandas-datareader) (1.15.0)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.3.0-&gt;pandas-datareader) (1.25.9)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.3.0-&gt;pandas-datareader) (2020.6.20)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.3.0-&gt;pandas-datareader) (2.10)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from requests&gt;=2.3.0-&gt;pandas-datareader) (3.0.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tqdm in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (4.47.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: xgboost in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (1.3.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from xgboost) (1.5.0)
+Requirement already satisfied: numpy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from xgboost) (1.18.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: lightgbm in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (3.1.1)
+Requirement already satisfied: scikit-learn!=0.22.0 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (0.23.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (1.18.5)
+Requirement already satisfied: wheel in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (0.34.2)
+Requirement already satisfied: scipy in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from lightgbm) (1.5.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from scikit-learn!=0.22.0-&gt;lightgbm) (2.1.0)
+Requirement already satisfied: joblib&gt;=0.11 in /Users/21ceo/opt/anaconda3/lib/python3.7/site-packages (from scikit-learn!=0.22.0-&gt;lightgbm) (0.16.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auto reload</span>
+<span class="o">%</span><span class="k">reload_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+<span class="kn">from</span> <span class="nn">module</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">d4418624de98</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;reload_ext&#39;</span><span class="p">,</span> <span class="s1">&#39;autoreload&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;autoreload&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">module</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;module&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="applying-agile-model-y-ml">
+<h1>Applying Agile Model: Y예측을 위한 ML분석 실행<a class="headerlink" href="#applying-agile-model-y-ml" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># Applying Agile Model</span>
+<span class="c1"># RandomForestRegressor</span>
+<span class="n">fit_reg6</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">)</span>
+<span class="n">pred_tr_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_feRSM</span><span class="p">)</span>
+<span class="n">pred_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">fit_reg6</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Prediction Effect of Variables</span>
+<span class="n">Variable_Importances</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">fit_reg6</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">],</span> 
+                                    <span class="n">columns</span><span class="o">=</span><span class="n">X_train_feRSM</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> 
+                                    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;importance&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;importance&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">Variable_Importances</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Variable Importances&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Evaluation</span>
+<span class="n">Score_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="n">Resid_te_reg6_feRSM</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_reg6_feRSM</span><span class="p">,</span>
+                                                                   <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_reg6_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_reg6_feRSM</span><span class="p">)</span>
+
+<span class="c1"># Error Analysis</span>
+<span class="n">error_analysis</span><span class="p">(</span><span class="n">Resid_tr_reg6_feRSM</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">],</span> <span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<img alt="../../_images/6_TimeSeries_Analysis_4_1.png" src="../../_images/6_TimeSeries_Analysis_4_1.png" />
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>6.54</td>
+      <td>123.38</td>
+      <td>9.11</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>51.52</td>
+      <td>6,749.92</td>
+      <td>40.49</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Stationarity_adf</th>
+      <th>Stationarity_kpss</th>
+      <th>Normality</th>
+      <th>Autocorr(lag1)</th>
+      <th>Autocorr(lag5)</th>
+      <th>Autocorr(lag10)</th>
+      <th>Autocorr(lag50)</th>
+      <th>Heteroscedasticity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Test Statistics</td>
+      <td>-16.29</td>
+      <td>0.40</td>
+      <td>0.83</td>
+      <td>986.72</td>
+      <td>1,017.92</td>
+      <td>1,064.70</td>
+      <td>1,511.67</td>
+      <td>3.04</td>
+    </tr>
+    <tr>
+      <td>p-value</td>
+      <td>0.00</td>
+      <td>0.08</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Alternative</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>two-sided</td>
+    </tr>
+    <tr>
+      <td>Used Lag</td>
+      <td>27.00</td>
+      <td>41.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Used Observations</td>
+      <td>13,100.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(1%)</td>
+      <td>-3.43</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(5%)</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(10%)</td>
+      <td>nan</td>
+      <td>0.35</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Maximum Information Criteria</td>
+      <td>98,935.70</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_4_5.png" src="../../_images/6_TimeSeries_Analysis_4_5.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_4_6.png" src="../../_images/6_TimeSeries_Analysis_4_6.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_4_7.png" src="../../_images/6_TimeSeries_Analysis_4_7.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_4_8.png" src="../../_images/6_TimeSeries_Analysis_4_8.png" />
+</div>
+</div>
+</div>
+<div class="section" id="applying-higher-model-y-ts">
+<h1>Applying Higher Model: Y예측을 위한 TS분석 실행<a class="headerlink" href="#applying-higher-model-y-ts" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## 정상성 테스트 및 모수추론(p=1, q=1, d=0, P=1, Q=1, D(m)=12)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">stattools</span><span class="o">.</span><span class="n">adfuller</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">())[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span>
+                   <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Test Statistics&#39;</span><span class="p">,</span> <span class="s1">&#39;p-value&#39;</span><span class="p">,</span> <span class="s1">&#39;Used Lag&#39;</span><span class="p">,</span> <span class="s1">&#39;Used Observations&#39;</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_acf</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">lags</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">use_vlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">))</span>
+<span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_pacf</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">lags</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">use_vlines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test Statistics         -6.84
+p-value                  0.00
+Used Lag                41.00
+Used Observations   13,086.00
+dtype: float64
+</pre></div>
+</div>
+<img alt="../../_images/6_TimeSeries_Analysis_6_1.png" src="../../_images/6_TimeSeries_Analysis_6_1.png" />
+</div>
+</div>
+<div class="section" id="sarima">
+<h2>수요예측 SARIMA 모델링<a class="headerlink" href="#sarima" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>정상성 변환 미실행<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># 모델링</span>
+<span class="c1">## Parameter Setting</span>
+<span class="n">trend_diff_order</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">seasonal_diff_order</span><span class="p">,</span> <span class="n">seasonal_order</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span>
+<span class="c1">## SARIMA</span>
+<span class="n">fit_ts_sarimax</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">SARIMAX</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">trend_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
+                                <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_order</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+<span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">predicted_mean</span>
+<span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
+    
+<span class="c1"># 검증</span>
+<span class="n">Score_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_te_ts_sarimax</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_ts_sarimax</span><span class="p">,</span> 
+                                                                             <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_ts_sarimax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span>
+                                                                           <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+                                                                           <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>50.64</td>
+      <td>4,854.67</td>
+      <td>159.15</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>167.64</td>
+      <td>42,669.35</td>
+      <td>559.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_9_3.png" src="../../_images/6_TimeSeries_Analysis_9_3.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_9_4.png" src="../../_images/6_TimeSeries_Analysis_9_4.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_9_5.png" src="../../_images/6_TimeSeries_Analysis_9_5.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>정상성 변환 오류<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># 모델링</span>
+<span class="c1">## Parameter Setting</span>
+<span class="n">logarithm</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">trend_diff_order</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">seasonal_diff_order</span><span class="p">,</span> <span class="n">seasonal_order</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span>
+<span class="c1">## 비정상성 데이터의 정상성 변환</span>
+<span class="k">if</span> <span class="n">logarithm</span><span class="p">:</span>
+    <span class="n">Y_train_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">##############################</span>
+<span class="c1">## SARIMA</span>
+<span class="n">fit_ts_sarimax</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">SARIMAX</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">trend_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
+                                <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_order</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+<span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">predicted_mean</span>
+<span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
+    
+<span class="c1"># 검증</span>
+<span class="n">Score_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_te_ts_sarimax</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_ts_sarimax</span><span class="p">,</span> 
+                                                                             <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_ts_sarimax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span>
+                                                                           <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+                                                                           <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>0.43</td>
+      <td>0.32</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>1.17</td>
+      <td>1.90</td>
+      <td>inf</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_11_3.png" src="../../_images/6_TimeSeries_Analysis_11_3.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_11_4.png" src="../../_images/6_TimeSeries_Analysis_11_4.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_11_5.png" src="../../_images/6_TimeSeries_Analysis_11_5.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>정상성 변환 및 복원<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># 모델링</span>
+<span class="c1">## Parameter Setting</span>
+<span class="n">logarithm</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">trend_diff_order</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">seasonal_diff_order</span><span class="p">,</span> <span class="n">seasonal_order</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span>
+<span class="c1">## 비정상성 데이터의 정상성 변환</span>
+<span class="k">if</span> <span class="n">logarithm</span><span class="p">:</span>
+    <span class="n">Y_train_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">##############################</span>
+<span class="c1">## SARIMA</span>
+<span class="n">fit_ts_sarimax</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">SARIMAX</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">trend_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
+                                <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_order</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+<span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">predicted_mean</span>
+<span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
+<span class="c1">## 정상성 데이터의 비정상성 변환</span>
+<span class="k">if</span> <span class="n">logarithm</span><span class="p">:</span>
+    <span class="n">Y_train_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">pred_tr_ts_sarimax</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">##############################</span>
+    
+<span class="c1"># 검증</span>
+<span class="n">Score_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_te_ts_sarimax</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_ts_sarimax</span><span class="p">,</span> 
+                                                                             <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_ts_sarimax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span>
+                                                                           <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+                                                                           <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>51.75</td>
+      <td>6,005.87</td>
+      <td>51.29</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>184.02</td>
+      <td>66,765.54</td>
+      <td>214.65</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_13_3.png" src="../../_images/6_TimeSeries_Analysis_13_3.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_13_4.png" src="../../_images/6_TimeSeries_Analysis_13_4.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_13_5.png" src="../../_images/6_TimeSeries_Analysis_13_5.png" />
+</div>
+</div>
+</div>
+<div class="section" id="code-summary">
+<h3>Code Summary<a class="headerlink" href="#code-summary" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># 모델링</span>
+<span class="c1">## Parameter Setting</span>
+<span class="n">logarithm</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">trend_diff_order</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">seasonal_diff_order</span><span class="p">,</span> <span class="n">seasonal_order</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span>
+<span class="c1">## 비정상성 데이터의 정상성 변환</span>
+<span class="k">if</span> <span class="n">logarithm</span><span class="p">:</span>
+    <span class="n">Y_train_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">##############################</span>
+<span class="c1">## SARIMA</span>
+<span class="n">fit_ts_sarimax</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">SARIMAX</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">trend_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
+                                <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_order</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+<span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">predicted_mean</span>
+<span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">))</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
+<span class="c1">## 정상성 데이터의 비정상성 변환</span>
+<span class="k">if</span> <span class="n">logarithm</span><span class="p">:</span>
+    <span class="n">Y_train_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">pred_tr_ts_sarimax</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">##############################</span>
+    
+<span class="c1"># 검증</span>
+<span class="n">Score_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_te_ts_sarimax</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_ts_sarimax</span><span class="p">,</span> 
+                                                                             <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_ts_sarimax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span>
+                                                                           <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+                                                                           <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># 잔차진단</span>
+<span class="n">error_analysis</span><span class="p">(</span><span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">],</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>Statespace Model Results</caption>
+<tr>
+  <th>Dep. Variable:</th>                <td>count</td>             <th>  No. Observations:  </th>    <td>13128</td>  
+</tr>
+<tr>
+  <th>Model:</th>           <td>SARIMAX(1, 0, 1)x(1, 0, 1, 12)</td> <th>  Log Likelihood     </th> <td>-74351.487</td>
+</tr>
+<tr>
+  <th>Date:</th>                   <td>Sat, 14 Mar 2020</td>        <th>  AIC                </th> <td>148714.974</td>
+</tr>
+<tr>
+  <th>Time:</th>                       <td>00:14:51</td>            <th>  BIC                </th> <td>148759.869</td>
+</tr>
+<tr>
+  <th>Sample:</th>                    <td>01-01-2011</td>           <th>  HQIC               </th> <td>148729.967</td>
+</tr>
+<tr>
+  <th></th>                          <td>- 06-30-2012</td>          <th>                     </th>      <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>               <td>opg</td>              <th>                     </th>      <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>intercept</th> <td>    0.0204</td> <td>    0.016</td> <td>    1.258</td> <td> 0.208</td> <td>   -0.011</td> <td>    0.052</td>
+</tr>
+<tr>
+  <th>ar.L1</th>     <td>    0.7235</td> <td>    0.005</td> <td>  131.742</td> <td> 0.000</td> <td>    0.713</td> <td>    0.734</td>
+</tr>
+<tr>
+  <th>ma.L1</th>     <td>    0.5017</td> <td>    0.008</td> <td>   65.302</td> <td> 0.000</td> <td>    0.487</td> <td>    0.517</td>
+</tr>
+<tr>
+  <th>ar.S.L12</th>  <td>    0.9996</td> <td>    0.000</td> <td> 3724.268</td> <td> 0.000</td> <td>    0.999</td> <td>    1.000</td>
+</tr>
+<tr>
+  <th>ma.S.L12</th>  <td>   -0.9830</td> <td>    0.002</td> <td> -625.305</td> <td> 0.000</td> <td>   -0.986</td> <td>   -0.980</td>
+</tr>
+<tr>
+  <th>sigma2</th>    <td> 4851.0078</td> <td>   48.044</td> <td>  100.971</td> <td> 0.000</td> <td> 4756.844</td> <td> 4945.172</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (Q):</th>          <td>14882.10</td> <th>  Jarque-Bera (JB):  </th> <td>3720.06</td>
+</tr>
+<tr>
+  <th>Prob(Q):</th>                  <td>0.00</td>   <th>  Prob(JB):          </th>  <td>0.00</td>  
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th>   <td>2.56</td>   <th>  Skew:              </th>  <td>0.57</td>  
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>      <td>0.00</td>   <th>  Kurtosis:          </th>  <td>5.35</td>  
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>50.64</td>
+      <td>4,854.67</td>
+      <td>159.15</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>167.64</td>
+      <td>42,669.35</td>
+      <td>559.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_15_4.png" src="../../_images/6_TimeSeries_Analysis_15_4.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_15_5.png" src="../../_images/6_TimeSeries_Analysis_15_5.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_15_6.png" src="../../_images/6_TimeSeries_Analysis_15_6.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\tsa\stattools.py:1708: InterpolationWarning: p-value is smaller than the indicated p-value
+  warn(&quot;p-value is smaller than the indicated p-value&quot;, InterpolationWarning)
+C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\tsa\stattools.py:1708: InterpolationWarning: p-value is smaller than the indicated p-value
+  warn(&quot;p-value is smaller than the indicated p-value&quot;, InterpolationWarning)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Stationarity_adf</th>
+      <th>Stationarity_kpss</th>
+      <th>Normality</th>
+      <th>Autocorr(lag1)</th>
+      <th>Autocorr(lag5)</th>
+      <th>Autocorr(lag10)</th>
+      <th>Autocorr(lag50)</th>
+      <th>Heteroscedasticity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Test Statistics</td>
+      <td>-14.65</td>
+      <td>1.02</td>
+      <td>0.96</td>
+      <td>28.81</td>
+      <td>576.20</td>
+      <td>2,003.74</td>
+      <td>17,431.62</td>
+      <td>1.70</td>
+    </tr>
+    <tr>
+      <td>p-value</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Alternative</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>two-sided</td>
+    </tr>
+    <tr>
+      <td>Used Lag</td>
+      <td>40.00</td>
+      <td>41.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Used Observations</td>
+      <td>13,087.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(1%)</td>
+      <td>-3.43</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(5%)</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(10%)</td>
+      <td>nan</td>
+      <td>0.35</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Maximum Information Criteria</td>
+      <td>139,502.98</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_15_9.png" src="../../_images/6_TimeSeries_Analysis_15_9.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_15_10.png" src="../../_images/6_TimeSeries_Analysis_15_10.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_15_11.png" src="../../_images/6_TimeSeries_Analysis_15_11.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_15_12.png" src="../../_images/6_TimeSeries_Analysis_15_12.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sarimax">
+<h2>수요예측 SARIMAX 모델링<a class="headerlink" href="#sarimax" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># 모델링</span>
+<span class="c1">## Additional Features</span>
+<span class="n">exog_tr</span> <span class="o">=</span> <span class="n">X_train_feRSM</span><span class="p">[[</span><span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;weather&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">,</span> <span class="s1">&#39;Quater_ver2&#39;</span><span class="p">,</span> <span class="s1">&#39;Hour&#39;</span><span class="p">,</span> <span class="s1">&#39;workingday&#39;</span><span class="p">,</span> <span class="s1">&#39;DayofWeek&#39;</span><span class="p">]]</span>
+<span class="n">exog_te</span> <span class="o">=</span> <span class="n">X_test_feRSM</span><span class="p">[[</span><span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;weather&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">,</span> <span class="s1">&#39;Quater_ver2&#39;</span><span class="p">,</span> <span class="s1">&#39;Hour&#39;</span><span class="p">,</span> <span class="s1">&#39;workingday&#39;</span><span class="p">,</span> <span class="s1">&#39;DayofWeek&#39;</span><span class="p">]]</span>                             
+<span class="c1">## Parameter Setting</span>
+<span class="n">trend_diff_order</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">seasonal_diff_order</span><span class="p">,</span> <span class="n">seasonal_order</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">12</span>
+<span class="c1">## SARIMAX</span>
+<span class="n">fit_ts_sarimax</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">SARIMAX</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">trend_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> 
+                                <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_diff_order</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">seasonal_order</span><span class="p">),</span> 
+                                <span class="n">exog</span><span class="o">=</span><span class="n">exog_tr</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+<span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">),</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog_te</span><span class="p">)</span><span class="o">.</span><span class="n">predicted_mean</span>
+<span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">),</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog_te</span><span class="p">)</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
+    
+<span class="c1"># 검증</span>
+<span class="n">Score_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_te_ts_sarimax</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_ts_sarimax</span><span class="p">,</span> 
+                                                                             <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_ts_sarimax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span>
+                                                                           <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+                                                                           <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># 잔차진단</span>
+<span class="n">error_analysis</span><span class="p">(</span><span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">],</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>Statespace Model Results</caption>
+<tr>
+  <th>Dep. Variable:</th>                <td>count</td>             <th>  No. Observations:  </th>    <td>13128</td>  
+</tr>
+<tr>
+  <th>Model:</th>           <td>SARIMAX(1, 0, 1)x(1, 0, 1, 12)</td> <th>  Log Likelihood     </th> <td>-72557.806</td>
+</tr>
+<tr>
+  <th>Date:</th>                   <td>Sat, 14 Mar 2020</td>        <th>  AIC                </th> <td>145143.613</td>
+</tr>
+<tr>
+  <th>Time:</th>                       <td>00:16:00</td>            <th>  BIC                </th> <td>145248.368</td>
+</tr>
+<tr>
+  <th>Sample:</th>                    <td>01-01-2011</td>           <th>  HQIC               </th> <td>145178.597</td>
+</tr>
+<tr>
+  <th></th>                          <td>- 06-30-2012</td>          <th>                     </th>      <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>               <td>opg</td>              <th>                     </th>      <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+         <td></td>           <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>intercept</th>      <td>   -0.0010</td> <td>    0.007</td> <td>   -0.146</td> <td> 0.884</td> <td>   -0.015</td> <td>    0.013</td>
+</tr>
+<tr>
+  <th>count_seasonal</th> <td> 1210.8875</td> <td>   20.086</td> <td>   60.286</td> <td> 0.000</td> <td> 1171.520</td> <td> 1250.255</td>
+</tr>
+<tr>
+  <th>weather</th>        <td>-1.678e+04</td> <td>    4.124</td> <td>-4069.403</td> <td> 0.000</td> <td>-1.68e+04</td> <td>-1.68e+04</td>
+</tr>
+<tr>
+  <th>count_lag2</th>     <td> 1080.5077</td> <td>   15.434</td> <td>   70.007</td> <td> 0.000</td> <td> 1050.257</td> <td> 1110.758</td>
+</tr>
+<tr>
+  <th>count_diff</th>     <td> 1316.3500</td> <td>   13.483</td> <td>   97.632</td> <td> 0.000</td> <td> 1289.924</td> <td> 1342.776</td>
+</tr>
+<tr>
+  <th>Quater_ver2</th>    <td> 3.292e+04</td> <td>    3.734</td> <td> 8815.491</td> <td> 0.000</td> <td> 3.29e+04</td> <td> 3.29e+04</td>
+</tr>
+<tr>
+  <th>Hour</th>           <td>-3279.2622</td> <td>  381.583</td> <td>   -8.594</td> <td> 0.000</td> <td>-4027.151</td> <td>-2531.373</td>
+</tr>
+<tr>
+  <th>workingday</th>     <td> 7.489e+04</td> <td>    0.214</td> <td>  3.5e+05</td> <td> 0.000</td> <td> 7.49e+04</td> <td> 7.49e+04</td>
+</tr>
+<tr>
+  <th>DayofWeek</th>      <td> 1.594e+04</td> <td>    6.368</td> <td> 2502.732</td> <td> 0.000</td> <td> 1.59e+04</td> <td> 1.59e+04</td>
+</tr>
+<tr>
+  <th>ar.L1</th>          <td>    0.2975</td> <td>    0.011</td> <td>   28.309</td> <td> 0.000</td> <td>    0.277</td> <td>    0.318</td>
+</tr>
+<tr>
+  <th>ma.L1</th>          <td>    0.5779</td> <td>    0.009</td> <td>   61.333</td> <td> 0.000</td> <td>    0.559</td> <td>    0.596</td>
+</tr>
+<tr>
+  <th>ar.S.L12</th>       <td>    1.0000</td> <td> 2.73e-05</td> <td> 3.66e+04</td> <td> 0.000</td> <td>    1.000</td> <td>    1.000</td>
+</tr>
+<tr>
+  <th>ma.S.L12</th>       <td>   -0.9789</td> <td>    0.001</td> <td> -671.291</td> <td> 0.000</td> <td>   -0.982</td> <td>   -0.976</td>
+</tr>
+<tr>
+  <th>sigma2</th>         <td> 3602.7401</td> <td>   36.138</td> <td>   99.694</td> <td> 0.000</td> <td> 3531.911</td> <td> 3673.569</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (Q):</th>          <td>7188.18</td> <th>  Jarque-Bera (JB):  </th> <td>13334.29</td>
+</tr>
+<tr>
+  <th>Prob(Q):</th>                 <td>0.00</td>   <th>  Prob(JB):          </th>   <td>0.00</td>  
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th>  <td>3.49</td>   <th>  Skew:              </th>   <td>0.53</td>  
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>     <td>0.00</td>   <th>  Kurtosis:          </th>   <td>7.82</td>  
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).<br/>[2] Covariance matrix is singular or near-singular, with condition number 3.91e+22. Standard errors may be unstable.</div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>42.30</td>
+      <td>3,687.83</td>
+      <td>116.89</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>108.53</td>
+      <td>19,648.91</td>
+      <td>212.71</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_17_4.png" src="../../_images/6_TimeSeries_Analysis_17_4.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_17_5.png" src="../../_images/6_TimeSeries_Analysis_17_5.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_17_6.png" src="../../_images/6_TimeSeries_Analysis_17_6.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\tsa\stattools.py:1708: InterpolationWarning: p-value is smaller than the indicated p-value
+  warn(&quot;p-value is smaller than the indicated p-value&quot;, InterpolationWarning)
+C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\tsa\stattools.py:1708: InterpolationWarning: p-value is smaller than the indicated p-value
+  warn(&quot;p-value is smaller than the indicated p-value&quot;, InterpolationWarning)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Stationarity_adf</th>
+      <th>Stationarity_kpss</th>
+      <th>Normality</th>
+      <th>Autocorr(lag1)</th>
+      <th>Autocorr(lag5)</th>
+      <th>Autocorr(lag10)</th>
+      <th>Autocorr(lag50)</th>
+      <th>Heteroscedasticity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Test Statistics</td>
+      <td>-14.59</td>
+      <td>0.92</td>
+      <td>0.94</td>
+      <td>2.94</td>
+      <td>339.29</td>
+      <td>1,945.78</td>
+      <td>7,657.36</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <td>p-value</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.09</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Alternative</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>two-sided</td>
+    </tr>
+    <tr>
+      <td>Used Lag</td>
+      <td>41.00</td>
+      <td>41.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Used Observations</td>
+      <td>13,086.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(1%)</td>
+      <td>-3.43</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(5%)</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(10%)</td>
+      <td>nan</td>
+      <td>0.35</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Maximum Information Criteria</td>
+      <td>139,938.56</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_17_9.png" src="../../_images/6_TimeSeries_Analysis_17_9.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_17_10.png" src="../../_images/6_TimeSeries_Analysis_17_10.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_17_11.png" src="../../_images/6_TimeSeries_Analysis_17_11.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_17_12.png" src="../../_images/6_TimeSeries_Analysis_17_12.png" />
+</div>
+</div>
+</div>
+<div class="section" id="auto-sarimax">
+<h2>수요예측 Auto-SARIMAX 모델링<a class="headerlink" href="#auto-sarimax" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Loading</span>
+<span class="c1"># location = &#39;https://raw.githubusercontent.com/cheonbi/DataScience/master/Data/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;./Data/BikeSharingDemand/Bike_Sharing_Demand_Full.csv&#39;</span>
+<span class="n">raw_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">location</span><span class="p">)</span>
+
+<span class="c1"># Feature Engineering</span>
+<span class="n">raw_fe</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="p">(</span><span class="n">raw_all</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_trend&#39;</span><span class="p">,</span> <span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Day&#39;</span><span class="p">,</span> <span class="s1">&#39;count_Week&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">]</span>
+<span class="n">raw_feR</span> <span class="o">=</span> <span class="n">feature_engineering_year_duplicated</span><span class="p">(</span><span class="n">raw_fe</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+
+<span class="c1"># Data Split</span>
+<span class="c1"># Confirm of input and output</span>
+<span class="n">Y_colname</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span>
+<span class="n">X_remove</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> <span class="s1">&#39;DateTime&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_group&#39;</span><span class="p">,</span> <span class="s1">&#39;casual&#39;</span><span class="p">,</span> <span class="s1">&#39;registered&#39;</span><span class="p">]</span>
+<span class="n">X_colname</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw_fe</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">Y_colname</span><span class="o">+</span><span class="n">X_remove</span><span class="p">]</span>
+<span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">Y_test_feR</span> <span class="o">=</span> <span class="n">datasplit_ts</span><span class="p">(</span><span class="n">raw_feR</span><span class="p">,</span> <span class="n">Y_colname</span><span class="p">,</span> <span class="n">X_colname</span><span class="p">,</span> <span class="s1">&#39;2012-07-01&#39;</span><span class="p">)</span>
+<span class="c1">### Reality ###</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;count_lag1&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">]</span>
+<span class="n">X_test_feR</span> <span class="o">=</span> <span class="n">feature_engineering_lag_modified</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Scaling ###</span>
+<span class="n">X_train_feRS</span><span class="p">,</span> <span class="n">X_test_feRS</span> <span class="o">=</span> <span class="n">feature_engineering_scaling</span><span class="p">(</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Normalizer</span><span class="p">(),</span> <span class="n">X_train_feR</span><span class="p">,</span> <span class="n">X_test_feR</span><span class="p">)</span>
+<span class="c1">###############</span>
+<span class="c1">### Multicollinearity ###</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Total_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="n">X_colname_vif</span> <span class="o">=</span> <span class="n">feature_engineering_XbyVIF</span><span class="p">(</span><span class="n">X_train_feRS</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number_of_Selected_X: &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_colname_vif</span><span class="p">))</span>
+<span class="n">X_train_feRSM</span><span class="p">,</span> <span class="n">X_test_feRSM</span> <span class="o">=</span> <span class="n">X_train_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">X_test_feRS</span><span class="p">[</span><span class="n">X_colname_vif</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#########################</span>
+
+<span class="c1"># 모델링</span>
+<span class="c1">## Additional Features</span>
+<span class="n">exog_tr</span> <span class="o">=</span> <span class="n">X_train_feRSM</span><span class="p">[[</span><span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;weather&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">,</span> <span class="s1">&#39;Quater_ver2&#39;</span><span class="p">,</span> <span class="s1">&#39;Hour&#39;</span><span class="p">,</span> <span class="s1">&#39;workingday&#39;</span><span class="p">,</span> <span class="s1">&#39;DayofWeek&#39;</span><span class="p">]]</span>
+<span class="n">exog_te</span> <span class="o">=</span> <span class="n">X_test_feRSM</span><span class="p">[[</span><span class="s1">&#39;count_seasonal&#39;</span><span class="p">,</span> <span class="s1">&#39;weather&#39;</span><span class="p">,</span> <span class="s1">&#39;count_lag2&#39;</span><span class="p">,</span> <span class="s1">&#39;count_diff&#39;</span><span class="p">,</span> <span class="s1">&#39;Quater_ver2&#39;</span><span class="p">,</span> <span class="s1">&#39;Hour&#39;</span><span class="p">,</span> <span class="s1">&#39;workingday&#39;</span><span class="p">,</span> <span class="s1">&#39;DayofWeek&#39;</span><span class="p">]]</span>                             
+<span class="c1">## Parameter Setting</span>
+<span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">P</span><span class="p">,</span> <span class="n">Q</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">trend_pdq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
+<span class="n">seasonal_pdq</span> <span class="o">=</span> <span class="p">[(</span><span class="n">candi</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">candi</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">candi</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">candi</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">Q</span><span class="p">))]</span>
+<span class="c1">## SARIMAX</span>
+<span class="n">AIC</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">SARIMAX_order</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">trend_param</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">trend_pdq</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">seasonal_params</span> <span class="ow">in</span> <span class="n">seasonal_pdq</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">SARIMAX</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> 
+                                   <span class="n">order</span><span class="o">=</span><span class="n">trend_param</span><span class="p">,</span> <span class="n">seasonal_order</span><span class="o">=</span><span class="n">seasonal_params</span><span class="p">,</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog_tr</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fit SARIMAX: trend_order=</span><span class="si">{}</span><span class="s1"> seasonal_order=</span><span class="si">{}</span><span class="s1"> AIC=</span><span class="si">{}</span><span class="s1">, BIC=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trend_param</span><span class="p">,</span> <span class="n">seasonal_params</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">aic</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">bic</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">))</span>
+            <span class="n">AIC</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">aic</span><span class="p">)</span>
+            <span class="n">SARIMAX_order</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">trend_param</span><span class="p">,</span> <span class="n">seasonal_params</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+<span class="c1">## Parameter Selection</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The smallest AIC is </span><span class="si">{}</span><span class="s1"> for model SARIMAX</span><span class="si">{}</span><span class="s1">x</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">AIC</span><span class="p">),</span> <span class="n">SARIMAX_order</span><span class="p">[</span><span class="n">AIC</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">AIC</span><span class="p">))][</span><span class="mi">0</span><span class="p">],</span>
+                                                             <span class="n">SARIMAX_order</span><span class="p">[</span><span class="n">AIC</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">AIC</span><span class="p">))][</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1">## Auto-SARIMAX Fitting</span>
+<span class="n">fit_ts_sarimax</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">tsa</span><span class="o">.</span><span class="n">SARIMAX</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">SARIMAX_order</span><span class="p">[</span><span class="n">AIC</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">AIC</span><span class="p">))][</span><span class="mi">0</span><span class="p">],</span> 
+                                <span class="n">seasonal_order</span><span class="o">=</span><span class="n">SARIMAX_order</span><span class="p">[</span><span class="n">AIC</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">AIC</span><span class="p">))][</span><span class="mi">1</span><span class="p">],</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog_tr</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+<span class="n">pred_tr_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+<span class="n">pred_te_ts_sarimax</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">),</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog_te</span><span class="p">)</span><span class="o">.</span><span class="n">predicted_mean</span>
+<span class="n">pred_te_ts_sarimax_ci</span> <span class="o">=</span> <span class="n">fit_ts_sarimax</span><span class="o">.</span><span class="n">get_forecast</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">),</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog_te</span><span class="p">)</span><span class="o">.</span><span class="n">conf_int</span><span class="p">()</span>
+    
+<span class="c1"># 검증</span>
+<span class="n">Score_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="n">Resid_te_ts_sarimax</span> <span class="o">=</span> <span class="n">evaluation_trte</span><span class="p">(</span><span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">pred_tr_ts_sarimax</span><span class="p">,</span> 
+                                                                             <span class="n">Y_test_feR</span><span class="p">,</span> <span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Score_ts_sarimax</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span>
+                                                                           <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+                                                                           <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pred_te_ts_sarimax_ci</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">Y_test_feR</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># 잔차진단</span>
+<span class="n">error_analysis</span><span class="p">(</span><span class="n">Resid_tr_ts_sarimax</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Error&#39;</span><span class="p">],</span> <span class="n">Y_train_feR</span><span class="p">,</span> <span class="n">graph_on</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train_size: (13128, 29) Test_size: (4416, 29)
+X_train: (13128, 24) Y_train: (13128, 1)
+X_test: (4416, 24) Y_test: (4416, 1)
+Number_of_Total_X:  24
+Number_of_Selected_X:  12
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                            | 0/4 [00:00&lt;?, ?it/s]C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(1, 0, 1) seasonal_order=(1, 1, 1, 12) AIC=142236.67502536162, BIC=142341.4172592931
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(1, 0, 1) seasonal_order=(1, 1, 2, 12) AIC=141418.73592497763, BIC=141530.9597470471
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(1, 0, 1) seasonal_order=(2, 1, 1, 12) AIC=141057.06156150065, BIC=141169.28538357012
+Fit SARIMAX: trend_order=(1, 0, 1) seasonal_order=(2, 1, 2, 12) AIC=141281.6459896494, BIC=141401.35139985685
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|████████████████████▊                                                              | 1/4 [16:23&lt;49:11, 983.81s/it]C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(1, 0, 2) seasonal_order=(1, 1, 1, 12) AIC=142426.58979103813, BIC=142538.8136131076
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(1, 0, 2) seasonal_order=(1, 1, 2, 12) AIC=141407.2747438823, BIC=141526.98015408975
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(1, 0, 2) seasonal_order=(2, 1, 1, 12) AIC=141242.66995398837, BIC=141362.37536419582
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(1, 0, 2) seasonal_order=(2, 1, 2, 12) AIC=141256.64974482797, BIC=141383.83674317336
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|█████████████████████████████████████████                                         | 2/4 [36:44&lt;35:09, 1054.79s/it]C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 1) seasonal_order=(1, 1, 1, 12) AIC=142430.66449149617, BIC=142542.88831356564
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 1) seasonal_order=(1, 1, 2, 12) AIC=141220.3804603831, BIC=141340.08587059056
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 1) seasonal_order=(2, 1, 1, 12) AIC=141057.60733487335, BIC=141177.3127450808
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 1) seasonal_order=(2, 1, 2, 12) AIC=141270.56747119426, BIC=141397.75446953965
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|█████████████████████████████████████████████████████████████▌                    | 3/4 [55:16&lt;17:52, 1072.07s/it]C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 2) seasonal_order=(1, 1, 1, 12) AIC=142426.37570496066, BIC=142546.0811151681
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 2) seasonal_order=(1, 1, 2, 12) AIC=141412.53036454157, BIC=141539.71736288696
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 2) seasonal_order=(2, 1, 1, 12) AIC=140943.2490737011, BIC=141070.4360720465
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fit SARIMAX: trend_order=(2, 0, 2) seasonal_order=(2, 1, 2, 12) AIC=141245.49053212715, BIC=141380.15911861052
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████| 4/4 [1:14:20&lt;00:00, 1115.06s/it]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The smallest AIC is 140943.2490737011 for model SARIMAX(2, 0, 2)x(2, 1, 1, 12)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\base\model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>Statespace Model Results</caption>
+<tr>
+  <th>Dep. Variable:</th>                <td>count</td>             <th>  No. Observations:  </th>    <td>13128</td>  
+</tr>
+<tr>
+  <th>Model:</th>           <td>SARIMAX(2, 0, 2)x(2, 1, 1, 12)</td> <th>  Log Likelihood     </th> <td>-70454.625</td>
+</tr>
+<tr>
+  <th>Date:</th>                   <td>Sun, 10 Nov 2019</td>        <th>  AIC                </th> <td>140943.249</td>
+</tr>
+<tr>
+  <th>Time:</th>                       <td>13:17:59</td>            <th>  BIC                </th> <td>141070.436</td>
+</tr>
+<tr>
+  <th>Sample:</th>                    <td>01-01-2011</td>           <th>  HQIC               </th> <td>140985.727</td>
+</tr>
+<tr>
+  <th></th>                          <td>- 06-30-2012</td>          <th>                     </th>      <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>               <td>opg</td>              <th>                     </th>      <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+         <td></td>           <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>intercept</th>      <td>    0.9316</td> <td>    0.086</td> <td>   10.824</td> <td> 0.000</td> <td>    0.763</td> <td>    1.100</td>
+</tr>
+<tr>
+  <th>count_seasonal</th> <td> 1378.1296</td> <td>   30.056</td> <td>   45.853</td> <td> 0.000</td> <td> 1319.222</td> <td> 1437.038</td>
+</tr>
+<tr>
+  <th>weather</th>        <td>-3.875e+04</td> <td> 1712.181</td> <td>  -22.631</td> <td> 0.000</td> <td>-4.21e+04</td> <td>-3.54e+04</td>
+</tr>
+<tr>
+  <th>count_lag2</th>     <td>  396.1452</td> <td>   20.307</td> <td>   19.508</td> <td> 0.000</td> <td>  356.344</td> <td>  435.946</td>
+</tr>
+<tr>
+  <th>count_diff</th>     <td> 1005.8416</td> <td>   10.727</td> <td>   93.766</td> <td> 0.000</td> <td>  984.817</td> <td> 1026.866</td>
+</tr>
+<tr>
+  <th>Quater_ver2</th>    <td>-6.417e+05</td> <td> 8259.159</td> <td>  -77.698</td> <td> 0.000</td> <td>-6.58e+05</td> <td>-6.26e+05</td>
+</tr>
+<tr>
+  <th>Hour</th>           <td>-1559.8431</td> <td>  632.352</td> <td>   -2.467</td> <td> 0.014</td> <td>-2799.231</td> <td> -320.456</td>
+</tr>
+<tr>
+  <th>workingday</th>     <td>-2118.5354</td> <td> 7229.985</td> <td>   -0.293</td> <td> 0.770</td> <td>-1.63e+04</td> <td> 1.21e+04</td>
+</tr>
+<tr>
+  <th>DayofWeek</th>      <td>  371.0572</td> <td> 1737.780</td> <td>    0.214</td> <td> 0.831</td> <td>-3034.929</td> <td> 3777.044</td>
+</tr>
+<tr>
+  <th>ar.L1</th>          <td>   -0.4549</td> <td>    0.010</td> <td>  -43.611</td> <td> 0.000</td> <td>   -0.475</td> <td>   -0.434</td>
+</tr>
+<tr>
+  <th>ar.L2</th>          <td>    0.4755</td> <td>    0.009</td> <td>   55.095</td> <td> 0.000</td> <td>    0.459</td> <td>    0.492</td>
+</tr>
+<tr>
+  <th>ma.L1</th>          <td>    1.4636</td> <td>    0.011</td> <td>  132.867</td> <td> 0.000</td> <td>    1.442</td> <td>    1.485</td>
+</tr>
+<tr>
+  <th>ma.L2</th>          <td>    0.4709</td> <td>    0.010</td> <td>   45.043</td> <td> 0.000</td> <td>    0.450</td> <td>    0.491</td>
+</tr>
+<tr>
+  <th>ar.S.L12</th>       <td>    0.0008</td> <td>    0.008</td> <td>    0.105</td> <td> 0.917</td> <td>   -0.015</td> <td>    0.017</td>
+</tr>
+<tr>
+  <th>ar.S.L24</th>       <td>    0.4325</td> <td>    0.006</td> <td>   76.220</td> <td> 0.000</td> <td>    0.421</td> <td>    0.444</td>
+</tr>
+<tr>
+  <th>ma.S.L12</th>       <td>   -0.9491</td> <td>    0.003</td> <td> -275.165</td> <td> 0.000</td> <td>   -0.956</td> <td>   -0.942</td>
+</tr>
+<tr>
+  <th>sigma2</th>         <td> 2709.7302</td> <td>   23.094</td> <td>  117.333</td> <td> 0.000</td> <td> 2664.466</td> <td> 2754.994</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (Q):</th>          <td>2526.91</td> <th>  Jarque-Bera (JB):  </th> <td>56402.58</td>
+</tr>
+<tr>
+  <th>Prob(Q):</th>                 <td>0.00</td>   <th>  Prob(JB):          </th>   <td>0.00</td>  
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th>  <td>4.49</td>   <th>  Skew:              </th>   <td>0.34</td>  
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>     <td>0.00</td>   <th>  Kurtosis:          </th>   <td>13.14</td> 
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).<br/>[2] Covariance matrix is singular or near-singular, with condition number 4.21e+14. Standard errors may be unstable.</div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAE</th>
+      <th>MSE</th>
+      <th>MAPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Train</td>
+      <td>33.98</td>
+      <td>2,856.47</td>
+      <td>103.64</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>163.72</td>
+      <td>43,241.33</td>
+      <td>311.89</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_19_36.png" src="../../_images/6_TimeSeries_Analysis_19_36.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_19_37.png" src="../../_images/6_TimeSeries_Analysis_19_37.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_19_38.png" src="../../_images/6_TimeSeries_Analysis_19_38.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+&#39;c&#39; argument looks like a single numeric RGB or RGBA sequence, which should be avoided as value-mapping will have precedence in case its length matches with &#39;x&#39; &amp; &#39;y&#39;.  Please use a 2-D array with a single row if you really want to specify the same RGB or RGBA value for all points.
+C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\tsa\stattools.py:1710: InterpolationWarning: p-value is greater than the indicated p-value
+  warn(&quot;p-value is greater than the indicated p-value&quot;, InterpolationWarning)
+C:\ProgramData\Anaconda3\lib\site-packages\statsmodels\tsa\stattools.py:1710: InterpolationWarning: p-value is greater than the indicated p-value
+  warn(&quot;p-value is greater than the indicated p-value&quot;, InterpolationWarning)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Stationarity_adf</th>
+      <th>Stationarity_kpss</th>
+      <th>Normality</th>
+      <th>Autocorr(lag1)</th>
+      <th>Autocorr(lag5)</th>
+      <th>Autocorr(lag10)</th>
+      <th>Autocorr(lag50)</th>
+      <th>Heteroscedasticity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Test Statistics</td>
+      <td>-10.22</td>
+      <td>0.18</td>
+      <td>0.87</td>
+      <td>40.82</td>
+      <td>311.54</td>
+      <td>1,348.00</td>
+      <td>3,016.53</td>
+      <td>2.45</td>
+    </tr>
+    <tr>
+      <td>p-value</td>
+      <td>0.00</td>
+      <td>0.10</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Alternative</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>two-sided</td>
+    </tr>
+    <tr>
+      <td>Used Lag</td>
+      <td>41.00</td>
+      <td>41.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Used Observations</td>
+      <td>13,086.00</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(1%)</td>
+      <td>-3.43</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(5%)</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Critical Value(10%)</td>
+      <td>nan</td>
+      <td>0.35</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Maximum Information Criteria</td>
+      <td>138,509.66</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>nan</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6_TimeSeries_Analysis_19_41.png" src="../../_images/6_TimeSeries_Analysis_19_41.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_19_42.png" src="../../_images/6_TimeSeries_Analysis_19_42.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_19_43.png" src="../../_images/6_TimeSeries_Analysis_19_43.png" />
+<img alt="../../_images/6_TimeSeries_Analysis_19_44.png" src="../../_images/6_TimeSeries_Analysis_19_44.png" />
+</div>
+</div>
+</div>
+<div class="section" id="auto-arima">
+<h2>수요예측 Auto-ARIMA 모델링<a class="headerlink" href="#auto-arima" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # 모델링</span>
+<span class="c1"># ## Additional Features</span>
+<span class="c1"># exog_tr = X_train_feRSM[[&#39;count_seasonal&#39;, &#39;weather&#39;, &#39;count_lag2&#39;, &#39;count_diff&#39;, &#39;Quater_ver2&#39;, &#39;Hour&#39;, &#39;workingday&#39;, &#39;DayofWeek&#39;]]</span>
+<span class="c1"># exog_te = X_test_feRSM[[&#39;count_seasonal&#39;, &#39;weather&#39;, &#39;count_lag2&#39;, &#39;count_diff&#39;, &#39;Quater_ver2&#39;, &#39;Hour&#39;, &#39;workingday&#39;, &#39;DayofWeek&#39;]]                             </span>
+<span class="c1"># ## Auto-ARIMA</span>
+<span class="c1"># fit_ts_autoarima = auto_arima(Y_train_feR, exogenous=exog_tr, stationary=False,</span>
+<span class="c1">#                               trend=&#39;c&#39;, start_p=0, start_q=0, max_p=2, max_q=2, max_d=1,</span>
+<span class="c1">#                               seasonal=True, start_P=0, start_Q=0, max_P=1, max_Q=1, m=12,</span>
+<span class="c1">#                               stepwise=True, trace=True)</span>
+<span class="c1"># display(fit_ts_autoarima.summary())</span>
+<span class="c1"># pred_tr_ts_autoarima = fit_ts_autoarima.predict_in_sample(exogenous=exog_tr)</span>
+<span class="c1"># pred_te_ts_autoarima = fit_ts_autoarima.predict(len(Y_test_feR), exogenous=exog_te, return_conf_int=True)[0]</span>
+<span class="c1"># pred_te_ts_autoarima_ci = fit_ts_autoarima.predict(len(Y_test_feR), exogenous=exog_te, return_conf_int=True)[1]</span>
+    
+<span class="c1"># # 검증</span>
+<span class="c1"># Score_ts_autoarima, Resid_tr_ts_autoarima, Resid_te_ts_autoarima = evaluation_trte(Y_train_feR, pred_tr_ts_autoarima, </span>
+<span class="c1">#                                                                              Y_test_feR, pred_te_ts_autoarima, graph_on=True)</span>
+<span class="c1"># display(Score_ts_autoarima)</span>
+<span class="c1"># ax = pd.DataFrame(Y_test_feR).plot(figsize=(12,4))</span>
+<span class="c1"># pd.DataFrame(pred_te_ts_autoarima, index=Y_test_feR.index, columns=[&#39;prediction&#39;]).plot(kind=&#39;line&#39;,</span>
+<span class="c1">#                                                                            xlim=(Y_test_feR.index.min(),Y_test_feR.index.max()),</span>
+<span class="c1">#                                                                            linewidth=3, fontsize=20, ax=ax)</span>
+<span class="c1"># ax.fill_between(pd.DataFrame(pred_te_ts_autoarima_ci, index=Y_test_feR.index).index,</span>
+<span class="c1">#                 pd.DataFrame(pred_te_ts_autoarima_ci, index=Y_test_feR.index).iloc[:,0],</span>
+<span class="c1">#                 pd.DataFrame(pred_te_ts_autoarima_ci, index=Y_test_feR.index).iloc[:,1], color=&#39;k&#39;, alpha=0.15)</span>
+<span class="c1"># plt.show()</span>
+
+<span class="c1"># # 잔차진단</span>
+<span class="c1"># error_analysis(Resid_tr_ts_autoarima, [&#39;Error&#39;], Y_train_feR, graph_on=True)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./TimeSeriesData/Practice"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Raphael Kim<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
