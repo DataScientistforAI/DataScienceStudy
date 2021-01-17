@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch buttons for interactivity &#8212; My Jupyter Book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hide or remove content" href="hiding.html" />
+    <link rel="prev" title="Formatting code outputs" href="../content/code-outputs.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/interactive/launchbuttons.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DataScientistforAI/DataScienceStudy/master?urlpath=tree/interactive/launchbuttons.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-notebook-interface">
+   The notebook interface
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#binder-buttons-for-your-pages">
+   <span class="xref std std-term">
+    Binder
+   </span>
+   buttons for your pages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyterhub-buttons-for-your-pages">
+   JupyterHub buttons for your pages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-colab-buttons-for-your-pages">
+   <span class="xref std std-term">
+    Google Colab
+   </span>
+   buttons for your pages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#live-interactive-pages-with-thebelab">
+   Live interactive pages with ThebeLab
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-cells-in-thebe-when-it-is-initialized">
+     Running cells in Thebe when it is initialized
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="launch-buttons-for-interactivity">
+<h1>Launch buttons for interactivity<a class="headerlink" href="#launch-buttons-for-interactivity" title="Permalink to this headline">¶</a></h1>
+<p>Because Jupyter Books are built with Jupyter notebooks, you can allow users to launch
+live Jupyter sessions in the cloud directly from your book. This lets readers quickly interact with your content in a traditional coding interface.
+There now exist numerous online notebook services - a good comparison is provided <a class="reference external" href="https://www.dataschool.io/cloud-services-for-jupyter-notebook">in this article</a> - and the following sections describes the available integrations provided by Jupyter Book.</p>
+<p>In each case, you’ll need to tell Jupyter Book where your book content lives online.
+To do so, use this configuration in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Information about where the book exists on the web</span>
+<span class="nt">repository</span><span class="p">:</span>
+  <span class="nt">url                       </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/yourusername/yourbookrepo</span>  <span class="c1"># Online location of your book</span>
+  <span class="nt">path_to_book              </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/book</span>  <span class="c1"># Optional path to your book, relative to the repository root</span>
+  <span class="nt">branch                    </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>  <span class="c1"># Which branch of the repository should be used when creating links (optional)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">repository:</span></code> configuration line uses <code class="docutils literal notranslate"><span class="pre">url</span></code>, <code class="docutils literal notranslate"><span class="pre">path_to_book</span></code>, and <code class="docutils literal notranslate"><span class="pre">branch</span></code> to find your notebook
+files.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">url</span></code> should be a GitHub repository that includes your source files used to build the
+Jupyter Book. Your repository should include:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>: packages for binder or general reproducibility</p></li>
+<li><p><em>the source files in *.ipynb and *.md</em></p></li>
+</ul>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">path_to_book</span></code> should used if your book is in a sub-folder of your repository (e.g. <code class="docutils literal notranslate"><span class="pre">docs/</span></code> or
+<code class="docutils literal notranslate"><span class="pre">book/</span></code>)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">branch</span></code> should be the branch where your book’s source files are stored. It <em>should not be</em>
+the <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html"><code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch</a>.</p></li>
+</ul>
+<div class="section" id="the-notebook-interface">
+<h2>The notebook interface<a class="headerlink" href="#the-notebook-interface" title="Permalink to this headline">¶</a></h2>
+<p>Binder and JupyterHub sessions can be opened using either the “classic” Jupyter Notebook or the new JupyterLab interface backend (see <a class="reference external" href="https://jupyter.org">jupyter.org</a> for more details).
+This is configured using:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">launch_buttons</span><span class="p">:</span>
+  <span class="nt">notebook_interface</span><span class="p">:</span> <span class="s">&quot;jupyterlab&quot;</span>  <span class="c1"># or &quot;classic&quot;</span>
+</pre></div>
+</div>
+<p>One thing to take into account when choosing the interface is that notebooks written in the <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">MyST Markdown</span></a> text-based format will not be opened as notebooks out-of-the-box.
+If you wish for these files to be opened as notebooks then firstly you must ensure that <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown"><code class="docutils literal notranslate"><span class="pre">jupytext&gt;=0.16</span></code></a> is installed in the Binder/JupyterHub environment for your book (no support for this feature exists in Google Colab).
+You then have two options:</p>
+<ul class="simple">
+<li><p>Use the “classic” interface, which will then immediately open these files as notebooks.</p></li>
+<li><p>The “jupyterlab” interface (at the time of writing) has not yet implemented this behaviour, and so you will need to instruct readers to right-click the Markdown file and click “Open in notebook editor”.</p></li>
+</ul>
+</div>
+<div class="section" id="binder-buttons-for-your-pages">
+<h2><a class="reference internal" href="../reference/glossary.html#term-Binder"><span class="xref std std-term">Binder</span></a> buttons for your pages<a class="headerlink" href="#binder-buttons-for-your-pages" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../reference/glossary.html#term-BinderHub"><span class="xref std std-term">BinderHub</span></a> can be used to build the environment needed to run a repository, and provides
+a link that lets others interact with that repository. If your Jupyter Book is hosted online
+on GitHub, you can automatically insert buttons that link to the Jupyter Notebook running in a BinderHub.
+When a user clicks the button, they’ll be taken to a live version of the page. If your code
+doesn’t require a significant amount of CPU or RAM, you can use the free, public BinderHub running
+at https://mybinder.org.</p>
+<p>To automatically include Binder link buttons in each page of your Jupyter Book, use the following
+configuration in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">launch_buttons</span><span class="p">:</span>
+  <span class="nt">binderhub_url</span><span class="p">:</span> <span class="s">&quot;https://mybinder.org&quot;</span>  <span class="c1"># The URL for your BinderHub (e.g., https://mybinder.org)</span>
+</pre></div>
+</div>
+<p>By adding this configuration, along with the repository url configuration above, Jupyter Book
+will insert Binder links to any pages that were built from notebook content.</p>
+</div>
+<div class="section" id="jupyterhub-buttons-for-your-pages">
+<h2>JupyterHub buttons for your pages<a class="headerlink" href="#jupyterhub-buttons-for-your-pages" title="Permalink to this headline">¶</a></h2>
+<p>JupyterHub lets you host an online service that gives users their own Jupyter servers with an environment that you specify for them.
+It allows you to give users access to resources and hardware that you provision in the cloud, and allows you to authenticate users in order to control who has access to your hardware.</p>
+<p>Similar to Binder link buttons, you can also automatically include interact links that send your readers to a JupyterHub that is running a live, interactive version of your page.
+This is accomplished using the <a class="reference external" href="https://github.com/jupyterhub/nbgitpuller">nbgitpuller</a> server extension.</p>
+<p>You can configure the location of the JupyterHub (which you may set up on your own using a guide such as <a class="reference external" href="https://z2jh.jupyter.org">zero to jupyterhub for kubernetes</a> or <a class="reference external" href="https://tljh.jupyter.org">the littlest jupyterhub</a>) with the following configuration:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">launch_buttons</span><span class="p">:</span>
+  <span class="nt">jupyterhub_url</span><span class="p">:</span> <span class="s">&quot;your-hub-url&quot;</span>  <span class="c1"># The URL for your JupyterHub. (e.g., https://datahub.berkeley.edu)</span>
+</pre></div>
+</div>
+<p>On your JupyterHub server, you need two dependencies installed:</p>
+<ol class="simple">
+<li><p>To clone the notebook with the launch link, the server needs
+<a class="reference external" href="https://jupyterhub.github.io/nbgitpuller/"><code class="docutils literal notranslate"><span class="pre">nbgitpuller</span></code></a>.</p></li>
+<li><p>To open myst-markdown as notebooks, the server needs
+<a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown"><code class="docutils literal notranslate"><span class="pre">jupytext&gt;=0.16</span></code></a>.</p></li>
+</ol>
+<p>You can add the following line to your <code class="docutils literal notranslate"><span class="pre">DockerFile</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RUN</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jupytext</span> <span class="n">nbgitpuller</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="google-colab-buttons-for-your-pages">
+<h2><a class="reference internal" href="../reference/glossary.html#term-Google-Colab"><span class="xref std std-term">Google Colab</span></a> buttons for your pages<a class="headerlink" href="#google-colab-buttons-for-your-pages" title="Permalink to this headline">¶</a></h2>
+<p>If your Jupyter Book is hosted online on GitHub, you can automatically insert buttons that link to the Jupyter Notebook running on <a class="reference external" href="https://colab.research.google.com/">Google Colab</a>.
+When a user clicks the button, they’ll be taken to a live version of the page.</p>
+<p>Similar to Binder link buttons, you can automatically include Google Colab link buttons with the following configuration in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">launch_buttons</span><span class="p">:</span>
+  <span class="nt">colab_url</span><span class="p">:</span> <span class="s">&quot;https://colab.research.google.com&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Google Colab links will only work for pages that have the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension.</p>
+</div>
+</div>
+<div class="section" id="live-interactive-pages-with-thebelab">
+<span id="launch-thebelab"></span><h2>Live interactive pages with ThebeLab<a class="headerlink" href="#live-interactive-pages-with-thebelab" title="Permalink to this headline">¶</a></h2>
+<p>This section describes how to bring interactivity to your book. This lets users
+run code and see outputs <em>without leaving the page</em>. Interactivity is provided
+by a kernel running on the public <a class="reference external" href="https://mybinder.org"><strong>MyBinder</strong></a> service.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an experimental feature, and may change in the future or work unexpectedly.</p>
+</div>
+<p>To make your content interactive without requiring readers to leave the current page,
+you can use a project called <a class="reference external" href="https://github.com/minrk/thebelab">Thebe</a>.
+This provides you with a button that, when clicked, will convert each code cell into
+an <strong>interactive</strong> cell that can be edited. It also adds a “run” button to each cell,
+and connects to a Binder kernel running in the cloud.
+As an alternative to pressing the Thebe button at the top of the page, you
+can press the <img src="../images/logo/edit-button.svg" alt="" style="width: 20px; display: inline;" /> symbol in the top right corner of each code cell to start the
+interactive mode.</p>
+<p>To add a Thebe button to your Jupyter Book pages, use the following configuration:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">launch_buttons</span><span class="p">:</span>
+  <span class="nt">thebe                  </span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>In addition, you can configure the Binder settings that are used to provide a kernel for
+Thebe to run the code. These use the same configuration fields as the BinderHub interact
+buttons described above.</p>
+<p>For an example, click the <strong>Thebe</strong> button above on this page, and run the code below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fa297ca8310&gt;
+</pre></div>
+</div>
+<img alt="../_images/launchbuttons_6_1.png" src="../_images/launchbuttons_6_1.png" />
+</div>
+</div>
+<div class="section" id="running-cells-in-thebe-when-it-is-initialized">
+<h3>Running cells in Thebe when it is initialized<a class="headerlink" href="#running-cells-in-thebe-when-it-is-initialized" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes you’d like to initialize the kernel that Thebe uses by running
+some code ahead of time. This might be code that you then hide from the user
+in order to narrow the focus of what they interact with. This is possible
+by using Jupyter Notebook tags.</p>
+<p>Adding the tag <code class="docutils literal notranslate"><span class="pre">thebe-init</span></code> to any code cell will cause Thebe to
+run this cell after it has received a kernel. Any subsequent Thebe cells
+will have access to the same environment (e.g. any module imports made in the
+initialization cell).</p>
+<p>You can then pair this with something like <code class="docutils literal notranslate"><span class="pre">hide-input</span></code> in order to run
+initialization code that your user doesn’t immediately see. For example,
+below we’ll initialize a variable in a hidden cell, and then tell another
+cell to print the output of that variable.</p>
+<div class="cell tag_hide-input tag_thebe-init docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_hidden_variable</span> <span class="o">=</span> <span class="s1">&#39;wow, it worked!&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The variable for this is defined in the cell above!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_hidden_variable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wow, it worked!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./interactive"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../content/code-outputs.html" title="previous page">Formatting code outputs</a>
+    <a class='right-next' id="next-link" href="hiding.html" title="next page">Hide or remove content</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyST Markdown overview &#8212; My Jupyter Book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Special content blocks" href="content-blocks.html" />
+    <link rel="prev" title="reStructuredText files" href="../file-types/restructuredtext.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../start/build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../start/publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/myst.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#directives-and-roles">
+   Directives and roles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directives">
+     Directives
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#more-arguments-and-metadata-in-directives">
+       More arguments and metadata in directives
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roles">
+     Roles
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-roles-and-directives-are-available">
+   What roles and directives are available?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nesting-content-blocks-in-markdown">
+   Nesting content blocks in Markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-myst-markdown-syntax">
+   Other MyST Markdown syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-i-create-with-myst-markdown">
+   What can I create with MyST Markdown?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools-for-writing-myst-markdown">
+   Tools for writing MyST Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-interfaces">
+     Jupyter interfaces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupytext-and-text-sync">
+     Jupytext and text sync
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vs-code">
+     VS Code
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="myst-markdown-overview">
+<h1>MyST Markdown overview<a class="headerlink" href="#myst-markdown-overview" title="Permalink to this headline">¶</a></h1>
+<p>In addition to <a class="reference internal" href="../file-types/notebooks.html"><span class="doc std std-doc">Jupyter Notebook Markdown</span></a>,
+Jupyter Book also supports a special flavour of Markdown called <strong>MyST (or
+Markedly Structured Text)</strong>.
+It was designed to make it easier to create publishable computational documents written with Markdown notation.
+It is a superset of <a class="reference external" href="https://commonmark.org/">CommonMark Markdown</a> and draws heavy inspiration from the fantastic <a class="reference external" href="https://rmarkdown.rstudio.com/">RMarkdown language from RStudio</a>.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>For those who are familiar with Sphinx, MyST Markdown is basically
+CommonMark + Markdown extensions + Sphinx roles and directives</p>
+</div>
+<p>Whether you write your book’s content in Jupyter notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or in regular Markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>),
+you’ll write in the same flavour of <strong>MyST Markdown</strong>. Jupyter Book will know how to parse both of them.</p>
+<p>This page contains a few pieces of information about MyST Markdown and how it relates to Jupyter Book.
+You can find much more information about this flavour of Markdown at
+<span class="xref myst">the Myst Parser documentation</span>.</p>
+<p>:::{admonition,tip} Want to use RMarkdown directly?
+See <span class="xref myst"></span>
+:::</p>
+<div class="section" id="directives-and-roles">
+<h2>Directives and roles<a class="headerlink" href="#directives-and-roles" title="Permalink to this headline">¶</a></h2>
+<p>Roles and directives are two of the most powerful tools in Jupyter Book.
+They are kind of like <em>functions</em>, but written in a markup language.
+They both serve a similar purpose, but <strong>roles are written in one line</strong> whereas <strong>directives span many lines</strong>.
+They both accept different kinds of inputs, and what they do with those inputs depends on the specific role or directive being used.</p>
+<div class="section" id="directives">
+<span id="content-myst-directives"></span><h3>Directives<a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h3>
+<p>Directives customize the look, feel, and behaviour of your book.
+They are kind of like <em>functions</em>, and come in a variety of names with different behaviour.
+This section covers how to structure and use them.</p>
+<p>At its simplest, you can use directive in your book like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{mydirectivename}
+My directive content
+```
+</pre></div>
+</div>
+<p>This will only work if a directive with name <code class="docutils literal notranslate"><span class="pre">mydirectivename</span></code> already exists (which it doesn’t).
+There are many pre-defined directives associated with Jupyter Book.
+For example, to insert a note box into your content, you can use the following directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
+Here is a note
+```
+</pre></div>
+</div>
+<p>This results in:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here is a note</p>
+</div>
+<p>being inserted in your built book.</p>
+<p>For more information on using directives, see the <span class="xref myst">MyST documentation</span>.</p>
+<div class="section" id="more-arguments-and-metadata-in-directives">
+<span id="directive-arguments"></span><h4>More arguments and metadata in directives<a class="headerlink" href="#more-arguments-and-metadata-in-directives" title="Permalink to this headline">¶</a></h4>
+<p>Many directives allow you to control their behaviour with extra pieces of
+information. In addition to the directive name and the directive content,
+directives allow two other configuration points:</p>
+<p><strong>directive arguments</strong> - a list of words that come just after the <code class="docutils literal notranslate"><span class="pre">{directivename}</span></code>.</p>
+<p>Here’s an example usage of directive arguments:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{directivename} arg1 arg2
+My directive content.
+```
+</pre></div>
+</div>
+<p><strong>directive keywords</strong> - a collection of flags or key/value pairs
+that come just underneath <code class="docutils literal notranslate"><span class="pre">{directivename}</span></code>.</p>
+<p>There are two ways to write directive keywords, either as <code class="docutils literal notranslate"><span class="pre">:key:</span> <span class="pre">val</span></code> pairs, or
+as <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">val</span></code> pairs enclosed by <code class="docutils literal notranslate"><span class="pre">---</span></code> lines. They both work the same way:</p>
+<p>Here’s an example of directive keywords using the <code class="docutils literal notranslate"><span class="pre">:key:</span> <span class="pre">val</span></code> syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{directivename}
+:key1: metadata1
+:key2: metadata2
+My directive content.
+```
+</pre></div>
+</div>
+<p>and here’s an example of directive keywords using the enclosing <code class="docutils literal notranslate"><span class="pre">---</span></code> syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{directivename}
+---
+metadata1: metadata2
+metadata3: metadata4
+---
+My directive content.
+```
+</pre></div>
+</div>
+<p>:::{tip}
+Remember, specifying directive keywords with <code class="docutils literal notranslate"><span class="pre">:key:</span></code> or <code class="docutils literal notranslate"><span class="pre">---</span></code> will make no difference.
+We recommend using <code class="docutils literal notranslate"><span class="pre">---</span></code> if you have many keywords you wish to specify, or if some values
+will span multiple lines. Use the <code class="docutils literal notranslate"><span class="pre">:key:</span> <span class="pre">val</span></code> syntax as a shorthand for just one or two
+keywords.
+:::</p>
+<p>For examples of how this is used, see the sections below.</p>
+</div>
+</div>
+<div class="section" id="roles">
+<span id="content-myst-roles"></span><h3>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h3>
+<p>Roles are very similar to directives, but they are less complex and written
+entirely in one line. You can use a role in your book with
+this syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Some content {rolename}`and here is my role&#39;s content!`
+</pre></div>
+</div>
+<p>Again, roles will only work if <code class="docutils literal notranslate"><span class="pre">rolename</span></code> is a valid role name.
+For example, the <code class="docutils literal notranslate"><span class="pre">doc</span></code> role can be used to refer to another page in your book.
+You can refer directly to another page by its relative path.
+For example, the syntax <code class="docutils literal notranslate"><span class="pre">{doc}`../intro`</span></code> will result in: <a class="reference internal" href="../intro.html"><span class="doc">Books with Jupyter</span></a>.</p>
+<p>For more information on using roles, see the <span class="xref myst">MyST documentation</span>.</p>
+</div>
+</div>
+<div class="section" id="what-roles-and-directives-are-available">
+<h2>What roles and directives are available?<a class="headerlink" href="#what-roles-and-directives-are-available" title="Permalink to this headline">¶</a></h2>
+<p>There is currently no single list of roles / directives to use as a reference, but this
+section tries to give as much as information as possible. For those who are familiar
+with the Sphinx ecosystem, <strong>you may use any directive / role that is available in Sphinx</strong>.
+This is because Jupyter Book uses Sphinx to build your book, and MyST Markdown supports
+all syntax that Sphinx supports (think of it as a Markdown version of reStructuredText).</p>
+<p>:::{caution}
+If you search the internet (and the links below) for information about roles and directives,
+the documentation will generally be written with reStructuredText in mind. MyST Markdown
+is different from reStructuredText, but all of the functionality should be the same.
+See <span class="xref myst">the MyST Sphinx parser documentation</span> for more information about the differences between MyST and rST.
+:::</p>
+<p>For a list of directives that are available to you, there are three places to check:</p>
+<ol class="simple">
+<li><p><span class="xref myst">The Sphinx directives page</span>
+has a list of directives that are available by default in Sphinx.</p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">The reStructuredText directives page</a>
+has a list of directives in the Python “docutils” module.</p></li>
+<li><p>This documentation has several additional directives that are specific to Jupyter Book.</p></li>
+</ol>
+<p>In some unusual cases, MyST-Parser may be incompatible with a certain role or directive.
+In this case, you can use the special <code class="docutils literal notranslate"><span class="pre">eval-rst</span></code> directive, to directly parse reStructuredText:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
+.. note::
+
+   A note written in reStructuredText.
+```
+</pre></div>
+</div>
+<p>which produces</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A note written in reStructuredText.</p>
+</div>
+<p>:::{seealso}
+The MyST-Parser documentation on <span class="xref myst">how directives parse content</span>, and its use for <span class="xref myst">including rST files into a Markdown file</span>, and <span class="xref myst">using <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> in Markdown files</span>.
+:::</p>
+</div>
+<div class="section" id="nesting-content-blocks-in-markdown">
+<span id="markdown-nesting"></span><h2>Nesting content blocks in Markdown<a class="headerlink" href="#nesting-content-blocks-in-markdown" title="Permalink to this headline">¶</a></h2>
+<p>If you’d like to nest content blocks inside one another in Markdown (for
+example, to put a <code class="docutils literal notranslate"><span class="pre">{note}</span></code> inside of a <code class="docutils literal notranslate"><span class="pre">{margin}</span></code>), you may do so by adding
+extra backticks (<code class="docutils literal notranslate"><span class="pre">`</span></code>) to the outer-most block. This works for literal
+code blocks as well.</p>
+<p>For example, the following syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>````
+<span class="s">```</span>
+<span class="s">```</span>
+````
+</pre></div>
+</div>
+<p>yields</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="s">```</span>
+<span class="s">```</span>
+</pre></div>
+</div>
+<p>Thus, if you’d like to nest directives inside one another, you can take the same
+approach. For example, the following syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>````{margin}
+```{note}
+Here&#39;s my note!
+```
+````
+</pre></div>
+</div>
+<p>produces:</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here’s my note!</p>
+</div>
+</div>
+</div>
+<div class="section" id="other-myst-markdown-syntax">
+<h2>Other MyST Markdown syntax<a class="headerlink" href="#other-myst-markdown-syntax" title="Permalink to this headline">¶</a></h2>
+<p>In addition to roles and directives, there are numerous other kinds of syntax
+that MyST Markdown supports.
+MyST supports all syntax of CommonMark Markdown (the kind of Markdown that Jupyter notebooks use), as well as an extended syntax that is used for scientific publishing.</p>
+<p>The <span class="xref myst">MyST-Parser</span> is the tool that Jupyter Book uses to allow you to write your book content in MyST.
+It is also a good source of information about the MyST syntax.
+Here are some links you can use as a reference:</p>
+<ul class="simple">
+<li><p><span class="xref myst">CommonMark block syntax</span></p></li>
+<li><p><span class="xref myst">Extended MyST block syntax in MyST</span></p></li>
+<li><p><span class="xref myst">CommonMark in-line syntax</span></p></li>
+<li><p><span class="xref myst">Extended in-line syntax in MyST</span></p></li>
+</ul>
+<p>As a shorthand, Jupyter Book offers a single configuration, to enable the MyST <span class="xref myst">extended syntaxes</span>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span>
+  <span class="nt">myst_extended_syntax</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="what-can-i-create-with-myst-markdown">
+<h2>What can I create with MyST Markdown?<a class="headerlink" href="#what-can-i-create-with-myst-markdown" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="content-blocks.html"><span class="doc std std-doc">Special content blocks</span></a> for an introduction to what you can do with MyST Markdown
+in Jupyter Book.
+In addition, the other pages in this site cover many more use-cases for how to use directives with MyST.</p>
+</div>
+<div class="section" id="tools-for-writing-myst-markdown">
+<h2>Tools for writing MyST Markdown<a class="headerlink" href="#tools-for-writing-myst-markdown" title="Permalink to this headline">¶</a></h2>
+<p>There is some support for MyST Markdown in tools across the community. Here we include
+a few prominent ones.</p>
+<div class="section" id="jupyter-interfaces">
+<h3>Jupyter interfaces<a class="headerlink" href="#jupyter-interfaces" title="Permalink to this headline">¶</a></h3>
+<p>While MyST Markdown does not (yet) render in traditional Jupyter interfaces, most
+of its syntax should “gracefully degrade”, meaning that you can still work with
+MyST in Jupyter, and then build your book with Jupyter Book.</p>
+</div>
+<div class="section" id="jupytext-and-text-sync">
+<h3>Jupytext and text sync<a class="headerlink" href="#jupytext-and-text-sync" title="Permalink to this headline">¶</a></h3>
+<p>For working with Jupyter notebook and Markdown files, we recommend <a class="reference external" href="https://jupytext.readthedocs.io/en/latest">jupytext</a>,
+an open source tool for two-way conversion between <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and text files.
+Jupytext <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown">supports the MyST Markdown format</a>.</p>
+<p>:::{note}
+For full compatibility with <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code>, it is necessary to use <code class="docutils literal notranslate"><span class="pre">jupytext&gt;=1.6.0</span></code>.</p>
+<p>See also <span class="xref myst"></span>.
+:::</p>
+</div>
+<div class="section" id="vs-code">
+<h3>VS Code<a class="headerlink" href="#vs-code" title="Permalink to this headline">¶</a></h3>
+<p>If editing the Markdown files using VS Code, the
+<a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight">VS Code MyST Markdown extension</a>
+provides syntax highlighting and other features.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../file-types/restructuredtext.html" title="previous page">reStructuredText files</a>
+    <a class='right-next' id="next-link" href="content-blocks.html" title="next page">Special content blocks</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

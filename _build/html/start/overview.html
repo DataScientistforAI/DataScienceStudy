@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview &#8212; My Jupyter Book</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Build your book" href="build.html" />
+    <link rel="prev" title="Books with Jupyter" href="../intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">My Jupyter Book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Books with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Get started
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="build.html">
+   Build your book
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="publish.html">
+   Publish your book online
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/gh-pages.html">
+     GitHub Pages and Actions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/netlify.html">
+     Publish with Netlify
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configure book settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/toc.html">
+   Table of contents structure
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../file-types/index.html">
+   Types of content source files
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/markdown.html">
+     Markdown files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/notebooks.html">
+     Jupyter Notebook files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/myst-notebooks.html">
+     Notebooks written entirely in Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file-types/restructuredtext.html">
+     reStructuredText files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Write book content
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/myst.html">
+   MyST Markdown overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/content-blocks.html">
+   Special content blocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/citations.html">
+   References and citations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/math.html">
+   Math and equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/figures.html">
+   Images and figures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/layout.html">
+   Control the page layout
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/execute.html">
+   Execute and cache your pages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/code-outputs.html">
+   Formatting code outputs
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Make your book interactive
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/launchbuttons.html">
+   Launch buttons for interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/hiding.html">
+   Hide or remove content
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../interactive/interactive.html">
+   Interactive data visualizations
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../interactive/comments.html">
+   Commenting and annotating
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/hypothesis.html">
+     Hypothesis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/comments/utterances.html">
+     Utterances
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Advanced and miscellaneous
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/pdf.html">
+   PDFs for your book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/sphinx.html">
+   Custom Sphinx configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../advanced/advanced.html">
+   How-to and FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   Contribute to Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/start/overview.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/start/overview.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/DataScientistforAI/DataScienceStudy/master?urlpath=tree/start/overview.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-jupyter-book-command-line-interface">
+   The Jupyter Book command-line interface
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-book-building-process">
+   The book building process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anatomy-of-a-jupyter-book">
+   Anatomy of a Jupyter Book
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#book-configuration-config-yml">
+     Book configuration (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _config.yml
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#table-of-contents-toc-yml">
+     Table of Contents (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _toc.yml
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#book-content">
+     Book content
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-template-book">
+   Create a template book
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quickly-generate-a-sample-book">
+     Quickly generate a sample book
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-a-templatized-book-from-interactive-prompts">
+     Generate a templatized book from interactive prompts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-step-build-your-book">
+   Next step: build your book
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>This is a short overview of the major components and steps in building a Jupyter Book. See the other pages in this guide for more in-depth information.</p>
+<div class="section" id="the-jupyter-book-command-line-interface">
+<h2>The Jupyter Book command-line interface<a class="headerlink" href="#the-jupyter-book-command-line-interface" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter Book uses a command-line interface to perform a variety of actions. For example, building and cleaning books. You can run the following command to see what options are at your control:</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>You can also use the short-hand <code class="docutils literal notranslate"><span class="pre">jb</span></code> for <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>. E.g.,:
+<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">create</span> <span class="pre">mybookname</span></code>. We’ll use <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> for the rest of this guide.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book --help
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Usage: jupyter-book [OPTIONS] COMMAND [ARGS]...
+
+  Build and manage books with Jupyter.
+
+Options:
+  --version   Show the version and exit.
+  -h, --help  Show this message and exit.
+
+Commands:
+  build   Convert your book&#39;s or page&#39;s content to HTML or a PDF.
+  clean   Empty the _build directory except jupyter_cache.
+  config  Inspect your _config.yml file.
+  create  Create a Jupyter Book template that you can customize.
+  myst    Manipulate MyST markdown files.
+  toc     Generate a _toc.yml file for your content folder.
+</pre></div>
+</div>
+</div>
+</div>
+<p>:::{admonition,warning} A note for Windows users</p>
+<p>Jupyter Book is now also tested against Windows OS 😀</p>
+<p>However, there is a known incompatibility for notebook execution when using Python 3.8.</p>
+<p>See <a class="reference internal" href="../advanced/advanced.html#working-on-windows"><span class="std std-ref">Working on Windows</span></a></p>
+<p>:::</p>
+<p>For more complete information about the CLI, see <a class="reference internal" href="../reference/cli.html"><span class="doc std std-doc">The command-line interface</span></a>.</p>
+</div>
+<div class="section" id="the-book-building-process">
+<h2>The book building process<a class="headerlink" href="#the-book-building-process" title="Permalink to this headline">¶</a></h2>
+<p>Building a Jupyter Book broadly consists of these steps:</p>
+<ol class="simple">
+<li><p><strong>Put your book content in a folder or a file</strong>. See <a class="reference internal" href="#anatomy-of-a-book"><span class="std std-ref">Anatomy of a Jupyter Book</span></a>.</p></li>
+<li><p><strong>Build your book</strong>. Using Jupyter Book’s command-line interface you can
+convert your pages into either an HTML or a PDF book. See <a class="reference internal" href="build.html"><span class="doc std std-doc">Build your book</span></a>.</p></li>
+<li><p><strong>Host your book’s HTML online</strong>. Once your book’s HTML is built, you can host
+it online as a public website. See <a class="reference internal" href="publish.html"><span class="doc">Publish your book online</span></a>.</p></li>
+</ol>
+</div>
+<div class="section" id="anatomy-of-a-jupyter-book">
+<span id="anatomy-of-a-book"></span><h2>Anatomy of a Jupyter Book<a class="headerlink" href="#anatomy-of-a-jupyter-book" title="Permalink to this headline">¶</a></h2>
+<p>There are three things that you need in order to build a Jupyter Book:</p>
+<ul class="simple">
+<li><p>A configuration file (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>)</p></li>
+<li><p>A table of contents file (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>)</p></li>
+<li><p>Your book’s content</p></li>
+</ul>
+<p>For example, consider the following folder structure, which makes up a simple Jupyter Book.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mybookname/
+├── _config.yml
+├── _toc.yml
+├── landing-page.md
+└── page1.ipynb
+</pre></div>
+</div>
+<p>We’ll cover each briefly below, and you can find more information about them
+elsewhere in this documentation.</p>
+<div class="section" id="book-configuration-config-yml">
+<h3>Book configuration (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>)<a class="headerlink" href="#book-configuration-config-yml" title="Permalink to this headline">¶</a></h3>
+<p>All of the configuration for your book is in a YAML file called <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.</p>
+<p>You can define metadata for your book (such as its title), add
+a book logo, turn on different “interactive” buttons (such as a
+<a class="reference internal" href="../reference/glossary.html#term-Binder"><span class="xref std std-term">Binder</span></a> button for pages built from a Jupyter Notebook), and more.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>For more information about your book’s configuration file, see
+<a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">Configure book settings</span></a>.</p>
+</div>
+<p>Here’s an example of a simple <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># in _config.yml</span>
+<span class="nt">title</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">book</span><span class="nv"> </span><span class="s">title&quot;</span>
+<span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">images/logo.png</span>
+<span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">execute_notebooks</span><span class="p">:</span> <span class="s">&quot;off&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">title:</span></code> defines a title for the book. It will show up in the left sidebar.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logo:</span></code> defines a path to an image file for your book’s logo (it will also show up in the sidebar).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">execute:</span></code> contains a collection of configuration options to control <a class="reference internal" href="../content/execute.html"><span class="doc std std-doc">execution and cacheing</span></a>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">execute_notebooks:</span> <span class="pre">&quot;off&quot;</span></code> tells Jupyter Book <strong>not to execute</strong> any computational content that it finds when building the book. By default, Jupyter Book executes and caches all book content.</p></li>
+</ul>
+</li>
+</ul>
+<p>:::{admonition,tip} More about <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>
+There is much more that you can do with the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file. For example, you can <a class="reference internal" href="../customize/config.html#source-repository-button"><span class="std std-ref">Add source repository buttons</span></a> or add <a class="reference internal" href="../interactive/interactive.html"><span class="doc std std-doc">Interactive data visualizations</span></a>. For a complete list of fields for <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, see <a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">Configure book settings</span></a>.
+:::</p>
+</div>
+<div class="section" id="table-of-contents-toc-yml">
+<h3>Table of Contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>)<a class="headerlink" href="#table-of-contents-toc-yml" title="Permalink to this headline">¶</a></h3>
+<p>Jupyter Book uses your Table of Contents to define the structure of your book.
+For example, your chapters, sub-chapters, etc.</p>
+<p>This is a YAML file with a collection of pages, each one linking to a
+file in your book. Here’s an example of the two content files shown above.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>If you would like to quickly <strong>generate a basic Table of Contents</strong> YAML file,
+run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book toc mybookname/
+</pre></div>
+</div>
+<p>And it will generate a TOC for you. Note that there must be at least one content
+file in each folder in order for any sub-folders to be parsed.</p>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># In _toc.yml</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">landing-page</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">page1</span>
+</pre></div>
+</div>
+<p>Each item in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file points to a single file. The links
+should be <strong>relative to your book’s folder and with no extension.</strong>
+Think of the top-most level of your TOC file as <strong>book chapters</strong> (excluding the landing page). The title of each chapter will be inferred from the title in your files.</p>
+<p>The first file specifies the <strong>landing page</strong> of your book (in this case, it is a <strong>markdown file</strong>).
+The landing page is the highest page in your book’s content hierarchy.
+The second file specifies a <strong>content page</strong> of your book (in this case, it is a <strong>Jupyter Notebook</strong>).</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>For more information about how section structure maps onto book structure,
+see <a class="reference internal" href="../customize/toc.html#toc-structure"><span class="std std-ref">How headers and sections map onto to book structure</span></a>.</p>
+</div>
+<p>:::{admonition,tip} More about <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>
+You can specify more complex book configurations with your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. For example, you can specify <strong>parts</strong>, <strong>sections</strong>, and control <strong>custom titles</strong>. For more information about your book’s table of contents file, see <a class="reference internal" href="../customize/toc.html"><span class="doc std std-doc">Table of contents structure</span></a>.
+:::</p>
+</div>
+<div class="section" id="book-content">
+<h3>Book content<a class="headerlink" href="#book-content" title="Permalink to this headline">¶</a></h3>
+<p>A collection of text files make up your book’s content. These can be one of several types of files, such as markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or reStructuredText (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>) files (see <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">Types of content source files</span></a> for a full list).</p>
+<p>In the above example, there were two files listed: a <strong>markdown</strong> file and a <strong>Jupyter Notebook</strong>. Let’s look at the content of each:</p>
+<div class="margin sidebar">
+<p class="sidebar-title">✨Notebooks with text files✨</p>
+<p>You can also store Jupyter Notebooks as markdown files or other text files. See <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">Notebooks written entirely in Markdown</span></a> and <span class="xref myst"></span>.</p>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="1e97f445-a092-4878-9a09-ef90579ae49d" name="4a8fac11-a715-4d9e-aa9b-c4eae78426d2" type="radio">
+</input><label class="tabbed-label" for="1e97f445-a092-4878-9a09-ef90579ae49d">
+landing-page.md</label><div class="tabbed-content docutils">
+<p>This is the landing page of the book. Let’s take a look at some sample markdown text.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh">#</span> My book title
+
+Some intro text
+
+<span class="gu">##</span> My book section
+
+```{note}
+Here&#39;s a note!
+```
+
+That&#39;s it!
+</pre></div>
+</div>
+<p>All content files must have a page title (specified as the first header). All subsequent headers must increase linearly (so no jumps from H1 to H3). See <a class="reference internal" href="../file-types/index.html#rules-all-content-types"><span class="std std-ref">Rules for all content types</span></a> for more rules that all content must adhere to.</p>
+<p>Markdown files can contain either <strong>CommonMark</strong> markdown, or <strong>MyST Markdown</strong> (a super-set of CommonMark). The example above is written in MyST. It looks very similar to CommonMark, but has a <code class="docutils literal notranslate"><span class="pre">{note}</span></code> directive. The note will be rendered like so:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here’s a note!</p>
+</div>
+<p>For more information about MyST markdown and all the things you can do with it, see <a class="reference internal" href="../content/myst.html"><span class="doc std std-doc">MyST Markdown overview</span></a>.</p>
+</div>
+<input id="d878c90e-7ab7-4370-8fb6-99c2ee85d6a0" name="4a8fac11-a715-4d9e-aa9b-c4eae78426d2" type="radio">
+</input><label class="tabbed-label" for="d878c90e-7ab7-4370-8fb6-99c2ee85d6a0">
+page1.ipynb</label><div class="tabbed-content docutils">
+<p>The other page in this book is a <strong>Jupyter Notebook</strong>. This means that the page has a combination of computational content and narrative conent. By default, when Jupyter Book builds your book, <strong>notebooks will be executed and their outputs cached</strong>. On subsequent builds, notebook pages will be re-executed only if their code has changed.</p>
+<p>Any outputs generated by the notebook will be inserted into your built book (though they may not be in your input notebook). This way you do not need to store the notebook’s outputs with your repository. See <a class="reference internal" href="../content/execute.html"><span class="doc std std-doc">Execute and cache your pages</span></a> for more information.</p>
+<p>There are many other interesting things that you can do with notebook content as a part of your book. We recommend checking out <a class="reference internal" href="../content/code-outputs.html"><span class="doc std std-doc">Formatting code outputs</span></a> as well as <a class="reference internal" href="../interactive/interactive.html"><span class="doc std std-doc">Interactive data visualizations</span></a> to get started with Jupyter notebooks.</p>
+</div>
+</div>
+<p>:::{admonition,tip} More about writing content files
+This is only a simple example, and touches on just a couple of the many ways that you can configure and structure your book. For more information about this, see <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">Types of content source files</span></a> as well as <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">Special content blocks</span></a>.
+:::</p>
+</div>
+</div>
+<div class="section" id="create-a-template-book">
+<span id="id1"></span><h2>Create a template book<a class="headerlink" href="#create-a-template-book" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter-Book comes with a demo book so that you can see how the content files
+are used in the book. This section goes through the process of creating a template book and building it as an alternative to manually creating the files in the sections above.</p>
+<p>To see your options for creating books from templates, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book create --help
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Usage: jupyter-book create [OPTIONS] PATH_BOOK
+
+  Create a Jupyter Book template that you can customize.
+
+Options:
+  --cookiecutter  Use cookiecutter to interactively create a Jupyter Book
+                  template.
+
+  -h, --help      Show this message and exit.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="quickly-generate-a-sample-book">
+<h3>Quickly generate a sample book<a class="headerlink" href="#quickly-generate-a-sample-book" title="Permalink to this headline">¶</a></h3>
+<p>This option is best if you are starting from scratch, or would like to see one example of a simple Jupyter Book on your own filesystem.</p>
+<p>If you’d just like to quickly create a sample book, you may do so by running the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">mynewbook</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>This will generate a mini Jupyter Book that you can both build and explore locally. It will have a few decisions made for you, and you can explore the configuration of the book in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> and its structure in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>. Use this book as inspiration, or as a starting point to work from.</p>
+</div>
+<div class="section" id="generate-a-templatized-book-from-interactive-prompts">
+<h3>Generate a templatized book from interactive prompts<a class="headerlink" href="#generate-a-templatized-book-from-interactive-prompts" title="Permalink to this headline">¶</a></h3>
+<p>This option is best if you’d like to answer a few questions from the command line in order to create a template book that is more complex and customized for your use-case.</p>
+<p>Jupyter Book also provides a <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">Jupyter Book cookiecutter</a> that can be used to interactively create a book directory structure.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><a class="reference external" href="https://cookiecutter.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code></a> is a Python tool for quickly generating folders from a templatized repository. Jupyter Book uses <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> under the hood.</p>
+</div>
+<p>The cookiecutter is suitable for users that want to create a ready-to-go repository to host their book that includes pre-populated metafiles such as <code class="docutils literal notranslate"><span class="pre">README</span></code>, <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONDUCT</span></code>, <code class="docutils literal notranslate"><span class="pre">CONTRIBUTING</span></code>, etc., as well as GitHub Actions workflow files to <a class="reference internal" href="../publish/gh-pages.html#publish-gh-actions"><span class="std std-ref">Automatically host your book with GitHub Actions</span></a>.</p>
+<p>To try the cookiecutter template, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book create mynewbook/ --cookiecutter
+</pre></div>
+</div>
+<p>For more help, see the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">Jupyter Book cookiecutter GitHub repository</a>, or run:</p>
+</div>
+</div>
+<div class="section" id="next-step-build-your-book">
+<h2>Next step: build your book<a class="headerlink" href="#next-step-build-your-book" title="Permalink to this headline">¶</a></h2>
+<p>Now that you’ve got a Jupyter Book folder structure, you can create
+the HTML (or PDF) for each of your book’s pages. That’s covered in the next
+section.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./start"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Books with Jupyter</a>
+    <a class='right-next' id="next-link" href="build.html" title="next page">Build your book</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,189 @@
+{
+  "content/code-outputs": {
+    "df_tbl": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "df_tbl",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "      first    second     third\n0  3.254233  3.098491  3.270044\n1  2.971051  3.112410  3.069389\n2  2.816367  3.444816  3.176406\n3  3.030915  2.856834  3.319746\n4  3.254592  3.227715  2.680512",
+        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>first</th>\n      <th>second</th>\n      <th>third</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>3.254233</td>\n      <td>3.098491</td>\n      <td>3.270044</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>2.971051</td>\n      <td>3.112410</td>\n      <td>3.069389</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>2.816367</td>\n      <td>3.444816</td>\n      <td>3.176406</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>3.030915</td>\n      <td>2.856834</td>\n      <td>3.319746</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>3.254592</td>\n      <td>3.227715</td>\n      <td>2.680512</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      }
+    },
+    "sym_eq": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "sym_eq",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "(sqrt(5)*I)**\\alpha*(1/2 - 2*sqrt(5)*I/5) + (-sqrt(5)*I)**\\alpha*(1/2 + 2*sqrt(5)*I/5)",
+        "text/latex": "$\\displaystyle \\left(\\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} - \\frac{2 \\sqrt{5} i}{5}\\right) + \\left(- \\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} + \\frac{2 \\sqrt{5} i}{5}\\right)$"
+      }
+    },
+    "boot_mean": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "boot_mean",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "3.0023035385104575"
+      }
+    },
+    "boot_clo": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "boot_clo",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "2.9900024958373006"
+      }
+    },
+    "boot_chi": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "boot_chi",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "3.0147137098701684"
+      }
+    },
+    "boot_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "boot_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Users/21ceo/Documents/DataScience/DataScientistforAI/DataScienceStudy/_build/jupyter_execute/content/code-outputs_22_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "boot_chi_notdisplayed": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "boot_chi_notdisplayed",
+          "mime_prefix": "application/papermill.record/"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "3.0147137098701684"
+      }
+    },
+    "sorted_means_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "sorted_means_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Users/21ceo/Documents/DataScience/DataScientistforAI/DataScienceStudy/_build/jupyter_execute/content/code-outputs_22_1.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x144 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "cool_text": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "cool_text",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "'here is some text!'"
+      }
+    }
+  },
+  "reference/cheatsheet": {
+    "example_eq": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "example_eq",
+          "mime_prefix": "application/papermill.record/"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "sqrt(x**2 + y**2)",
+        "application/papermill.record/text/latex": "$\\displaystyle \\sqrt{x^{2} + y^{2}}$"
+      }
+    },
+    "glued_text": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "glued_text",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "'here is some text!'"
+      }
+    },
+    "ns_mean": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "ns_mean",
+          "mime_prefix": "application/papermill.record/"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "0.17693703198598115"
+      }
+    },
+    "glued_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "glued_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Users/21ceo/Documents/DataScience/DataScientistforAI/DataScienceStudy/_build/jupyter_execute/reference/cheatsheet_7_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "ss_mean": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "ss_mean",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "-0.12663360431951143"
+      }
+    }
+  }
+}
