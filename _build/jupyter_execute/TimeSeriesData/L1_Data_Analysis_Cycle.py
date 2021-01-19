@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <center><img src='Image/Contents_Part1.png' width='800'></center>
-# <center><img src='Image/Contents_Part2.png' width='800'></center>
-# <center><img src='Image/Contents_Part3.png' width='800'></center>
-# <center><img src='Image/Contents_Part4.png' width='800'></center>
-
 # # 데이터 분석의 단계별 목적 이해하기 (분석 싸이클 이해)
 
 # ## 데이터 싸이언티스트?/애널리스트?/엔지니어?/비즈니스고객? 관점에서:
